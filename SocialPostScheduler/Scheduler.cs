@@ -19,6 +19,7 @@ namespace SocialPostScheduler
     {
         #region Variables
 
+        internal static TabControl tabControlOne = new TabControl();
         private string lastline = string.Empty;
         private static BackgroundWorker worker;
         private static Timer post;
@@ -106,7 +107,8 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @Scheduler(1): " + ex);
-                MessageBox.Show(ex.Message, "SocialPostScheduler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowWindow();
+                tabControlOne.SelectedIndex = 4;
             }
         }
 
@@ -1473,15 +1475,7 @@ namespace SocialPostScheduler
             {
                 if (e.Button == MouseButtons.Left)
                 {
-                    TopMost = true;
-                    WindowState = FormWindowState.Minimized;
-                    Show();
-                    ShowInTaskbar = true;
-                    WindowState = Properties.Settings.Default.windowState;
-                    BringToFront();
-                    Focus();
-                    Activate();
-                    TopMost = false;
+                    ShowWindow();
                 }
             }
             catch (Exception ex)
@@ -1489,6 +1483,19 @@ namespace SocialPostScheduler
                 EasyLogger.Error("Scheduler - @NotifyIcon_MouseClick(1): " + ex);
                 MessageBox.Show(ex.Message, "SocialPostScheduler", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void ShowWindow()
+        {
+            TopMost = true;
+            WindowState = FormWindowState.Minimized;
+            Show();
+            ShowInTaskbar = true;
+            WindowState = Properties.Settings.Default.windowState;
+            BringToFront();
+            Focus();
+            Activate();
+            TopMost = false;
         }
 
         private static void EnsureVisibleRow(DataGridView view, int rowToShow)
@@ -2192,15 +2199,7 @@ namespace SocialPostScheduler
         {
             try
             {
-                TopMost = true;
-                WindowState = FormWindowState.Minimized;
-                Show();
-                ShowInTaskbar = true;
-                WindowState = Properties.Settings.Default.windowState;
-                BringToFront();
-                Focus();
-                Activate();
-                TopMost = false;
+                ShowWindow();
             }
             catch (Exception ex)
             {
