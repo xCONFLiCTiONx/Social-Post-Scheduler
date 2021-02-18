@@ -1,0 +1,30 @@
+(localdb)\MSSQLLocalDB
+
+sqllocaldb i
+MSSQLLocalDB
+
+Reset Entire DB:
+EXEC sp_msforeachtable "ALTER TABLE ? NOCHECK CONSTRAINT all" 
+EXEC sp_MSForEachTable "DELETE FROM ?"
+Exec sp_MSforeachtable 'DBCC CHECKIDENT(''?'', RESEED, 0)'
+Exec sp_msforeachtable "ALTER TABLE ? WITH CHECK CHECK CONSTRAINT all"
+
+Reseed:
+--DBCC CHECKIDENT('dbo.Facebook', RESEED, 0)
+--DBCC CHECKIDENT('dbo.Twitter', RESEED, 0)
+DBCC CHECKIDENT('dbo.Sunday', RESEED, 0)
+DBCC CHECKIDENT('dbo.Monday', RESEED, 0)
+DBCC CHECKIDENT('dbo.Tuesday', RESEED, 0)
+DBCC CHECKIDENT('dbo.Wednesday', RESEED, 0)
+DBCC CHECKIDENT('dbo.Thursday', RESEED, 0)
+DBCC CHECKIDENT('dbo.Friday', RESEED, 0)
+DBCC CHECKIDENT('dbo.Saturday', RESEED, 0)
+SELECT IDENT_CURRENT ('Facebook') AS Current_Identity;
+SELECT IDENT_CURRENT ('Twitter') AS Current_Identity;
+SELECT IDENT_CURRENT ('Sunday') AS Current_Identity;
+SELECT IDENT_CURRENT ('Monday') AS Current_Identity;
+SELECT IDENT_CURRENT ('Tuesday') AS Current_Identity;
+SELECT IDENT_CURRENT ('Wednesday') AS Current_Identity;
+SELECT IDENT_CURRENT ('Thursday') AS Current_Identity;
+SELECT IDENT_CURRENT ('Friday') AS Current_Identity;
+SELECT IDENT_CURRENT ('Saturday') AS Current_Identity;
