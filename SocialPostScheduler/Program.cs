@@ -16,7 +16,7 @@ namespace SocialPostScheduler
             EasyLogger.Info("Initializing...");
 
             int tries = 60;
-            TryAgain:;
+        TryAgain:;
             try
             {
                 if (!SQLConnection.IsServerConnected(Properties.Settings.Default.SocialPostSchedulerConnectionString))

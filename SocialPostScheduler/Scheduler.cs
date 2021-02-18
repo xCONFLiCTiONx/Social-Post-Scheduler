@@ -225,7 +225,8 @@ namespace SocialPostScheduler
                 catch (Exception ex)
                 {
                     EasyLogger.Error("Scheduler - @Scheduler_HandleCreated(1): " + ex);
-                    MessageBox.Show(ex.Message, "SocialPostScheduler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ShowWindow();
+                    tabControlOne.SelectedIndex = 4;
 
                     try
                     {
@@ -261,7 +262,8 @@ namespace SocialPostScheduler
                 catch (Exception ex)
                 {
                     EasyLogger.Error("Scheduler - @Scheduler_HandleCreated(2): " + ex);
-                    MessageBox.Show(ex.Message, "SocialPostScheduler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ShowWindow();
+                    tabControlOne.SelectedIndex = 4;
                 }
 
                 // Notifcation Icon
@@ -301,7 +303,8 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @Scheduler_Load(1): " + ex);
-                MessageBox.Show(ex.Message, "SocialPostScheduler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowWindow();
+                tabControlOne.SelectedIndex = 4;
             }
         }
 
@@ -378,7 +381,7 @@ namespace SocialPostScheduler
             catch
             {
             }
-            Retry:;
+        Retry:;
             try
             {
                 retries++;
@@ -427,7 +430,8 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @Scheduler_VisibleChanged(1): " + ex);
-                MessageBox.Show(ex.Message, "SocialPostScheduler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowWindow();
+                tabControlOne.SelectedIndex = 4;
             }
         }
 
@@ -474,7 +478,7 @@ namespace SocialPostScheduler
                                         catch
                                         {
                                         }
-                                        Retry:;
+                                    Retry:;
                                         try
                                         {
                                             retries++;
@@ -1355,7 +1359,8 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @PollUpdates(1): " + ex);
-                MessageBox.Show(ex.Message, "SocialPostScheduler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowWindow();
+                tabControlOne.SelectedIndex = 4;
             }
         }
 
@@ -1443,7 +1448,8 @@ namespace SocialPostScheduler
                     {
                         EasyLogger.Warning(response);
 
-                        MessageBox.Show(response, "Social Post Scheduler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        ShowWindow();
+                        tabControlOne.SelectedIndex = 4;
                     }
                     else
                     {
@@ -1454,7 +1460,8 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @Post(1): " + ex);
-                MessageBox.Show(ex.Message, "SocialPostScheduler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowWindow();
+                tabControlOne.SelectedIndex = 4;
             }
         }
         #endregion Post
@@ -1481,7 +1488,8 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @NotifyIcon_MouseClick(1): " + ex);
-                MessageBox.Show(ex.Message, "SocialPostScheduler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowWindow();
+                tabControlOne.SelectedIndex = 4;
             }
         }
 
@@ -1605,7 +1613,8 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @MenuItemAddImage_Click(1): " + ex);
-                MessageBox.Show(ex.Message, "SocialPostScheduler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowWindow();
+                tabControlOne.SelectedIndex = 4;
             }
         }
 
@@ -1715,7 +1724,8 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @MenuItemUpdateImage_Click(1): " + ex);
-                MessageBox.Show(ex.Message, "SocialPostScheduler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowWindow();
+                tabControlOne.SelectedIndex = 4;
             }
         }
 
@@ -1728,7 +1738,8 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @MenuItemRemoveImage_Click(1): " + ex);
-                MessageBox.Show(ex.Message, "SocialPostScheduler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowWindow();
+                tabControlOne.SelectedIndex = 4;
             }
         }
 
@@ -1748,7 +1759,8 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @MenuItemView_Click(1): " + ex);
-                MessageBox.Show(ex.Message, "SocialPostScheduler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowWindow();
+                tabControlOne.SelectedIndex = 4;
             }
         }
 
@@ -1774,7 +1786,8 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @MenuItemSave_Click(1): " + ex);
-                MessageBox.Show(ex.Message, "SocialPostScheduler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowWindow();
+                tabControlOne.SelectedIndex = 4;
             }
         }
 
@@ -1826,7 +1839,8 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @DataGridView_UserDeletingRow(1): " + ex);
-                MessageBox.Show(ex.Message, "SocialPostScheduler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowWindow();
+                tabControlOne.SelectedIndex = 4;
             }
         }
 
@@ -1864,7 +1878,8 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @DataGridView1_CellValueChanged(1): " + ex);
-                MessageBox.Show(ex.Message, "SocialPostScheduler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowWindow();
+                tabControlOne.SelectedIndex = 4;
             }
         }
 
@@ -1900,7 +1915,8 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @DataGridView2_CellValueChanged(1): " + ex);
-                MessageBox.Show(ex.Message, "SocialPostScheduler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowWindow();
+                tabControlOne.SelectedIndex = 4;
             }
         }
 
@@ -1941,7 +1957,8 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @DataGridView3_CellValueChanged(1): " + ex);
-                MessageBox.Show(ex.Message, "SocialPostScheduler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowWindow();
+                tabControlOne.SelectedIndex = 4;
             }
         }
 
@@ -1981,7 +1998,8 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @DataGridView4_CellValueChanged(1): " + ex);
-                MessageBox.Show(ex.Message, "SocialPostScheduler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowWindow();
+                tabControlOne.SelectedIndex = 4;
             }
         }
 
@@ -2021,7 +2039,8 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @DataGridView5_CellValueChanged(1): " + ex);
-                MessageBox.Show(ex.Message, "SocialPostScheduler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowWindow();
+                tabControlOne.SelectedIndex = 4;
             }
         }
 
@@ -2061,7 +2080,8 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @DataGridView6_CellValueChanged(1): " + ex);
-                MessageBox.Show(ex.Message, "SocialPostScheduler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowWindow();
+                tabControlOne.SelectedIndex = 4;
             }
         }
 
@@ -2101,7 +2121,8 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @DataGridView7_CellValueChanged(1): " + ex);
-                MessageBox.Show(ex.Message, "SocialPostScheduler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowWindow();
+                tabControlOne.SelectedIndex = 4;
             }
         }
 
@@ -2141,7 +2162,8 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @DataGridView8_CellValueChanged(1): " + ex);
-                MessageBox.Show(ex.Message, "SocialPostScheduler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowWindow();
+                tabControlOne.SelectedIndex = 4;
             }
         }
 
@@ -2181,7 +2203,8 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @DataGridView9_CellValueChanged(1): " + ex);
-                MessageBox.Show(ex.Message, "SocialPostScheduler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowWindow();
+                tabControlOne.SelectedIndex = 4;
             }
         }
 
@@ -2204,7 +2227,8 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @MenuItemScheduler_Click(1): " + ex);
-                MessageBox.Show(ex.Message, "SocialPostScheduler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowWindow();
+                tabControlOne.SelectedIndex = 4;
             }
         }
 
@@ -2218,7 +2242,8 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @MenuItemClose_Click(1): " + ex);
-                MessageBox.Show(ex.Message, "SocialPostScheduler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowWindow();
+                tabControlOne.SelectedIndex = 4;
             }
 
             Environment.Exit(0);
@@ -2457,7 +2482,8 @@ namespace SocialPostScheduler
             catch (SqlException ex)
             {
                 EasyLogger.Error("Scheduler - @CreateContextMenu(1): " + ex);
-                MessageBox.Show(ex.Message, "SocialPostScheduler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowWindow();
+                tabControlOne.SelectedIndex = 4;
             }
         }
 
@@ -2471,7 +2497,8 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @ExitToolStripMenuItem_Click(1): " + ex);
-                MessageBox.Show(ex.Message, "SocialPostScheduler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowWindow();
+                tabControlOne.SelectedIndex = 4;
             }
 
             Environment.Exit(0);
@@ -2620,7 +2647,8 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @PlatforMenuItem_Click(1): " + ex);
-                MessageBox.Show(ex.Message, "SocialPostScheduler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowWindow();
+                tabControlOne.SelectedIndex = 4;
             }
         }
 
@@ -2750,7 +2778,8 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @InsertQuery(1): " + ex);
-                MessageBox.Show(ex.Message, "SocialPostScheduler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowWindow();
+                tabControlOne.SelectedIndex = 4;
             }
         }
 
@@ -2879,7 +2908,8 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @UpdateQuery(1): " + ex);
-                MessageBox.Show(ex.Message, "SocialPostScheduler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowWindow();
+                tabControlOne.SelectedIndex = 4;
             }
         }
 
@@ -2940,7 +2970,8 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @Settings_FormClosing(1): " + ex);
-                MessageBox.Show(ex.Message, "SocialPostScheduler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowWindow();
+                tabControlOne.SelectedIndex = 4;
             }
 
             e.Cancel = true;
