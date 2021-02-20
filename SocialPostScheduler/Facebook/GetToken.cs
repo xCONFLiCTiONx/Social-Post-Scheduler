@@ -28,27 +28,30 @@ namespace SocialPostScheduler
             }
         }
 
-        internal static string GetPageTokenAsync(string PAGE_NAME, string USER_TOKEN, string USER_ID, string PAGE_ID, bool isImage, string MESSAGE_STRING, string IMAGE_PATH, string LINK_URL)
+        internal static async Task<string> GetPageTokenAsync(string PAGE_NAME, string USER_TOKEN, string USER_ID, string PAGE_ID, bool isImage, string MESSAGE_STRING, string IMAGE_PATH, string LINK_URL)
         {
             try
             {
-                using (WebClient wb = new WebClient())
-                {
-                    string responseInString = wb.DownloadString("https://graph.facebook.com/" + USER_ID + "/accounts?access_token=" + USER_TOKEN);
+                //using (WebClient wb = new WebClient())
+                //{
+                //    string responseInString = wb.DownloadString("https://graph.facebook.com/" + USER_ID + "/accounts?access_token=" + USER_TOKEN);
 
-                    JObject jdata = JObject.Parse(responseInString);
-                    JToken array = jdata["data"];
+                //    JObject jdata = JObject.Parse(responseInString);
+                //    JToken array = jdata["data"];
 
-                    foreach (JToken account in array)
-                    {
-                        if (account["name"].ToString().Equals(PAGE_NAME))
-                        {
-                            string PAGE_TOKEN = account["access_token"].ToString();
-                            _ = PostMessage(PAGE_ID, PAGE_TOKEN, isImage, MESSAGE_STRING, IMAGE_PATH, LINK_URL);
-                            return PAGE_TOKEN;
-                        }
-                    }
-                }
+                //    foreach (JToken account in array)
+                //    {
+                //        if (account["name"].ToString().Equals(PAGE_NAME))
+                //        {
+                //            string PAGE_TOKEN = account["access_token"].ToString();
+                //            _ = PostMessage(PAGE_ID, PAGE_TOKEN, isImage, MESSAGE_STRING, IMAGE_PATH, LINK_URL);
+                //            return PAGE_TOKEN;
+                //        }
+                //    }
+                //}
+
+                USER_TOKEN = await Task.Run(() => PostMessage(PAGE_ID, USER_TOKEN, isImage, MESSAGE_STRING, IMAGE_PATH, LINK_URL));
+                return USER_TOKEN;
 
                 return string.Empty;
             }

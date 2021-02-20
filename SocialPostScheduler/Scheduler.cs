@@ -1403,7 +1403,7 @@ namespace SocialPostScheduler
                         }
                     }));
 
-                    string token = GetToken.GetPageTokenAsync(PAGE_NAME, _CURRENT_USER_TOKEN, _USER_ID, _PAGE_ID, isImage, MESSAGE_STRING, IMAGE_PATH, LINK_URL);
+                    string token = await GetToken.GetPageTokenAsync(PAGE_NAME, _CURRENT_USER_TOKEN, _USER_ID, _PAGE_ID, isImage, MESSAGE_STRING, IMAGE_PATH, LINK_URL);
 
                     facebookTableAdapter.UpdateQuery(dataGridViewRow.Cells[1].Value.ToString(), dataGridViewRow.Cells[2].Value.ToString(), token, dataGridViewRow.Cells[4].Value.ToString(), dataGridViewRow.Cells[5].Value.ToString(), dataGridViewRow.Cells[6].Value.ToString(), (int)dataGridViewRow.Cells[0].Value);
                     facebookTableAdapter.Fill(socialPostSchedulerDataSet.Facebook);
