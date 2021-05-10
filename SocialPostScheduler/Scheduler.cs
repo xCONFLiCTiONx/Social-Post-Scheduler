@@ -1011,8 +1011,6 @@ namespace SocialPostScheduler
                                 }
                                 else
                                 {
-                                    EasyLogger.Error("Facebook token successfully updated...");
-
                                     facebookTableAdapter.UpdateQuery(dataGridViewRow.Cells[1].Value.ToString(), dataGridViewRow.Cells[2].Value.ToString(), token, dataGridViewRow.Cells[4].Value.ToString(), dataGridViewRow.Cells[5].Value.ToString(), dataGridViewRow.Cells[6].Value.ToString(), (int)dataGridViewRow.Cells[0].Value);
                                     facebookTableAdapter.Fill(socialPostSchedulerDataSet.Facebook);
                                 }
@@ -1428,10 +1426,7 @@ namespace SocialPostScheduler
                         }
                     }));
 
-                    string token = await GetToken.GrabTokenPostMessage(_CURRENT_USER_TOKEN, _PAGE_ID, isImage, MESSAGE_STRING, IMAGE_PATH, LINK_URL);
-
-                    facebookTableAdapter.UpdateQuery(dataGridViewRow.Cells[1].Value.ToString(), dataGridViewRow.Cells[2].Value.ToString(), token, dataGridViewRow.Cells[4].Value.ToString(), dataGridViewRow.Cells[5].Value.ToString(), dataGridViewRow.Cells[6].Value.ToString(), (int)dataGridViewRow.Cells[0].Value);
-                    facebookTableAdapter.Fill(socialPostSchedulerDataSet.Facebook);
+                    _ = await GetToken.GrabTokenPostMessage(_CURRENT_USER_TOKEN, _PAGE_ID, isImage, MESSAGE_STRING, IMAGE_PATH, LINK_URL);
                 }
                 else if (platform == "Twitter")
                 {
@@ -1538,10 +1533,7 @@ namespace SocialPostScheduler
             Focus();
             Activate();
             TopMost = false;
-            if (dataGridView != null)
-            {
-                dataGridView.Refresh();
-            }
+            dataGridView.Refresh();
         }
 
         private static void EnsureVisibleRow(DataGridView view, int rowToShow)
