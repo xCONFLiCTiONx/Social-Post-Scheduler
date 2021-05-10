@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Imaging;
+using System.Globalization;
 using System.IO;
 using System.Reflection;
 using System.Text;
@@ -107,7 +108,10 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @Scheduler(1): " + ex);
-                ShowWindow();
+                if (!Visible)
+                {
+                    ShowWindow();
+                }
                 tabControlOne.SelectedIndex = 4;
             }
         }
@@ -225,7 +229,10 @@ namespace SocialPostScheduler
                 catch (Exception ex)
                 {
                     EasyLogger.Error("Scheduler - @Scheduler_HandleCreated(1): " + ex);
-                    ShowWindow();
+                    if (!Visible)
+                    {
+                        ShowWindow();
+                    }
                     tabControlOne.SelectedIndex = 4;
 
                     try
@@ -262,7 +269,10 @@ namespace SocialPostScheduler
                 catch (Exception ex)
                 {
                     EasyLogger.Error("Scheduler - @Scheduler_HandleCreated(2): " + ex);
-                    ShowWindow();
+                    if (!Visible)
+                    {
+                        ShowWindow();
+                    }
                     tabControlOne.SelectedIndex = 4;
                 }
 
@@ -303,7 +313,10 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @Scheduler_Load(1): " + ex);
-                ShowWindow();
+                if (!Visible)
+                {
+                    ShowWindow();
+                }
                 tabControlOne.SelectedIndex = 4;
             }
         }
@@ -311,7 +324,7 @@ namespace SocialPostScheduler
         private void DataGridView9_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView dgv = (DataGridView)sender;
-            if (e.ColumnIndex == 7 || e.ColumnIndex == 8 || e.ColumnIndex == 9 || e.ColumnIndex == 10 || e.ColumnIndex == 11)
+            if (e.ColumnIndex == 7 || e.ColumnIndex == 8 || e.ColumnIndex == 9 || e.ColumnIndex == 10 || e.ColumnIndex == 11 || e.ColumnIndex == 12)
             {
                 dgv.EndEdit();
             }
@@ -320,7 +333,7 @@ namespace SocialPostScheduler
         private void DataGridView8_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView dgv = (DataGridView)sender;
-            if (e.ColumnIndex == 7 || e.ColumnIndex == 8 || e.ColumnIndex == 9 || e.ColumnIndex == 10 || e.ColumnIndex == 11)
+            if (e.ColumnIndex == 7 || e.ColumnIndex == 8 || e.ColumnIndex == 9 || e.ColumnIndex == 10 || e.ColumnIndex == 11 || e.ColumnIndex == 12)
             {
                 dgv.EndEdit();
             }
@@ -329,7 +342,7 @@ namespace SocialPostScheduler
         private void DataGridView7_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView dgv = (DataGridView)sender;
-            if (e.ColumnIndex == 7 || e.ColumnIndex == 8 || e.ColumnIndex == 9 || e.ColumnIndex == 10 || e.ColumnIndex == 11)
+            if (e.ColumnIndex == 7 || e.ColumnIndex == 8 || e.ColumnIndex == 9 || e.ColumnIndex == 10 || e.ColumnIndex == 11 || e.ColumnIndex == 12)
             {
                 dgv.EndEdit();
             }
@@ -338,7 +351,7 @@ namespace SocialPostScheduler
         private void DataGridView6_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView dgv = (DataGridView)sender;
-            if (e.ColumnIndex == 7 || e.ColumnIndex == 8 || e.ColumnIndex == 9 || e.ColumnIndex == 10 || e.ColumnIndex == 11)
+            if (e.ColumnIndex == 7 || e.ColumnIndex == 8 || e.ColumnIndex == 9 || e.ColumnIndex == 10 || e.ColumnIndex == 11 || e.ColumnIndex == 12)
             {
                 dgv.EndEdit();
             }
@@ -347,7 +360,7 @@ namespace SocialPostScheduler
         private void DataGridView5_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView dgv = (DataGridView)sender;
-            if (e.ColumnIndex == 7 || e.ColumnIndex == 8 || e.ColumnIndex == 9 || e.ColumnIndex == 10 || e.ColumnIndex == 11)
+            if (e.ColumnIndex == 7 || e.ColumnIndex == 8 || e.ColumnIndex == 9 || e.ColumnIndex == 10 || e.ColumnIndex == 11 || e.ColumnIndex == 12)
             {
                 dgv.EndEdit();
             }
@@ -356,7 +369,7 @@ namespace SocialPostScheduler
         private void DataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView dgv = (DataGridView)sender;
-            if (e.ColumnIndex == 7 || e.ColumnIndex == 8 || e.ColumnIndex == 9 || e.ColumnIndex == 10 || e.ColumnIndex == 11)
+            if (e.ColumnIndex == 7 || e.ColumnIndex == 8 || e.ColumnIndex == 9 || e.ColumnIndex == 10 || e.ColumnIndex == 11 || e.ColumnIndex == 12)
             {
                 dgv.EndEdit();
             }
@@ -365,7 +378,7 @@ namespace SocialPostScheduler
         private void DataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView dgv = (DataGridView)sender;
-            if (e.ColumnIndex == 7 || e.ColumnIndex == 8 || e.ColumnIndex == 9 || e.ColumnIndex == 10 || e.ColumnIndex == 11)
+            if (e.ColumnIndex == 7 || e.ColumnIndex == 8 || e.ColumnIndex == 9 || e.ColumnIndex == 10 || e.ColumnIndex == 11 || e.ColumnIndex == 12)
             {
                 dgv.EndEdit();
             }
@@ -430,7 +443,10 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @Scheduler_VisibleChanged(1): " + ex);
-                ShowWindow();
+                if (!Visible)
+                {
+                    ShowWindow();
+                }
                 tabControlOne.SelectedIndex = 4;
             }
         }
@@ -914,21 +930,25 @@ namespace SocialPostScheduler
                     value = Convert.ToBoolean(DGVR.Cells[11].Value);
                 }
             }
+            if (week == 6)
+            {
+                if (DGVR.Cells[12].Value != DBNull.Value)
+                {
+                    value = Convert.ToBoolean(DGVR.Cells[12].Value);
+                }
+            }
 
             return value;
         }
 
-        private static int GetWeekNumberOfMonth(DateTime date)
+        public static int GetWeekNumberOfMonth(DateTime date)
         {
-            date = date.Date;
-            DateTime firstMonthDay = new DateTime(date.Year, date.Month, 1);
-            DateTime firstMonthMonday = firstMonthDay.AddDays((DayOfWeek.Monday + 7 - firstMonthDay.DayOfWeek) % 7);
-            if (firstMonthMonday > date)
-            {
-                firstMonthDay = firstMonthDay.AddMonths(-1);
-                firstMonthMonday = firstMonthDay.AddDays((DayOfWeek.Monday + 7 - firstMonthDay.DayOfWeek) % 7);
-            }
-            return (date - firstMonthMonday).Days / 7 + 1;
+            DateTime beginningOfMonth = new DateTime(date.Year, date.Month, 1);
+
+            while (date.Date.AddDays(1).DayOfWeek != CultureInfo.CurrentCulture.DateTimeFormat.FirstDayOfWeek)
+                date = date.AddDays(1);
+
+            return (int)Math.Truncate((double)date.Subtract(beginningOfMonth).TotalDays / 7f) + 1;
         }
 
         private async void PollUpdates(object sender, System.Timers.ElapsedEventArgs e)
@@ -991,6 +1011,8 @@ namespace SocialPostScheduler
                                 }
                                 else
                                 {
+                                    EasyLogger.Error("Facebook token successfully updated...");
+
                                     facebookTableAdapter.UpdateQuery(dataGridViewRow.Cells[1].Value.ToString(), dataGridViewRow.Cells[2].Value.ToString(), token, dataGridViewRow.Cells[4].Value.ToString(), dataGridViewRow.Cells[5].Value.ToString(), dataGridViewRow.Cells[6].Value.ToString(), (int)dataGridViewRow.Cells[0].Value);
                                     facebookTableAdapter.Fill(socialPostSchedulerDataSet.Facebook);
                                 }
@@ -1359,7 +1381,10 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @PollUpdates(1): " + ex);
-                ShowWindow();
+                if (!Visible)
+                {
+                    ShowWindow();
+                }
                 tabControlOne.SelectedIndex = 4;
             }
         }
@@ -1403,7 +1428,7 @@ namespace SocialPostScheduler
                         }
                     }));
 
-                    string token = GetToken.GetPageTokenAsync(PAGE_NAME, _CURRENT_USER_TOKEN, _USER_ID, _PAGE_ID, isImage, MESSAGE_STRING, IMAGE_PATH, LINK_URL);
+                    string token = await GetToken.GrabTokenPostMessage(_CURRENT_USER_TOKEN, _PAGE_ID, isImage, MESSAGE_STRING, IMAGE_PATH, LINK_URL);
 
                     facebookTableAdapter.UpdateQuery(dataGridViewRow.Cells[1].Value.ToString(), dataGridViewRow.Cells[2].Value.ToString(), token, dataGridViewRow.Cells[4].Value.ToString(), dataGridViewRow.Cells[5].Value.ToString(), dataGridViewRow.Cells[6].Value.ToString(), (int)dataGridViewRow.Cells[0].Value);
                     facebookTableAdapter.Fill(socialPostSchedulerDataSet.Facebook);
@@ -1447,8 +1472,10 @@ namespace SocialPostScheduler
                     if (response != "OK")
                     {
                         EasyLogger.Warning(response);
-
-                        ShowWindow();
+                        if (!Visible)
+                        {
+                            ShowWindow();
+                        }
                         tabControlOne.SelectedIndex = 4;
                     }
                     else
@@ -1460,7 +1487,10 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @Post(1): " + ex);
-                ShowWindow();
+                if (!Visible)
+                {
+                    ShowWindow();
+                }
                 tabControlOne.SelectedIndex = 4;
             }
         }
@@ -1488,7 +1518,10 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @NotifyIcon_MouseClick(1): " + ex);
-                ShowWindow();
+                if (!Visible)
+                {
+                    ShowWindow();
+                }
                 tabControlOne.SelectedIndex = 4;
             }
         }
@@ -1499,11 +1532,16 @@ namespace SocialPostScheduler
             WindowState = FormWindowState.Minimized;
             Show();
             ShowInTaskbar = true;
+            WindowState = FormWindowState.Normal;
             WindowState = Properties.Settings.Default.windowState;
             BringToFront();
             Focus();
             Activate();
             TopMost = false;
+            if (dataGridView != null)
+            {
+                dataGridView.Refresh();
+            }
         }
 
         private static void EnsureVisibleRow(DataGridView view, int rowToShow)
@@ -1539,14 +1577,14 @@ namespace SocialPostScheduler
                         }
 
                         DateTime? expire = null;
-                        if (!DBNull.Value.Equals(dataGridView.CurrentRow.Cells[12].Value))
+                        if (!DBNull.Value.Equals(dataGridView.CurrentRow.Cells[13].Value))
                         {
-                            expire = (DateTime)dataGridView.CurrentRow.Cells[12].Value;
+                            expire = (DateTime)dataGridView.CurrentRow.Cells[13].Value;
                         }
 
                         if (dataGridView.Parent.Text == "Sunday")
                         {
-                            sundayTableAdapter.InsertQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, (bool)dataGridView.CurrentRow.Cells[7].Value, (bool)dataGridView.CurrentRow.Cells[8].Value, (bool)dataGridView.CurrentRow.Cells[9].Value, (bool)dataGridView.CurrentRow.Cells[10].Value, (bool)dataGridView.CurrentRow.Cells[11].Value, expire);
+                            sundayTableAdapter.InsertQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, (bool)dataGridView.CurrentRow.Cells[7].Value, (bool)dataGridView.CurrentRow.Cells[8].Value, (bool)dataGridView.CurrentRow.Cells[9].Value, (bool)dataGridView.CurrentRow.Cells[10].Value, (bool)dataGridView.CurrentRow.Cells[11].Value, (bool)dataGridView.CurrentRow.Cells[12].Value, expire);
                             sundayTableAdapter.Fill(socialPostSchedulerDataSet.Sunday);
 
                             dataGridView.Rows[gridviewRowIndex].Cells[gridviewColIndex].Selected = true;
@@ -1555,7 +1593,7 @@ namespace SocialPostScheduler
                         }
                         if (dataGridView.Parent.Text == "Monday")
                         {
-                            mondayTableAdapter.InsertQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, (bool)dataGridView.CurrentRow.Cells[7].Value, (bool)dataGridView.CurrentRow.Cells[8].Value, (bool)dataGridView.CurrentRow.Cells[9].Value, (bool)dataGridView.CurrentRow.Cells[10].Value, (bool)dataGridView.CurrentRow.Cells[11].Value, expire);
+                            mondayTableAdapter.InsertQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, (bool)dataGridView.CurrentRow.Cells[7].Value, (bool)dataGridView.CurrentRow.Cells[8].Value, (bool)dataGridView.CurrentRow.Cells[9].Value, (bool)dataGridView.CurrentRow.Cells[10].Value, (bool)dataGridView.CurrentRow.Cells[11].Value, (bool)dataGridView.CurrentRow.Cells[12].Value, expire);
                             mondayTableAdapter.Fill(socialPostSchedulerDataSet.Monday);
 
                             dataGridView.Rows[gridviewRowIndex].Cells[gridviewColIndex].Selected = true;
@@ -1564,7 +1602,7 @@ namespace SocialPostScheduler
                         }
                         if (dataGridView.Parent.Text == "Tuesday")
                         {
-                            tuesdayTableAdapter.InsertQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, (bool)dataGridView.CurrentRow.Cells[7].Value, (bool)dataGridView.CurrentRow.Cells[8].Value, (bool)dataGridView.CurrentRow.Cells[9].Value, (bool)dataGridView.CurrentRow.Cells[10].Value, (bool)dataGridView.CurrentRow.Cells[11].Value, expire);
+                            tuesdayTableAdapter.InsertQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, (bool)dataGridView.CurrentRow.Cells[7].Value, (bool)dataGridView.CurrentRow.Cells[8].Value, (bool)dataGridView.CurrentRow.Cells[9].Value, (bool)dataGridView.CurrentRow.Cells[10].Value, (bool)dataGridView.CurrentRow.Cells[11].Value, (bool)dataGridView.CurrentRow.Cells[12].Value, expire);
                             tuesdayTableAdapter.Fill(socialPostSchedulerDataSet.Tuesday);
 
                             dataGridView.Rows[gridviewRowIndex].Cells[gridviewColIndex].Selected = true;
@@ -1573,7 +1611,7 @@ namespace SocialPostScheduler
                         }
                         if (dataGridView.Parent.Text == "Wednesday")
                         {
-                            wednesdayTableAdapter.InsertQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, (bool)dataGridView.CurrentRow.Cells[7].Value, (bool)dataGridView.CurrentRow.Cells[8].Value, (bool)dataGridView.CurrentRow.Cells[9].Value, (bool)dataGridView.CurrentRow.Cells[10].Value, (bool)dataGridView.CurrentRow.Cells[11].Value, expire);
+                            wednesdayTableAdapter.InsertQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, (bool)dataGridView.CurrentRow.Cells[7].Value, (bool)dataGridView.CurrentRow.Cells[8].Value, (bool)dataGridView.CurrentRow.Cells[9].Value, (bool)dataGridView.CurrentRow.Cells[10].Value, (bool)dataGridView.CurrentRow.Cells[11].Value, (bool)dataGridView.CurrentRow.Cells[12].Value, expire);
                             wednesdayTableAdapter.Fill(socialPostSchedulerDataSet.Wednesday);
 
                             dataGridView.Rows[gridviewRowIndex].Cells[gridviewColIndex].Selected = true;
@@ -1582,7 +1620,7 @@ namespace SocialPostScheduler
                         }
                         if (dataGridView.Parent.Text == "Thursday")
                         {
-                            thursdayTableAdapter.InsertQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, (bool)dataGridView.CurrentRow.Cells[7].Value, (bool)dataGridView.CurrentRow.Cells[8].Value, (bool)dataGridView.CurrentRow.Cells[9].Value, (bool)dataGridView.CurrentRow.Cells[10].Value, (bool)dataGridView.CurrentRow.Cells[11].Value, expire);
+                            thursdayTableAdapter.InsertQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, (bool)dataGridView.CurrentRow.Cells[7].Value, (bool)dataGridView.CurrentRow.Cells[8].Value, (bool)dataGridView.CurrentRow.Cells[9].Value, (bool)dataGridView.CurrentRow.Cells[10].Value, (bool)dataGridView.CurrentRow.Cells[11].Value, (bool)dataGridView.CurrentRow.Cells[12].Value, expire);
                             thursdayTableAdapter.Fill(socialPostSchedulerDataSet.Thursday);
 
                             dataGridView.Rows[gridviewRowIndex].Cells[gridviewColIndex].Selected = true;
@@ -1591,7 +1629,7 @@ namespace SocialPostScheduler
                         }
                         if (dataGridView.Parent.Text == "Friday")
                         {
-                            fridayTableAdapter.InsertQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, (bool)dataGridView.CurrentRow.Cells[7].Value, (bool)dataGridView.CurrentRow.Cells[8].Value, (bool)dataGridView.CurrentRow.Cells[9].Value, (bool)dataGridView.CurrentRow.Cells[10].Value, (bool)dataGridView.CurrentRow.Cells[11].Value, expire);
+                            fridayTableAdapter.InsertQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, (bool)dataGridView.CurrentRow.Cells[7].Value, (bool)dataGridView.CurrentRow.Cells[8].Value, (bool)dataGridView.CurrentRow.Cells[9].Value, (bool)dataGridView.CurrentRow.Cells[10].Value, (bool)dataGridView.CurrentRow.Cells[11].Value, (bool)dataGridView.CurrentRow.Cells[12].Value, expire);
                             fridayTableAdapter.Fill(socialPostSchedulerDataSet.Friday);
 
                             dataGridView.Rows[gridviewRowIndex].Cells[gridviewColIndex].Selected = true;
@@ -1600,7 +1638,7 @@ namespace SocialPostScheduler
                         }
                         if (dataGridView.Parent.Text == "Saturday")
                         {
-                            saturdayTableAdapter.InsertQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, (bool)dataGridView.CurrentRow.Cells[7].Value, (bool)dataGridView.CurrentRow.Cells[8].Value, (bool)dataGridView.CurrentRow.Cells[9].Value, (bool)dataGridView.CurrentRow.Cells[10].Value, (bool)dataGridView.CurrentRow.Cells[11].Value, expire);
+                            saturdayTableAdapter.InsertQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, (bool)dataGridView.CurrentRow.Cells[7].Value, (bool)dataGridView.CurrentRow.Cells[8].Value, (bool)dataGridView.CurrentRow.Cells[9].Value, (bool)dataGridView.CurrentRow.Cells[10].Value, (bool)dataGridView.CurrentRow.Cells[11].Value, (bool)dataGridView.CurrentRow.Cells[12].Value, expire);
                             saturdayTableAdapter.Fill(socialPostSchedulerDataSet.Saturday);
 
                             dataGridView.Rows[gridviewRowIndex].Cells[gridviewColIndex].Selected = true;
@@ -1613,7 +1651,10 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @MenuItemAddImage_Click(1): " + ex);
-                ShowWindow();
+                if (!Visible)
+                {
+                    ShowWindow();
+                }
                 tabControlOne.SelectedIndex = 4;
             }
         }
@@ -1644,14 +1685,14 @@ namespace SocialPostScheduler
                         }
 
                         DateTime? expire = null;
-                        if (!DBNull.Value.Equals(dataGridView.CurrentRow.Cells[12].Value))
+                        if (!DBNull.Value.Equals(dataGridView.CurrentRow.Cells[13].Value))
                         {
-                            expire = (DateTime)dataGridView.CurrentRow.Cells[12].Value;
+                            expire = (DateTime)dataGridView.CurrentRow.Cells[13].Value;
                         }
 
                         if (dataGridView.Parent.Text == "Sunday")
                         {
-                            sundayTableAdapter.UpdateQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, (bool)dataGridView.CurrentRow.Cells[7].Value, (bool)dataGridView.CurrentRow.Cells[8].Value, (bool)dataGridView.CurrentRow.Cells[9].Value, (bool)dataGridView.CurrentRow.Cells[10].Value, (bool)dataGridView.CurrentRow.Cells[11].Value, expire, (int)dataGridView.CurrentRow.Cells[0].Value);
+                            sundayTableAdapter.UpdateQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, (bool)dataGridView.CurrentRow.Cells[7].Value, (bool)dataGridView.CurrentRow.Cells[8].Value, (bool)dataGridView.CurrentRow.Cells[9].Value, (bool)dataGridView.CurrentRow.Cells[10].Value, (bool)dataGridView.CurrentRow.Cells[11].Value, (bool)dataGridView.CurrentRow.Cells[12].Value, expire, (int)dataGridView.CurrentRow.Cells[0].Value);
                             sundayTableAdapter.Fill(socialPostSchedulerDataSet.Sunday);
 
                             dataGridView.Rows[gridviewRowIndex].Cells[gridviewColIndex].Selected = true;
@@ -1661,7 +1702,7 @@ namespace SocialPostScheduler
 
                         if (dataGridView.Parent.Text == "Monday")
                         {
-                            mondayTableAdapter.UpdateQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, (bool)dataGridView.CurrentRow.Cells[7].Value, (bool)dataGridView.CurrentRow.Cells[8].Value, (bool)dataGridView.CurrentRow.Cells[9].Value, (bool)dataGridView.CurrentRow.Cells[10].Value, (bool)dataGridView.CurrentRow.Cells[11].Value, expire, (int)dataGridView.CurrentRow.Cells[0].Value);
+                            mondayTableAdapter.UpdateQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, (bool)dataGridView.CurrentRow.Cells[7].Value, (bool)dataGridView.CurrentRow.Cells[8].Value, (bool)dataGridView.CurrentRow.Cells[9].Value, (bool)dataGridView.CurrentRow.Cells[10].Value, (bool)dataGridView.CurrentRow.Cells[11].Value, (bool)dataGridView.CurrentRow.Cells[12].Value, expire, (int)dataGridView.CurrentRow.Cells[0].Value);
                             mondayTableAdapter.Fill(socialPostSchedulerDataSet.Monday);
 
                             dataGridView.Rows[gridviewRowIndex].Cells[gridviewColIndex].Selected = true;
@@ -1671,7 +1712,7 @@ namespace SocialPostScheduler
 
                         if (dataGridView.Parent.Text == "Tuesday")
                         {
-                            tuesdayTableAdapter.UpdateQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, (bool)dataGridView.CurrentRow.Cells[7].Value, (bool)dataGridView.CurrentRow.Cells[8].Value, (bool)dataGridView.CurrentRow.Cells[9].Value, (bool)dataGridView.CurrentRow.Cells[10].Value, (bool)dataGridView.CurrentRow.Cells[11].Value, expire, (int)dataGridView.CurrentRow.Cells[0].Value);
+                            tuesdayTableAdapter.UpdateQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, (bool)dataGridView.CurrentRow.Cells[7].Value, (bool)dataGridView.CurrentRow.Cells[8].Value, (bool)dataGridView.CurrentRow.Cells[9].Value, (bool)dataGridView.CurrentRow.Cells[10].Value, (bool)dataGridView.CurrentRow.Cells[11].Value, (bool)dataGridView.CurrentRow.Cells[12].Value, expire, (int)dataGridView.CurrentRow.Cells[0].Value);
                             tuesdayTableAdapter.Fill(socialPostSchedulerDataSet.Tuesday);
 
                             dataGridView.Rows[gridviewRowIndex].Cells[gridviewColIndex].Selected = true;
@@ -1681,7 +1722,7 @@ namespace SocialPostScheduler
 
                         if (dataGridView.Parent.Text == "Wednesday")
                         {
-                            wednesdayTableAdapter.UpdateQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, (bool)dataGridView.CurrentRow.Cells[7].Value, (bool)dataGridView.CurrentRow.Cells[8].Value, (bool)dataGridView.CurrentRow.Cells[9].Value, (bool)dataGridView.CurrentRow.Cells[10].Value, (bool)dataGridView.CurrentRow.Cells[11].Value, expire, (int)dataGridView.CurrentRow.Cells[0].Value);
+                            wednesdayTableAdapter.UpdateQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, (bool)dataGridView.CurrentRow.Cells[7].Value, (bool)dataGridView.CurrentRow.Cells[8].Value, (bool)dataGridView.CurrentRow.Cells[9].Value, (bool)dataGridView.CurrentRow.Cells[10].Value, (bool)dataGridView.CurrentRow.Cells[11].Value, (bool)dataGridView.CurrentRow.Cells[12].Value, expire, (int)dataGridView.CurrentRow.Cells[0].Value);
                             wednesdayTableAdapter.Fill(socialPostSchedulerDataSet.Wednesday);
 
                             dataGridView.Rows[gridviewRowIndex].Cells[gridviewColIndex].Selected = true;
@@ -1691,7 +1732,7 @@ namespace SocialPostScheduler
 
                         if (dataGridView.Parent.Text == "Thursday")
                         {
-                            thursdayTableAdapter.UpdateQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, (bool)dataGridView.CurrentRow.Cells[7].Value, (bool)dataGridView.CurrentRow.Cells[8].Value, (bool)dataGridView.CurrentRow.Cells[9].Value, (bool)dataGridView.CurrentRow.Cells[10].Value, (bool)dataGridView.CurrentRow.Cells[11].Value, expire, (int)dataGridView.CurrentRow.Cells[0].Value);
+                            thursdayTableAdapter.UpdateQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, (bool)dataGridView.CurrentRow.Cells[7].Value, (bool)dataGridView.CurrentRow.Cells[8].Value, (bool)dataGridView.CurrentRow.Cells[9].Value, (bool)dataGridView.CurrentRow.Cells[10].Value, (bool)dataGridView.CurrentRow.Cells[11].Value, (bool)dataGridView.CurrentRow.Cells[12].Value, expire, (int)dataGridView.CurrentRow.Cells[0].Value);
                             thursdayTableAdapter.Fill(socialPostSchedulerDataSet.Thursday);
 
                             dataGridView.Rows[gridviewRowIndex].Cells[gridviewColIndex].Selected = true;
@@ -1701,7 +1742,7 @@ namespace SocialPostScheduler
 
                         if (dataGridView.Parent.Text == "Friday")
                         {
-                            fridayTableAdapter.UpdateQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, (bool)dataGridView.CurrentRow.Cells[7].Value, (bool)dataGridView.CurrentRow.Cells[8].Value, (bool)dataGridView.CurrentRow.Cells[9].Value, (bool)dataGridView.CurrentRow.Cells[10].Value, (bool)dataGridView.CurrentRow.Cells[11].Value, expire, (int)dataGridView.CurrentRow.Cells[0].Value);
+                            fridayTableAdapter.UpdateQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, (bool)dataGridView.CurrentRow.Cells[7].Value, (bool)dataGridView.CurrentRow.Cells[8].Value, (bool)dataGridView.CurrentRow.Cells[9].Value, (bool)dataGridView.CurrentRow.Cells[10].Value, (bool)dataGridView.CurrentRow.Cells[11].Value, (bool)dataGridView.CurrentRow.Cells[12].Value, expire, (int)dataGridView.CurrentRow.Cells[0].Value);
                             fridayTableAdapter.Fill(socialPostSchedulerDataSet.Friday);
 
                             dataGridView.Rows[gridviewRowIndex].Cells[gridviewColIndex].Selected = true;
@@ -1711,7 +1752,7 @@ namespace SocialPostScheduler
 
                         if (dataGridView.Parent.Text == "Saturday")
                         {
-                            saturdayTableAdapter.UpdateQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, (bool)dataGridView.CurrentRow.Cells[7].Value, (bool)dataGridView.CurrentRow.Cells[8].Value, (bool)dataGridView.CurrentRow.Cells[9].Value, (bool)dataGridView.CurrentRow.Cells[10].Value, (bool)dataGridView.CurrentRow.Cells[11].Value, expire, (int)dataGridView.CurrentRow.Cells[0].Value);
+                            saturdayTableAdapter.UpdateQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, (bool)dataGridView.CurrentRow.Cells[7].Value, (bool)dataGridView.CurrentRow.Cells[8].Value, (bool)dataGridView.CurrentRow.Cells[9].Value, (bool)dataGridView.CurrentRow.Cells[10].Value, (bool)dataGridView.CurrentRow.Cells[11].Value, (bool)dataGridView.CurrentRow.Cells[12].Value, expire, (int)dataGridView.CurrentRow.Cells[0].Value);
                             saturdayTableAdapter.Fill(socialPostSchedulerDataSet.Saturday);
 
                             dataGridView.Rows[gridviewRowIndex].Cells[gridviewColIndex].Selected = true;
@@ -1724,7 +1765,10 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @MenuItemUpdateImage_Click(1): " + ex);
-                ShowWindow();
+                if (!Visible)
+                {
+                    ShowWindow();
+                }
                 tabControlOne.SelectedIndex = 4;
             }
         }
@@ -1738,7 +1782,10 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @MenuItemRemoveImage_Click(1): " + ex);
-                ShowWindow();
+                if (!Visible)
+                {
+                    ShowWindow();
+                }
                 tabControlOne.SelectedIndex = 4;
             }
         }
@@ -1759,7 +1806,10 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @MenuItemView_Click(1): " + ex);
-                ShowWindow();
+                if (!Visible)
+                {
+                    ShowWindow();
+                }
                 tabControlOne.SelectedIndex = 4;
             }
         }
@@ -1786,7 +1836,10 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @MenuItemSave_Click(1): " + ex);
-                ShowWindow();
+                if (!Visible)
+                {
+                    ShowWindow();
+                }
                 tabControlOne.SelectedIndex = 4;
             }
         }
@@ -1839,7 +1892,10 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @DataGridView_UserDeletingRow(1): " + ex);
-                ShowWindow();
+                if (!Visible)
+                {
+                    ShowWindow();
+                }
                 tabControlOne.SelectedIndex = 4;
             }
         }
@@ -1878,7 +1934,10 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @DataGridView1_CellValueChanged(1): " + ex);
-                ShowWindow();
+                if (!Visible)
+                {
+                    ShowWindow();
+                }
                 tabControlOne.SelectedIndex = 4;
             }
         }
@@ -1915,7 +1974,10 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @DataGridView2_CellValueChanged(1): " + ex);
-                ShowWindow();
+                if (!Visible)
+                {
+                    ShowWindow();
+                }
                 tabControlOne.SelectedIndex = 4;
             }
         }
@@ -1957,7 +2019,10 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @DataGridView3_CellValueChanged(1): " + ex);
-                ShowWindow();
+                if (!Visible)
+                {
+                    ShowWindow();
+                }
                 tabControlOne.SelectedIndex = 4;
             }
         }
@@ -1998,7 +2063,10 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @DataGridView4_CellValueChanged(1): " + ex);
-                ShowWindow();
+                if (!Visible)
+                {
+                    ShowWindow();
+                }
                 tabControlOne.SelectedIndex = 4;
             }
         }
@@ -2039,7 +2107,10 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @DataGridView5_CellValueChanged(1): " + ex);
-                ShowWindow();
+                if (!Visible)
+                {
+                    ShowWindow();
+                }
                 tabControlOne.SelectedIndex = 4;
             }
         }
@@ -2080,7 +2151,10 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @DataGridView6_CellValueChanged(1): " + ex);
-                ShowWindow();
+                if (!Visible)
+                {
+                    ShowWindow();
+                }
                 tabControlOne.SelectedIndex = 4;
             }
         }
@@ -2121,7 +2195,10 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @DataGridView7_CellValueChanged(1): " + ex);
-                ShowWindow();
+                if (!Visible)
+                {
+                    ShowWindow();
+                }
                 tabControlOne.SelectedIndex = 4;
             }
         }
@@ -2162,7 +2239,10 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @DataGridView8_CellValueChanged(1): " + ex);
-                ShowWindow();
+                if (!Visible)
+                {
+                    ShowWindow();
+                }
                 tabControlOne.SelectedIndex = 4;
             }
         }
@@ -2203,7 +2283,10 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @DataGridView9_CellValueChanged(1): " + ex);
-                ShowWindow();
+                if (!Visible)
+                {
+                    ShowWindow();
+                }
                 tabControlOne.SelectedIndex = 4;
             }
         }
@@ -2227,7 +2310,10 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @MenuItemScheduler_Click(1): " + ex);
-                ShowWindow();
+                if (!Visible)
+                {
+                    ShowWindow();
+                }
                 tabControlOne.SelectedIndex = 4;
             }
         }
@@ -2242,7 +2328,10 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @MenuItemClose_Click(1): " + ex);
-                ShowWindow();
+                if (!Visible)
+                {
+                    ShowWindow();
+                }
                 tabControlOne.SelectedIndex = 4;
             }
 
@@ -2482,7 +2571,10 @@ namespace SocialPostScheduler
             catch (SqlException ex)
             {
                 EasyLogger.Error("Scheduler - @CreateContextMenu(1): " + ex);
-                ShowWindow();
+                if (!Visible)
+                {
+                    ShowWindow();
+                }
                 tabControlOne.SelectedIndex = 4;
             }
         }
@@ -2497,7 +2589,10 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @ExitToolStripMenuItem_Click(1): " + ex);
-                ShowWindow();
+                if (!Visible)
+                {
+                    ShowWindow();
+                }
                 tabControlOne.SelectedIndex = 4;
             }
 
@@ -2647,7 +2742,10 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @PlatforMenuItem_Click(1): " + ex);
-                ShowWindow();
+                if (!Visible)
+                {
+                    ShowWindow();
+                }
                 tabControlOne.SelectedIndex = 4;
             }
         }
@@ -2685,6 +2783,11 @@ namespace SocialPostScheduler
                 {
                     cell11 = Convert.ToBoolean(dataGridView.CurrentRow.Cells[11].Value);
                 }
+                bool cell12 = false;
+                if (dataGridView.CurrentRow.Cells[12].Value != DBNull.Value)
+                {
+                    cell12 = Convert.ToBoolean(dataGridView.CurrentRow.Cells[12].Value);
+                }
 
                 if (dataGridView.CurrentRow.Cells[4].Value != DBNull.Value)
                 {
@@ -2704,16 +2807,16 @@ namespace SocialPostScheduler
                 }
 
                 DateTime? expire = null;
-                if (!DBNull.Value.Equals(dataGridView.CurrentRow.Cells[12].Value))
+                if (!DBNull.Value.Equals(dataGridView.CurrentRow.Cells[13].Value))
                 {
-                    expire = (DateTime)dataGridView.CurrentRow.Cells[12].Value;
+                    expire = (DateTime)dataGridView.CurrentRow.Cells[13].Value;
                 }
 
                 CheckLength();
 
                 if (dataGridView.Parent.Text == "Sunday")
                 {
-                    sundayTableAdapter.InsertQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, cell7, cell8, cell9, cell10, cell11, expire);
+                    sundayTableAdapter.InsertQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, cell7, cell8, cell9, cell10, cell11, cell12, expire);
                     sundayTableAdapter.Fill(socialPostSchedulerDataSet.Sunday);
 
                     dataGridView.Rows[row].Cells[col].Selected = true;
@@ -2722,7 +2825,7 @@ namespace SocialPostScheduler
                 }
                 if (dataGridView.Parent.Text == "Monday")
                 {
-                    mondayTableAdapter.InsertQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, cell7, cell8, cell9, cell10, cell11, expire);
+                    mondayTableAdapter.InsertQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, cell7, cell8, cell9, cell10, cell11, cell12, expire);
                     mondayTableAdapter.Fill(socialPostSchedulerDataSet.Monday);
 
                     dataGridView.Rows[row].Cells[col].Selected = true;
@@ -2731,7 +2834,7 @@ namespace SocialPostScheduler
                 }
                 if (dataGridView.Parent.Text == "Tuesday")
                 {
-                    tuesdayTableAdapter.InsertQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, cell7, cell8, cell9, cell10, cell11, expire);
+                    tuesdayTableAdapter.InsertQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, cell7, cell8, cell9, cell10, cell11, cell12, expire);
                     tuesdayTableAdapter.Fill(socialPostSchedulerDataSet.Tuesday);
 
                     dataGridView.Rows[row].Cells[col].Selected = true;
@@ -2740,7 +2843,7 @@ namespace SocialPostScheduler
                 }
                 if (dataGridView.Parent.Text == "Wednesday")
                 {
-                    wednesdayTableAdapter.InsertQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, cell7, cell8, cell9, cell10, cell11, expire);
+                    wednesdayTableAdapter.InsertQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, cell7, cell8, cell9, cell10, cell11, cell12, expire);
                     wednesdayTableAdapter.Fill(socialPostSchedulerDataSet.Wednesday);
 
                     dataGridView.Rows[row].Cells[col].Selected = true;
@@ -2749,7 +2852,7 @@ namespace SocialPostScheduler
                 }
                 if (dataGridView.Parent.Text == "Thursday")
                 {
-                    thursdayTableAdapter.InsertQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, cell7, cell8, cell9, cell10, cell11, expire);
+                    thursdayTableAdapter.InsertQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, cell7, cell8, cell9, cell10, cell11, cell12, expire);
                     thursdayTableAdapter.Fill(socialPostSchedulerDataSet.Thursday);
 
                     dataGridView.Rows[row].Cells[col].Selected = true;
@@ -2758,7 +2861,7 @@ namespace SocialPostScheduler
                 }
                 if (dataGridView.Parent.Text == "Friday")
                 {
-                    fridayTableAdapter.InsertQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, cell7, cell8, cell9, cell10, cell11, expire);
+                    fridayTableAdapter.InsertQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, cell7, cell8, cell9, cell10, cell11, cell12, expire);
                     fridayTableAdapter.Fill(socialPostSchedulerDataSet.Friday);
 
                     dataGridView.Rows[row].Cells[col].Selected = true;
@@ -2767,7 +2870,7 @@ namespace SocialPostScheduler
                 }
                 if (dataGridView.Parent.Text == "Saturday")
                 {
-                    saturdayTableAdapter.InsertQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, cell7, cell8, cell9, cell10, cell11, expire);
+                    saturdayTableAdapter.InsertQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, cell7, cell8, cell9, cell10, cell11, cell12, expire);
                     saturdayTableAdapter.Fill(socialPostSchedulerDataSet.Saturday);
 
                     dataGridView.Rows[row].Cells[col].Selected = true;
@@ -2778,7 +2881,10 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @InsertQuery(1): " + ex);
-                ShowWindow();
+                if (!Visible)
+                {
+                    ShowWindow();
+                }
                 tabControlOne.SelectedIndex = 4;
             }
         }
@@ -2814,6 +2920,11 @@ namespace SocialPostScheduler
                 {
                     cell11 = Convert.ToBoolean(dataGridView.CurrentRow.Cells[11].Value);
                 }
+                bool cell12 = false;
+                if (dataGridView.CurrentRow.Cells[12].Value != DBNull.Value)
+                {
+                    cell12 = Convert.ToBoolean(dataGridView.CurrentRow.Cells[12].Value);
+                }
 
                 if (dataGridView.CurrentRow.Cells[4].Value != DBNull.Value)
                 {
@@ -2833,16 +2944,16 @@ namespace SocialPostScheduler
                 }
 
                 DateTime? expire = null;
-                if (!DBNull.Value.Equals(dataGridView.CurrentRow.Cells[12].Value))
+                if (!DBNull.Value.Equals(dataGridView.CurrentRow.Cells[13].Value))
                 {
-                    expire = (DateTime)dataGridView.CurrentRow.Cells[12].Value;
+                    expire = (DateTime)dataGridView.CurrentRow.Cells[13].Value;
                 }
 
                 CheckLength();
 
                 if (dataGridView.Parent.Text == "Sunday")
                 {
-                    sundayTableAdapter.UpdateQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, cell7, cell8, cell9, cell10, cell11, expire, (int)dataGridView.CurrentRow.Cells[0].Value);
+                    sundayTableAdapter.UpdateQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, cell7, cell8, cell9, cell10, cell11, cell12, expire, (int)dataGridView.CurrentRow.Cells[0].Value);
 
                     sundayTableAdapter.Fill(socialPostSchedulerDataSet.Sunday);
 
@@ -2852,7 +2963,7 @@ namespace SocialPostScheduler
                 }
                 if (dataGridView.Parent.Text == "Monday")
                 {
-                    mondayTableAdapter.UpdateQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, cell7, cell8, cell9, cell10, cell11, expire, (int)dataGridView.CurrentRow.Cells[0].Value);
+                    mondayTableAdapter.UpdateQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, cell7, cell8, cell9, cell10, cell11, cell12, expire, (int)dataGridView.CurrentRow.Cells[0].Value);
                     mondayTableAdapter.Fill(socialPostSchedulerDataSet.Monday);
 
                     dataGridView.Rows[row].Cells[col].Selected = true;
@@ -2861,7 +2972,7 @@ namespace SocialPostScheduler
                 }
                 if (dataGridView.Parent.Text == "Tuesday")
                 {
-                    tuesdayTableAdapter.UpdateQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, cell7, cell8, cell9, cell10, cell11, expire, (int)dataGridView.CurrentRow.Cells[0].Value);
+                    tuesdayTableAdapter.UpdateQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, cell7, cell8, cell9, cell10, cell11, cell12, expire, (int)dataGridView.CurrentRow.Cells[0].Value);
                     tuesdayTableAdapter.Fill(socialPostSchedulerDataSet.Tuesday);
 
                     dataGridView.Rows[row].Cells[col].Selected = true;
@@ -2870,7 +2981,7 @@ namespace SocialPostScheduler
                 }
                 if (dataGridView.Parent.Text == "Wednesday")
                 {
-                    wednesdayTableAdapter.UpdateQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, cell7, cell8, cell9, cell10, cell11, expire, (int)dataGridView.CurrentRow.Cells[0].Value);
+                    wednesdayTableAdapter.UpdateQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, cell7, cell8, cell9, cell10, cell11, cell12, expire, (int)dataGridView.CurrentRow.Cells[0].Value);
                     wednesdayTableAdapter.Fill(socialPostSchedulerDataSet.Wednesday);
 
                     dataGridView.Rows[row].Cells[col].Selected = true;
@@ -2879,7 +2990,7 @@ namespace SocialPostScheduler
                 }
                 if (dataGridView.Parent.Text == "Thursday")
                 {
-                    thursdayTableAdapter.UpdateQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, cell7, cell8, cell9, cell10, cell11, expire, (int)dataGridView.CurrentRow.Cells[0].Value);
+                    thursdayTableAdapter.UpdateQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, cell7, cell8, cell9, cell10, cell11, cell12, expire, (int)dataGridView.CurrentRow.Cells[0].Value);
                     thursdayTableAdapter.Fill(socialPostSchedulerDataSet.Thursday);
 
                     dataGridView.Rows[row].Cells[col].Selected = true;
@@ -2888,7 +2999,7 @@ namespace SocialPostScheduler
                 }
                 if (dataGridView.Parent.Text == "Friday")
                 {
-                    fridayTableAdapter.UpdateQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, cell7, cell8, cell9, cell10, cell11, expire, (int)dataGridView.CurrentRow.Cells[0].Value);
+                    fridayTableAdapter.UpdateQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, cell7, cell8, cell9, cell10, cell11, cell12, expire, (int)dataGridView.CurrentRow.Cells[0].Value);
                     fridayTableAdapter.Fill(socialPostSchedulerDataSet.Friday);
 
                     dataGridView.Rows[row].Cells[col].Selected = true;
@@ -2897,7 +3008,7 @@ namespace SocialPostScheduler
                 }
                 if (dataGridView.Parent.Text == "Saturday")
                 {
-                    saturdayTableAdapter.UpdateQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, cell7, cell8, cell9, cell10, cell11, expire, (int)dataGridView.CurrentRow.Cells[0].Value);
+                    saturdayTableAdapter.UpdateQuery(dataGridView.CurrentRow.Cells[1].Value.ToString(), dataGridView.CurrentRow.Cells[2].Value.ToString(), dataGridView.CurrentRow.Cells[3].Value.ToString(), image, dataGridView.CurrentRow.Cells[5].Value.ToString(), time, cell7, cell8, cell9, cell10, cell11, cell12, expire, (int)dataGridView.CurrentRow.Cells[0].Value);
                     saturdayTableAdapter.Fill(socialPostSchedulerDataSet.Saturday);
 
                     dataGridView.Rows[row].Cells[col].Selected = true;
@@ -2908,7 +3019,10 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @UpdateQuery(1): " + ex);
-                ShowWindow();
+                if (!Visible)
+                {
+                    ShowWindow();
+                }
                 tabControlOne.SelectedIndex = 4;
             }
         }
@@ -2970,7 +3084,10 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 EasyLogger.Error("Scheduler - @Settings_FormClosing(1): " + ex);
-                ShowWindow();
+                if (!Visible)
+                {
+                    ShowWindow();
+                }
                 tabControlOne.SelectedIndex = 4;
             }
 

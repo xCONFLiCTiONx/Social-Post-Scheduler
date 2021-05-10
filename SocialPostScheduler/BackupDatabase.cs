@@ -15,8 +15,6 @@ namespace SocialPostScheduler
         {
             try
             {
-                EasyLogger.Info("Creating a new backup of the database...");
-
                 ProcessStartInfo startInfo = new ProcessStartInfo()
                 {
                     FileName = "sqllocaldb",
@@ -71,6 +69,8 @@ namespace SocialPostScheduler
                 ErrorsHaveOccurred = true;
                 EasyLogger.Error("BackupDatabase - @ExecuteBackup(2): " + ex);
             }
+
+            EasyLogger.Info("Successfully created a new backup of the database...");
         }
     }
 }

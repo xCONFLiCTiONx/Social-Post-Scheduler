@@ -26,6 +26,8 @@ namespace SocialPostScheduler
 
                 string responseString = await response.Content.ReadAsStringAsync();
 
+                EasyLogger.Info(responseString);
+
                 return "OK";
             }
             catch (Exception ex)
