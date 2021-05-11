@@ -58,13 +58,12 @@ namespace SocialPostScheduler
                     {
                         EasyLogger.Warning(response);
 
-                        Form.ActiveForm.Opacity = 0;
                         Form.ActiveForm.TopMost = true;
-                        Form.ActiveForm.Show();
-                        Form.ActiveForm.WindowState = FormWindowState.Normal;
                         Form.ActiveForm.WindowState = FormWindowState.Minimized;
-                        Form.ActiveForm.Opacity = 1;
+                        Form.ActiveForm.Show();
+                        Form.ActiveForm.ShowInTaskbar = true;
                         Form.ActiveForm.WindowState = FormWindowState.Normal;
+                        Form.ActiveForm.WindowState = Properties.Settings.Default.windowState;
                         Form.ActiveForm.BringToFront();
                         Form.ActiveForm.Focus();
                         Form.ActiveForm.Activate();
@@ -87,13 +86,12 @@ namespace SocialPostScheduler
                     {
                         EasyLogger.Warning(response);
 
-                        Form.ActiveForm.Opacity = 0;
                         Form.ActiveForm.TopMost = true;
-                        Form.ActiveForm.Show();
-                        Form.ActiveForm.WindowState = FormWindowState.Normal;
                         Form.ActiveForm.WindowState = FormWindowState.Minimized;
-                        Form.ActiveForm.Opacity = 1;
+                        Form.ActiveForm.Show();
+                        Form.ActiveForm.ShowInTaskbar = true;
                         Form.ActiveForm.WindowState = FormWindowState.Normal;
+                        Form.ActiveForm.WindowState = Properties.Settings.Default.windowState;
                         Form.ActiveForm.BringToFront();
                         Form.ActiveForm.Focus();
                         Form.ActiveForm.Activate();

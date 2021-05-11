@@ -935,9 +935,9 @@ namespace SocialPostScheduler {
             
             private global::System.Data.DataColumn columnWeek_5;
             
-            private global::System.Data.DataColumn columnExpire;
-            
             private global::System.Data.DataColumn columnWeek_6;
+            
+            private global::System.Data.DataColumn columnExpire;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -1070,17 +1070,17 @@ namespace SocialPostScheduler {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ExpireColumn {
+            public global::System.Data.DataColumn Week_6Column {
                 get {
-                    return this.columnExpire;
+                    return this.columnWeek_6;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Week_6Column {
+            public global::System.Data.DataColumn ExpireColumn {
                 get {
-                    return this.columnWeek_6;
+                    return this.columnExpire;
                 }
             }
             
@@ -1121,7 +1121,7 @@ namespace SocialPostScheduler {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FridayRow AddFridayRow(string Platform, string Page, string Message, byte[] Image, string Link, System.DateTime Time, bool Week_1, bool Week_2, bool Week_3, bool Week_4, bool Week_5, System.DateTime Expire, bool Week_6) {
+            public FridayRow AddFridayRow(string Platform, string Page, string Message, byte[] Image, string Link, System.DateTime Time, bool Week_1, bool Week_2, bool Week_3, bool Week_4, bool Week_5, bool Week_6, System.DateTime Expire) {
                 FridayRow rowFridayRow = ((FridayRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1136,8 +1136,8 @@ namespace SocialPostScheduler {
                         Week_3,
                         Week_4,
                         Week_5,
-                        Expire,
-                        Week_6};
+                        Week_6,
+                        Expire};
                 rowFridayRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFridayRow);
                 return rowFridayRow;
@@ -1179,8 +1179,8 @@ namespace SocialPostScheduler {
                 this.columnWeek_3 = base.Columns["Week 3"];
                 this.columnWeek_4 = base.Columns["Week 4"];
                 this.columnWeek_5 = base.Columns["Week 5"];
-                this.columnExpire = base.Columns["Expire"];
                 this.columnWeek_6 = base.Columns["Week 6"];
+                this.columnExpire = base.Columns["Expire"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1210,10 +1210,10 @@ namespace SocialPostScheduler {
                 base.Columns.Add(this.columnWeek_4);
                 this.columnWeek_5 = new global::System.Data.DataColumn("Week 5", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWeek_5);
-                this.columnExpire = new global::System.Data.DataColumn("Expire", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnExpire);
                 this.columnWeek_6 = new global::System.Data.DataColumn("Week 6", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWeek_6);
+                this.columnExpire = new global::System.Data.DataColumn("Expire", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnExpire);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
@@ -1383,9 +1383,9 @@ namespace SocialPostScheduler {
             
             private global::System.Data.DataColumn columnWeek_5;
             
-            private global::System.Data.DataColumn columnExpire;
-            
             private global::System.Data.DataColumn columnWeek_6;
+            
+            private global::System.Data.DataColumn columnExpire;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -1518,17 +1518,17 @@ namespace SocialPostScheduler {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ExpireColumn {
+            public global::System.Data.DataColumn Week_6Column {
                 get {
-                    return this.columnExpire;
+                    return this.columnWeek_6;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Week_6Column {
+            public global::System.Data.DataColumn ExpireColumn {
                 get {
-                    return this.columnWeek_6;
+                    return this.columnExpire;
                 }
             }
             
@@ -1569,7 +1569,7 @@ namespace SocialPostScheduler {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public MondayRow AddMondayRow(string Platform, string Page, string Message, byte[] Image, string Link, System.DateTime Time, bool Week_1, bool Week_2, bool Week_3, bool Week_4, bool Week_5, System.DateTime Expire, bool Week_6) {
+            public MondayRow AddMondayRow(string Platform, string Page, string Message, byte[] Image, string Link, System.DateTime Time, bool Week_1, bool Week_2, bool Week_3, bool Week_4, bool Week_5, bool Week_6, System.DateTime Expire) {
                 MondayRow rowMondayRow = ((MondayRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1584,8 +1584,8 @@ namespace SocialPostScheduler {
                         Week_3,
                         Week_4,
                         Week_5,
-                        Expire,
-                        Week_6};
+                        Week_6,
+                        Expire};
                 rowMondayRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowMondayRow);
                 return rowMondayRow;
@@ -1627,8 +1627,8 @@ namespace SocialPostScheduler {
                 this.columnWeek_3 = base.Columns["Week 3"];
                 this.columnWeek_4 = base.Columns["Week 4"];
                 this.columnWeek_5 = base.Columns["Week 5"];
-                this.columnExpire = base.Columns["Expire"];
                 this.columnWeek_6 = base.Columns["Week 6"];
+                this.columnExpire = base.Columns["Expire"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1658,10 +1658,10 @@ namespace SocialPostScheduler {
                 base.Columns.Add(this.columnWeek_4);
                 this.columnWeek_5 = new global::System.Data.DataColumn("Week 5", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWeek_5);
-                this.columnExpire = new global::System.Data.DataColumn("Expire", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnExpire);
                 this.columnWeek_6 = new global::System.Data.DataColumn("Week 6", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWeek_6);
+                this.columnExpire = new global::System.Data.DataColumn("Expire", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnExpire);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
@@ -1831,9 +1831,9 @@ namespace SocialPostScheduler {
             
             private global::System.Data.DataColumn columnWeek_5;
             
-            private global::System.Data.DataColumn columnExpire;
-            
             private global::System.Data.DataColumn columnWeek_6;
+            
+            private global::System.Data.DataColumn columnExpire;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -1966,17 +1966,17 @@ namespace SocialPostScheduler {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ExpireColumn {
+            public global::System.Data.DataColumn Week_6Column {
                 get {
-                    return this.columnExpire;
+                    return this.columnWeek_6;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Week_6Column {
+            public global::System.Data.DataColumn ExpireColumn {
                 get {
-                    return this.columnWeek_6;
+                    return this.columnExpire;
                 }
             }
             
@@ -2017,7 +2017,7 @@ namespace SocialPostScheduler {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SaturdayRow AddSaturdayRow(string Platform, string Page, string Message, byte[] Image, string Link, System.DateTime Time, bool Week_1, bool Week_2, bool Week_3, bool Week_4, bool Week_5, System.DateTime Expire, bool Week_6) {
+            public SaturdayRow AddSaturdayRow(string Platform, string Page, string Message, byte[] Image, string Link, System.DateTime Time, bool Week_1, bool Week_2, bool Week_3, bool Week_4, bool Week_5, bool Week_6, System.DateTime Expire) {
                 SaturdayRow rowSaturdayRow = ((SaturdayRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -2032,8 +2032,8 @@ namespace SocialPostScheduler {
                         Week_3,
                         Week_4,
                         Week_5,
-                        Expire,
-                        Week_6};
+                        Week_6,
+                        Expire};
                 rowSaturdayRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSaturdayRow);
                 return rowSaturdayRow;
@@ -2075,8 +2075,8 @@ namespace SocialPostScheduler {
                 this.columnWeek_3 = base.Columns["Week 3"];
                 this.columnWeek_4 = base.Columns["Week 4"];
                 this.columnWeek_5 = base.Columns["Week 5"];
-                this.columnExpire = base.Columns["Expire"];
                 this.columnWeek_6 = base.Columns["Week 6"];
+                this.columnExpire = base.Columns["Expire"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2106,10 +2106,10 @@ namespace SocialPostScheduler {
                 base.Columns.Add(this.columnWeek_4);
                 this.columnWeek_5 = new global::System.Data.DataColumn("Week 5", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWeek_5);
-                this.columnExpire = new global::System.Data.DataColumn("Expire", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnExpire);
                 this.columnWeek_6 = new global::System.Data.DataColumn("Week 6", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWeek_6);
+                this.columnExpire = new global::System.Data.DataColumn("Expire", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnExpire);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
@@ -2279,9 +2279,9 @@ namespace SocialPostScheduler {
             
             private global::System.Data.DataColumn columnWeek_5;
             
-            private global::System.Data.DataColumn columnExpire;
-            
             private global::System.Data.DataColumn columnWeek_6;
+            
+            private global::System.Data.DataColumn columnExpire;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -2414,17 +2414,17 @@ namespace SocialPostScheduler {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ExpireColumn {
+            public global::System.Data.DataColumn Week_6Column {
                 get {
-                    return this.columnExpire;
+                    return this.columnWeek_6;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Week_6Column {
+            public global::System.Data.DataColumn ExpireColumn {
                 get {
-                    return this.columnWeek_6;
+                    return this.columnExpire;
                 }
             }
             
@@ -2465,7 +2465,7 @@ namespace SocialPostScheduler {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SundayRow AddSundayRow(string Platform, string Page, string Message, byte[] Image, string Link, System.DateTime Time, bool Week_1, bool Week_2, bool Week_3, bool Week_4, bool Week_5, System.DateTime Expire, bool Week_6) {
+            public SundayRow AddSundayRow(string Platform, string Page, string Message, byte[] Image, string Link, System.DateTime Time, bool Week_1, bool Week_2, bool Week_3, bool Week_4, bool Week_5, bool Week_6, System.DateTime Expire) {
                 SundayRow rowSundayRow = ((SundayRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -2480,8 +2480,8 @@ namespace SocialPostScheduler {
                         Week_3,
                         Week_4,
                         Week_5,
-                        Expire,
-                        Week_6};
+                        Week_6,
+                        Expire};
                 rowSundayRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSundayRow);
                 return rowSundayRow;
@@ -2523,8 +2523,8 @@ namespace SocialPostScheduler {
                 this.columnWeek_3 = base.Columns["Week 3"];
                 this.columnWeek_4 = base.Columns["Week 4"];
                 this.columnWeek_5 = base.Columns["Week 5"];
-                this.columnExpire = base.Columns["Expire"];
                 this.columnWeek_6 = base.Columns["Week 6"];
+                this.columnExpire = base.Columns["Expire"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2554,10 +2554,10 @@ namespace SocialPostScheduler {
                 base.Columns.Add(this.columnWeek_4);
                 this.columnWeek_5 = new global::System.Data.DataColumn("Week 5", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWeek_5);
-                this.columnExpire = new global::System.Data.DataColumn("Expire", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnExpire);
                 this.columnWeek_6 = new global::System.Data.DataColumn("Week 6", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWeek_6);
+                this.columnExpire = new global::System.Data.DataColumn("Expire", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnExpire);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
@@ -2727,9 +2727,9 @@ namespace SocialPostScheduler {
             
             private global::System.Data.DataColumn columnWeek_5;
             
-            private global::System.Data.DataColumn columnExpire;
-            
             private global::System.Data.DataColumn columnWeek_6;
+            
+            private global::System.Data.DataColumn columnExpire;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -2862,17 +2862,17 @@ namespace SocialPostScheduler {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ExpireColumn {
+            public global::System.Data.DataColumn Week_6Column {
                 get {
-                    return this.columnExpire;
+                    return this.columnWeek_6;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Week_6Column {
+            public global::System.Data.DataColumn ExpireColumn {
                 get {
-                    return this.columnWeek_6;
+                    return this.columnExpire;
                 }
             }
             
@@ -2913,7 +2913,7 @@ namespace SocialPostScheduler {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ThursdayRow AddThursdayRow(string Platform, string Page, string Message, byte[] Image, string Link, System.DateTime Time, bool Week_1, bool Week_2, bool Week_3, bool Week_4, bool Week_5, System.DateTime Expire, bool Week_6) {
+            public ThursdayRow AddThursdayRow(string Platform, string Page, string Message, byte[] Image, string Link, System.DateTime Time, bool Week_1, bool Week_2, bool Week_3, bool Week_4, bool Week_5, bool Week_6, System.DateTime Expire) {
                 ThursdayRow rowThursdayRow = ((ThursdayRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -2928,8 +2928,8 @@ namespace SocialPostScheduler {
                         Week_3,
                         Week_4,
                         Week_5,
-                        Expire,
-                        Week_6};
+                        Week_6,
+                        Expire};
                 rowThursdayRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowThursdayRow);
                 return rowThursdayRow;
@@ -2971,8 +2971,8 @@ namespace SocialPostScheduler {
                 this.columnWeek_3 = base.Columns["Week 3"];
                 this.columnWeek_4 = base.Columns["Week 4"];
                 this.columnWeek_5 = base.Columns["Week 5"];
-                this.columnExpire = base.Columns["Expire"];
                 this.columnWeek_6 = base.Columns["Week 6"];
+                this.columnExpire = base.Columns["Expire"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3002,10 +3002,10 @@ namespace SocialPostScheduler {
                 base.Columns.Add(this.columnWeek_4);
                 this.columnWeek_5 = new global::System.Data.DataColumn("Week 5", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWeek_5);
-                this.columnExpire = new global::System.Data.DataColumn("Expire", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnExpire);
                 this.columnWeek_6 = new global::System.Data.DataColumn("Week 6", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWeek_6);
+                this.columnExpire = new global::System.Data.DataColumn("Expire", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnExpire);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
@@ -3175,9 +3175,9 @@ namespace SocialPostScheduler {
             
             private global::System.Data.DataColumn columnWeek_5;
             
-            private global::System.Data.DataColumn columnExpire;
-            
             private global::System.Data.DataColumn columnWeek_6;
+            
+            private global::System.Data.DataColumn columnExpire;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -3310,17 +3310,17 @@ namespace SocialPostScheduler {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ExpireColumn {
+            public global::System.Data.DataColumn Week_6Column {
                 get {
-                    return this.columnExpire;
+                    return this.columnWeek_6;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Week_6Column {
+            public global::System.Data.DataColumn ExpireColumn {
                 get {
-                    return this.columnWeek_6;
+                    return this.columnExpire;
                 }
             }
             
@@ -3361,7 +3361,7 @@ namespace SocialPostScheduler {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public TuesdayRow AddTuesdayRow(string Platform, string Page, string Message, byte[] Image, string Link, System.DateTime Time, bool Week_1, bool Week_2, bool Week_3, bool Week_4, bool Week_5, System.DateTime Expire, bool Week_6) {
+            public TuesdayRow AddTuesdayRow(string Platform, string Page, string Message, byte[] Image, string Link, System.DateTime Time, bool Week_1, bool Week_2, bool Week_3, bool Week_4, bool Week_5, bool Week_6, System.DateTime Expire) {
                 TuesdayRow rowTuesdayRow = ((TuesdayRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -3376,8 +3376,8 @@ namespace SocialPostScheduler {
                         Week_3,
                         Week_4,
                         Week_5,
-                        Expire,
-                        Week_6};
+                        Week_6,
+                        Expire};
                 rowTuesdayRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTuesdayRow);
                 return rowTuesdayRow;
@@ -3419,8 +3419,8 @@ namespace SocialPostScheduler {
                 this.columnWeek_3 = base.Columns["Week 3"];
                 this.columnWeek_4 = base.Columns["Week 4"];
                 this.columnWeek_5 = base.Columns["Week 5"];
-                this.columnExpire = base.Columns["Expire"];
                 this.columnWeek_6 = base.Columns["Week 6"];
+                this.columnExpire = base.Columns["Expire"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3450,10 +3450,10 @@ namespace SocialPostScheduler {
                 base.Columns.Add(this.columnWeek_4);
                 this.columnWeek_5 = new global::System.Data.DataColumn("Week 5", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWeek_5);
-                this.columnExpire = new global::System.Data.DataColumn("Expire", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnExpire);
                 this.columnWeek_6 = new global::System.Data.DataColumn("Week 6", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWeek_6);
+                this.columnExpire = new global::System.Data.DataColumn("Expire", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnExpire);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
@@ -3960,9 +3960,9 @@ namespace SocialPostScheduler {
             
             private global::System.Data.DataColumn columnWeek_5;
             
-            private global::System.Data.DataColumn columnExpire;
-            
             private global::System.Data.DataColumn columnWeek_6;
+            
+            private global::System.Data.DataColumn columnExpire;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -4095,17 +4095,17 @@ namespace SocialPostScheduler {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ExpireColumn {
+            public global::System.Data.DataColumn Week_6Column {
                 get {
-                    return this.columnExpire;
+                    return this.columnWeek_6;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Week_6Column {
+            public global::System.Data.DataColumn ExpireColumn {
                 get {
-                    return this.columnWeek_6;
+                    return this.columnExpire;
                 }
             }
             
@@ -4146,7 +4146,7 @@ namespace SocialPostScheduler {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public WednesdayRow AddWednesdayRow(string Platform, string Page, string Message, byte[] Image, string Link, System.DateTime Time, bool Week_1, bool Week_2, bool Week_3, bool Week_4, bool Week_5, System.DateTime Expire, bool Week_6) {
+            public WednesdayRow AddWednesdayRow(string Platform, string Page, string Message, byte[] Image, string Link, System.DateTime Time, bool Week_1, bool Week_2, bool Week_3, bool Week_4, bool Week_5, bool Week_6, System.DateTime Expire) {
                 WednesdayRow rowWednesdayRow = ((WednesdayRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -4161,8 +4161,8 @@ namespace SocialPostScheduler {
                         Week_3,
                         Week_4,
                         Week_5,
-                        Expire,
-                        Week_6};
+                        Week_6,
+                        Expire};
                 rowWednesdayRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowWednesdayRow);
                 return rowWednesdayRow;
@@ -4204,8 +4204,8 @@ namespace SocialPostScheduler {
                 this.columnWeek_3 = base.Columns["Week 3"];
                 this.columnWeek_4 = base.Columns["Week 4"];
                 this.columnWeek_5 = base.Columns["Week 5"];
-                this.columnExpire = base.Columns["Expire"];
                 this.columnWeek_6 = base.Columns["Week 6"];
+                this.columnExpire = base.Columns["Expire"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4235,10 +4235,10 @@ namespace SocialPostScheduler {
                 base.Columns.Add(this.columnWeek_4);
                 this.columnWeek_5 = new global::System.Data.DataColumn("Week 5", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWeek_5);
-                this.columnExpire = new global::System.Data.DataColumn("Expire", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnExpire);
                 this.columnWeek_6 = new global::System.Data.DataColumn("Week 6", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWeek_6);
+                this.columnExpire = new global::System.Data.DataColumn("Expire", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnExpire);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
@@ -4774,22 +4774,6 @@ namespace SocialPostScheduler {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime Expire {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableFriday.ExpireColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Expire\' in table \'Friday\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableFriday.ExpireColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Week_6 {
                 get {
                     try {
@@ -4801,6 +4785,22 @@ namespace SocialPostScheduler {
                 }
                 set {
                     this[this.tableFriday.Week_6Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime Expire {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableFriday.ExpireColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Expire\' in table \'Friday\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFriday.ExpireColumn] = value;
                 }
             }
             
@@ -4938,18 +4938,6 @@ namespace SocialPostScheduler {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsExpireNull() {
-                return this.IsNull(this.tableFriday.ExpireColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetExpireNull() {
-                this[this.tableFriday.ExpireColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsWeek_6Null() {
                 return this.IsNull(this.tableFriday.Week_6Column);
             }
@@ -4958,6 +4946,18 @@ namespace SocialPostScheduler {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetWeek_6Null() {
                 this[this.tableFriday.Week_6Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsExpireNull() {
+                return this.IsNull(this.tableFriday.ExpireColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetExpireNull() {
+                this[this.tableFriday.ExpireColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -5164,22 +5164,6 @@ namespace SocialPostScheduler {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime Expire {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableMonday.ExpireColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Expire\' in table \'Monday\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableMonday.ExpireColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Week_6 {
                 get {
                     try {
@@ -5191,6 +5175,22 @@ namespace SocialPostScheduler {
                 }
                 set {
                     this[this.tableMonday.Week_6Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime Expire {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableMonday.ExpireColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Expire\' in table \'Monday\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMonday.ExpireColumn] = value;
                 }
             }
             
@@ -5328,18 +5328,6 @@ namespace SocialPostScheduler {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsExpireNull() {
-                return this.IsNull(this.tableMonday.ExpireColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetExpireNull() {
-                this[this.tableMonday.ExpireColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsWeek_6Null() {
                 return this.IsNull(this.tableMonday.Week_6Column);
             }
@@ -5348,6 +5336,18 @@ namespace SocialPostScheduler {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetWeek_6Null() {
                 this[this.tableMonday.Week_6Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsExpireNull() {
+                return this.IsNull(this.tableMonday.ExpireColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetExpireNull() {
+                this[this.tableMonday.ExpireColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -5554,22 +5554,6 @@ namespace SocialPostScheduler {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime Expire {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableSaturday.ExpireColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Expire\' in table \'Saturday\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSaturday.ExpireColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Week_6 {
                 get {
                     try {
@@ -5581,6 +5565,22 @@ namespace SocialPostScheduler {
                 }
                 set {
                     this[this.tableSaturday.Week_6Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime Expire {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableSaturday.ExpireColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Expire\' in table \'Saturday\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSaturday.ExpireColumn] = value;
                 }
             }
             
@@ -5718,18 +5718,6 @@ namespace SocialPostScheduler {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsExpireNull() {
-                return this.IsNull(this.tableSaturday.ExpireColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetExpireNull() {
-                this[this.tableSaturday.ExpireColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsWeek_6Null() {
                 return this.IsNull(this.tableSaturday.Week_6Column);
             }
@@ -5738,6 +5726,18 @@ namespace SocialPostScheduler {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetWeek_6Null() {
                 this[this.tableSaturday.Week_6Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsExpireNull() {
+                return this.IsNull(this.tableSaturday.ExpireColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetExpireNull() {
+                this[this.tableSaturday.ExpireColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -5944,22 +5944,6 @@ namespace SocialPostScheduler {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime Expire {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableSunday.ExpireColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Expire\' in table \'Sunday\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSunday.ExpireColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Week_6 {
                 get {
                     try {
@@ -5971,6 +5955,22 @@ namespace SocialPostScheduler {
                 }
                 set {
                     this[this.tableSunday.Week_6Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime Expire {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableSunday.ExpireColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Expire\' in table \'Sunday\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSunday.ExpireColumn] = value;
                 }
             }
             
@@ -6108,18 +6108,6 @@ namespace SocialPostScheduler {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsExpireNull() {
-                return this.IsNull(this.tableSunday.ExpireColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetExpireNull() {
-                this[this.tableSunday.ExpireColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsWeek_6Null() {
                 return this.IsNull(this.tableSunday.Week_6Column);
             }
@@ -6128,6 +6116,18 @@ namespace SocialPostScheduler {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetWeek_6Null() {
                 this[this.tableSunday.Week_6Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsExpireNull() {
+                return this.IsNull(this.tableSunday.ExpireColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetExpireNull() {
+                this[this.tableSunday.ExpireColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -6334,22 +6334,6 @@ namespace SocialPostScheduler {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime Expire {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableThursday.ExpireColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Expire\' in table \'Thursday\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableThursday.ExpireColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Week_6 {
                 get {
                     try {
@@ -6361,6 +6345,22 @@ namespace SocialPostScheduler {
                 }
                 set {
                     this[this.tableThursday.Week_6Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime Expire {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableThursday.ExpireColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Expire\' in table \'Thursday\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableThursday.ExpireColumn] = value;
                 }
             }
             
@@ -6498,18 +6498,6 @@ namespace SocialPostScheduler {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsExpireNull() {
-                return this.IsNull(this.tableThursday.ExpireColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetExpireNull() {
-                this[this.tableThursday.ExpireColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsWeek_6Null() {
                 return this.IsNull(this.tableThursday.Week_6Column);
             }
@@ -6518,6 +6506,18 @@ namespace SocialPostScheduler {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetWeek_6Null() {
                 this[this.tableThursday.Week_6Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsExpireNull() {
+                return this.IsNull(this.tableThursday.ExpireColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetExpireNull() {
+                this[this.tableThursday.ExpireColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -6724,22 +6724,6 @@ namespace SocialPostScheduler {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime Expire {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableTuesday.ExpireColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Expire\' in table \'Tuesday\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableTuesday.ExpireColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Week_6 {
                 get {
                     try {
@@ -6751,6 +6735,22 @@ namespace SocialPostScheduler {
                 }
                 set {
                     this[this.tableTuesday.Week_6Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime Expire {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableTuesday.ExpireColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Expire\' in table \'Tuesday\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTuesday.ExpireColumn] = value;
                 }
             }
             
@@ -6888,18 +6888,6 @@ namespace SocialPostScheduler {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsExpireNull() {
-                return this.IsNull(this.tableTuesday.ExpireColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetExpireNull() {
-                this[this.tableTuesday.ExpireColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsWeek_6Null() {
                 return this.IsNull(this.tableTuesday.Week_6Column);
             }
@@ -6908,6 +6896,18 @@ namespace SocialPostScheduler {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetWeek_6Null() {
                 this[this.tableTuesday.Week_6Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsExpireNull() {
+                return this.IsNull(this.tableTuesday.ExpireColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetExpireNull() {
+                this[this.tableTuesday.ExpireColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -7280,22 +7280,6 @@ namespace SocialPostScheduler {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime Expire {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableWednesday.ExpireColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Expire\' in table \'Wednesday\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableWednesday.ExpireColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Week_6 {
                 get {
                     try {
@@ -7307,6 +7291,22 @@ namespace SocialPostScheduler {
                 }
                 set {
                     this[this.tableWednesday.Week_6Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime Expire {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableWednesday.ExpireColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Expire\' in table \'Wednesday\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableWednesday.ExpireColumn] = value;
                 }
             }
             
@@ -7444,18 +7444,6 @@ namespace SocialPostScheduler {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsExpireNull() {
-                return this.IsNull(this.tableWednesday.ExpireColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetExpireNull() {
-                this[this.tableWednesday.ExpireColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsWeek_6Null() {
                 return this.IsNull(this.tableWednesday.Week_6Column);
             }
@@ -7464,6 +7452,18 @@ namespace SocialPostScheduler {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetWeek_6Null() {
                 this[this.tableWednesday.Week_6Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsExpireNull() {
+                return this.IsNull(this.tableWednesday.ExpireColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetExpireNull() {
+                this[this.tableWednesday.ExpireColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -7976,9 +7976,9 @@ SELECT Id, PAGE_NAME, PAGE_ID, USER_TOKEN, APP_SECRET, APP_ID, USER_ID FROM Face
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "INSERT INTO Facebook\n                         (PAGE_NAME, PAGE_ID, USER_TOKEN, AP" +
-                "P_SECRET, APP_ID, USER_ID)\nVALUES        (@PAGE_NAME,@PAGE_ID,@USER_TOKEN,@APP_S" +
-                "ECRET,@APP_ID,@USER_ID)";
+            this._commandCollection[2].CommandText = "INSERT INTO Facebook\r\n                         (PAGE_NAME, PAGE_ID, USER_TOKEN, A" +
+                "PP_SECRET, APP_ID, USER_ID)\r\nVALUES        (@PAGE_NAME,@PAGE_ID,@USER_TOKEN,@APP" +
+                "_SECRET,@APP_ID,@USER_ID)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PAGE_NAME", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, "PAGE_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PAGE_ID", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "PAGE_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -7988,9 +7988,9 @@ SELECT Id, PAGE_NAME, PAGE_ID, USER_TOKEN, APP_SECRET, APP_ID, USER_ID FROM Face
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@USER_ID", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "USER_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "UPDATE       Facebook\nSET                PAGE_NAME = @PAGE_NAME, PAGE_ID = @PAGE_" +
-                "ID, USER_TOKEN = @USER_TOKEN, APP_SECRET = @APP_SECRET, APP_ID = @APP_ID, USER_I" +
-                "D = @USER_ID\nWHERE        (Id = @Original_Id)";
+            this._commandCollection[3].CommandText = "UPDATE       Facebook\r\nSET                PAGE_NAME = @PAGE_NAME, PAGE_ID = @PAGE" +
+                "_ID, USER_TOKEN = @USER_TOKEN, APP_SECRET = @APP_SECRET, APP_ID = @APP_ID, USER_" +
+                "ID = @USER_ID\nWHERE        (Id = @Original_Id)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PAGE_NAME", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, "PAGE_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PAGE_ID", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "PAGE_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -8541,12 +8541,12 @@ SELECT Id, PAGE_NAME, PAGE_ID, USER_TOKEN, APP_SECRET, APP_ID, USER_ID FROM Face
             tableMapping.ColumnMappings.Add("Week 3", "Week 3");
             tableMapping.ColumnMappings.Add("Week 4", "Week 4");
             tableMapping.ColumnMappings.Add("Week 5", "Week 5");
-            tableMapping.ColumnMappings.Add("Expire", "Expire");
             tableMapping.ColumnMappings.Add("Week 6", "Week 6");
+            tableMapping.ColumnMappings.Add("Expire", "Expire");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Friday] WHERE (([Id] = @Original_Id) AND ((@IsNull_Platform = 1 AND [Platform] IS NULL) OR ([Platform] = @Original_Platform)) AND ((@IsNull_Page = 1 AND [Page] IS NULL) OR ([Page] = @Original_Page)) AND ((@IsNull_Time = 1 AND [Time] IS NULL) OR ([Time] = @Original_Time)) AND ((@IsNull_Week_1 = 1 AND [Week 1] IS NULL) OR ([Week 1] = @Original_Week_1)) AND ((@IsNull_Week_2 = 1 AND [Week 2] IS NULL) OR ([Week 2] = @Original_Week_2)) AND ((@IsNull_Week_3 = 1 AND [Week 3] IS NULL) OR ([Week 3] = @Original_Week_3)) AND ((@IsNull_Week_4 = 1 AND [Week 4] IS NULL) OR ([Week 4] = @Original_Week_4)) AND ((@IsNull_Week_5 = 1 AND [Week 5] IS NULL) OR ([Week 5] = @Original_Week_5)) AND ((@IsNull_Expire = 1 AND [Expire] IS NULL) OR ([Expire] = @Original_Expire)) AND ((@IsNull_Week_6 = 1 AND [Week 6] IS NULL) OR ([Week 6] = @Original_Week_6)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Friday] WHERE (([Id] = @Original_Id) AND ((@IsNull_Platform = 1 AND [Platform] IS NULL) OR ([Platform] = @Original_Platform)) AND ((@IsNull_Page = 1 AND [Page] IS NULL) OR ([Page] = @Original_Page)) AND ((@IsNull_Time = 1 AND [Time] IS NULL) OR ([Time] = @Original_Time)) AND ((@IsNull_Week_1 = 1 AND [Week 1] IS NULL) OR ([Week 1] = @Original_Week_1)) AND ((@IsNull_Week_2 = 1 AND [Week 2] IS NULL) OR ([Week 2] = @Original_Week_2)) AND ((@IsNull_Week_3 = 1 AND [Week 3] IS NULL) OR ([Week 3] = @Original_Week_3)) AND ((@IsNull_Week_4 = 1 AND [Week 4] IS NULL) OR ([Week 4] = @Original_Week_4)) AND ((@IsNull_Week_5 = 1 AND [Week 5] IS NULL) OR ([Week 5] = @Original_Week_5)) AND ((@IsNull_Week_6 = 1 AND [Week 6] IS NULL) OR ([Week 6] = @Original_Week_6)) AND ((@IsNull_Expire = 1 AND [Expire] IS NULL) OR ([Expire] = @Original_Expire)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Platform", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -8565,14 +8565,14 @@ SELECT Id, PAGE_NAME, PAGE_ID, USER_TOKEN, APP_SECRET, APP_ID, USER_ID FROM Face
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_4", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 4", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Week_5", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_5", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Expire", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Week_6", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_6", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Expire", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Friday] ([Platform], [Page], [Message], [Image], [Link], [Time], [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], [Expire], [Week 6]) VALUES (@Platform, @Page, @Message, @Image, @Link, @Time, @Week_1, @Week_2, @Week_3, @Week_4, @Week_5, @Expire, @Week_6);
-SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], Expire, [Week 6] FROM Friday WHERE (Id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Friday] ([Platform], [Page], [Message], [Image], [Link], [Time], [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], [Week 6], [Expire]) VALUES (@Platform, @Page, @Message, @Image, @Link, @Time, @Week_1, @Week_2, @Week_3, @Week_4, @Week_5, @Week_6, @Expire);
+SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], [Week 6], Expire FROM Friday WHERE (Id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Platform", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Page", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Page", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -8585,12 +8585,12 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_3", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 3", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_4", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 4", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_5", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_6", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [Friday] SET [Platform] = @Platform, [Page] = @Page, [Message] = @Message, [Image] = @Image, [Link] = @Link, [Time] = @Time, [Week 1] = @Week_1, [Week 2] = @Week_2, [Week 3] = @Week_3, [Week 4] = @Week_4, [Week 5] = @Week_5, [Expire] = @Expire, [Week 6] = @Week_6 WHERE (([Id] = @Original_Id) AND ((@IsNull_Platform = 1 AND [Platform] IS NULL) OR ([Platform] = @Original_Platform)) AND ((@IsNull_Page = 1 AND [Page] IS NULL) OR ([Page] = @Original_Page)) AND ((@IsNull_Time = 1 AND [Time] IS NULL) OR ([Time] = @Original_Time)) AND ((@IsNull_Week_1 = 1 AND [Week 1] IS NULL) OR ([Week 1] = @Original_Week_1)) AND ((@IsNull_Week_2 = 1 AND [Week 2] IS NULL) OR ([Week 2] = @Original_Week_2)) AND ((@IsNull_Week_3 = 1 AND [Week 3] IS NULL) OR ([Week 3] = @Original_Week_3)) AND ((@IsNull_Week_4 = 1 AND [Week 4] IS NULL) OR ([Week 4] = @Original_Week_4)) AND ((@IsNull_Week_5 = 1 AND [Week 5] IS NULL) OR ([Week 5] = @Original_Week_5)) AND ((@IsNull_Expire = 1 AND [Expire] IS NULL) OR ([Expire] = @Original_Expire)) AND ((@IsNull_Week_6 = 1 AND [Week 6] IS NULL) OR ([Week 6] = @Original_Week_6)));
-SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], Expire, [Week 6] FROM Friday WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Friday] SET [Platform] = @Platform, [Page] = @Page, [Message] = @Message, [Image] = @Image, [Link] = @Link, [Time] = @Time, [Week 1] = @Week_1, [Week 2] = @Week_2, [Week 3] = @Week_3, [Week 4] = @Week_4, [Week 5] = @Week_5, [Week 6] = @Week_6, [Expire] = @Expire WHERE (([Id] = @Original_Id) AND ((@IsNull_Platform = 1 AND [Platform] IS NULL) OR ([Platform] = @Original_Platform)) AND ((@IsNull_Page = 1 AND [Page] IS NULL) OR ([Page] = @Original_Page)) AND ((@IsNull_Time = 1 AND [Time] IS NULL) OR ([Time] = @Original_Time)) AND ((@IsNull_Week_1 = 1 AND [Week 1] IS NULL) OR ([Week 1] = @Original_Week_1)) AND ((@IsNull_Week_2 = 1 AND [Week 2] IS NULL) OR ([Week 2] = @Original_Week_2)) AND ((@IsNull_Week_3 = 1 AND [Week 3] IS NULL) OR ([Week 3] = @Original_Week_3)) AND ((@IsNull_Week_4 = 1 AND [Week 4] IS NULL) OR ([Week 4] = @Original_Week_4)) AND ((@IsNull_Week_5 = 1 AND [Week 5] IS NULL) OR ([Week 5] = @Original_Week_5)) AND ((@IsNull_Week_6 = 1 AND [Week 6] IS NULL) OR ([Week 6] = @Original_Week_6)) AND ((@IsNull_Expire = 1 AND [Expire] IS NULL) OR ([Expire] = @Original_Expire)));
+SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], [Week 6], Expire FROM Friday WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Platform", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Page", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Page", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -8603,8 +8603,8 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_3", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 3", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_4", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 4", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_5", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_6", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Platform", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Platform", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -8622,10 +8622,10 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_4", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 4", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Week_5", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_5", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Expire", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Week_6", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_6", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Expire", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -8643,7 +8643,7 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2]," +
-                " [Week 3], [Week 4], [Week 5], Expire, [Week 6]\r\nFROM            Friday";
+                " [Week 3], [Week 4], [Week 5], [Week 6], Expire\r\nFROM            Friday";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -8652,9 +8652,9 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "INSERT INTO Friday\r\n(Platform, Page, Message, Image, Link, Time, [Week 1], [Week " +
-                "2], [Week 3], [Week 4], [Week 5], [Week 6], Expire)\r\nVALUES (@Platform,@Page,@Me" +
-                "ssage,@Image,@Link,@Time,@Week1,@Week2,@Week3,@Week4,@Week5,@Week6,@Expire,)";
+            this._commandCollection[2].CommandText = @"INSERT INTO Friday
+                         (Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], [Week 6], Expire)
+VALUES        (@Platform, @Page, @Message, @Image, @Link, @Time, @Week1, @Week2, @Week3, @Week4, @Week5, @Week6, @Expire)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Platform", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Page", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Page", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -8672,9 +8672,10 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
             this._commandCollection[3].CommandText = @"UPDATE       Friday
-SET
-Platform = @Platform, Page = @Page, Message = @Message, Image = @Image, Link = @Link, Time = @Time, [Week 1] = @Week1, [Week 2] = @Week2, [Week 3] = @Week3, [Week 4] = @Week4, [Week 5] = @Week5, [Week 6] = @Week6, Expire = @Expire
-WHERE (Id = @Original_Id)";
+
+SET                Platform = @Platform, Page = @Page, Message = @Message, Image = @Image, Link = @Link, Time = @Time, [Week 1] = @Week1, [Week 2] = @Week2, [Week 3] = @Week3, [Week 4] = @Week4, [Week 5] = @Week5, 
+                         [Week 6] = @Week6, Expire = @Expire
+WHERE        (Id = @Original_Id)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Platform", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Page", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Page", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -8749,7 +8750,7 @@ WHERE (Id = @Original_Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, string Original_Platform, string Original_Page, global::System.Nullable<global::System.DateTime> Original_Time, global::System.Nullable<bool> Original_Week_1, global::System.Nullable<bool> Original_Week_2, global::System.Nullable<bool> Original_Week_3, global::System.Nullable<bool> Original_Week_4, global::System.Nullable<bool> Original_Week_5, global::System.Nullable<global::System.DateTime> Original_Expire, global::System.Nullable<bool> Original_Week_6) {
+        public virtual int Delete(int Original_Id, string Original_Platform, string Original_Page, global::System.Nullable<global::System.DateTime> Original_Time, global::System.Nullable<bool> Original_Week_1, global::System.Nullable<bool> Original_Week_2, global::System.Nullable<bool> Original_Week_3, global::System.Nullable<bool> Original_Week_4, global::System.Nullable<bool> Original_Week_5, global::System.Nullable<bool> Original_Week_6, global::System.Nullable<global::System.DateTime> Original_Expire) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
             if ((Original_Platform == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -8815,17 +8816,17 @@ WHERE (Id = @Original_Id)";
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
-            if ((Original_Expire.HasValue == true)) {
+            if ((Original_Week_6.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((System.DateTime)(Original_Expire.Value));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((bool)(Original_Week_6.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
-            if ((Original_Week_6.HasValue == true)) {
+            if ((Original_Expire.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((bool)(Original_Week_6.Value));
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((System.DateTime)(Original_Expire.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
@@ -8851,7 +8852,7 @@ WHERE (Id = @Original_Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Platform, string Page, string Message, byte[] Image, string Link, global::System.Nullable<global::System.DateTime> Time, global::System.Nullable<bool> Week_1, global::System.Nullable<bool> Week_2, global::System.Nullable<bool> Week_3, global::System.Nullable<bool> Week_4, global::System.Nullable<bool> Week_5, global::System.Nullable<global::System.DateTime> Expire, global::System.Nullable<bool> Week_6) {
+        public virtual int Insert(string Platform, string Page, string Message, byte[] Image, string Link, global::System.Nullable<global::System.DateTime> Time, global::System.Nullable<bool> Week_1, global::System.Nullable<bool> Week_2, global::System.Nullable<bool> Week_3, global::System.Nullable<bool> Week_4, global::System.Nullable<bool> Week_5, global::System.Nullable<bool> Week_6, global::System.Nullable<global::System.DateTime> Expire) {
             if ((Platform == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -8918,14 +8919,14 @@ WHERE (Id = @Original_Id)";
             else {
                 this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Expire.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((System.DateTime)(Expire.Value));
+            if ((Week_6.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((bool)(Week_6.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((Week_6.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[12].Value = ((bool)(Week_6.Value));
+            if ((Expire.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((System.DateTime)(Expire.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
@@ -8962,8 +8963,8 @@ WHERE (Id = @Original_Id)";
                     global::System.Nullable<bool> Week_3, 
                     global::System.Nullable<bool> Week_4, 
                     global::System.Nullable<bool> Week_5, 
-                    global::System.Nullable<global::System.DateTime> Expire, 
                     global::System.Nullable<bool> Week_6, 
+                    global::System.Nullable<global::System.DateTime> Expire, 
                     int Original_Id, 
                     string Original_Platform, 
                     string Original_Page, 
@@ -8973,8 +8974,8 @@ WHERE (Id = @Original_Id)";
                     global::System.Nullable<bool> Original_Week_3, 
                     global::System.Nullable<bool> Original_Week_4, 
                     global::System.Nullable<bool> Original_Week_5, 
-                    global::System.Nullable<global::System.DateTime> Original_Expire, 
                     global::System.Nullable<bool> Original_Week_6, 
+                    global::System.Nullable<global::System.DateTime> Original_Expire, 
                     int Id) {
             if ((Platform == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -9042,14 +9043,14 @@ WHERE (Id = @Original_Id)";
             else {
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Expire.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((System.DateTime)(Expire.Value));
+            if ((Week_6.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((bool)(Week_6.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((Week_6.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((bool)(Week_6.Value));
+            if ((Expire.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(Expire.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
@@ -9119,17 +9120,17 @@ WHERE (Id = @Original_Id)";
                 this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
             }
-            if ((Original_Expire.HasValue == true)) {
+            if ((Original_Week_6.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((System.DateTime)(Original_Expire.Value));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((bool)(Original_Week_6.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
             }
-            if ((Original_Week_6.HasValue == true)) {
+            if ((Original_Expire.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((bool)(Original_Week_6.Value));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((System.DateTime)(Original_Expire.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
@@ -9168,8 +9169,8 @@ WHERE (Id = @Original_Id)";
                     global::System.Nullable<bool> Week_3, 
                     global::System.Nullable<bool> Week_4, 
                     global::System.Nullable<bool> Week_5, 
-                    global::System.Nullable<global::System.DateTime> Expire, 
                     global::System.Nullable<bool> Week_6, 
+                    global::System.Nullable<global::System.DateTime> Expire, 
                     int Original_Id, 
                     string Original_Platform, 
                     string Original_Page, 
@@ -9179,9 +9180,9 @@ WHERE (Id = @Original_Id)";
                     global::System.Nullable<bool> Original_Week_3, 
                     global::System.Nullable<bool> Original_Week_4, 
                     global::System.Nullable<bool> Original_Week_5, 
-                    global::System.Nullable<global::System.DateTime> Original_Expire, 
-                    global::System.Nullable<bool> Original_Week_6) {
-            return this.Update(Platform, Page, Message, Image, Link, Time, Week_1, Week_2, Week_3, Week_4, Week_5, Expire, Week_6, Original_Id, Original_Platform, Original_Page, Original_Time, Original_Week_1, Original_Week_2, Original_Week_3, Original_Week_4, Original_Week_5, Original_Expire, Original_Week_6, Original_Id);
+                    global::System.Nullable<bool> Original_Week_6, 
+                    global::System.Nullable<global::System.DateTime> Original_Expire) {
+            return this.Update(Platform, Page, Message, Image, Link, Time, Week_1, Week_2, Week_3, Week_4, Week_5, Week_6, Expire, Original_Id, Original_Platform, Original_Page, Original_Time, Original_Week_1, Original_Week_2, Original_Week_3, Original_Week_4, Original_Week_5, Original_Week_6, Original_Expire, Original_Id);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9545,12 +9546,12 @@ WHERE (Id = @Original_Id)";
             tableMapping.ColumnMappings.Add("Week 3", "Week 3");
             tableMapping.ColumnMappings.Add("Week 4", "Week 4");
             tableMapping.ColumnMappings.Add("Week 5", "Week 5");
-            tableMapping.ColumnMappings.Add("Expire", "Expire");
             tableMapping.ColumnMappings.Add("Week 6", "Week 6");
+            tableMapping.ColumnMappings.Add("Expire", "Expire");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Monday] WHERE (([Id] = @Original_Id) AND ((@IsNull_Platform = 1 AND [Platform] IS NULL) OR ([Platform] = @Original_Platform)) AND ((@IsNull_Page = 1 AND [Page] IS NULL) OR ([Page] = @Original_Page)) AND ((@IsNull_Time = 1 AND [Time] IS NULL) OR ([Time] = @Original_Time)) AND ((@IsNull_Week_1 = 1 AND [Week 1] IS NULL) OR ([Week 1] = @Original_Week_1)) AND ((@IsNull_Week_2 = 1 AND [Week 2] IS NULL) OR ([Week 2] = @Original_Week_2)) AND ((@IsNull_Week_3 = 1 AND [Week 3] IS NULL) OR ([Week 3] = @Original_Week_3)) AND ((@IsNull_Week_4 = 1 AND [Week 4] IS NULL) OR ([Week 4] = @Original_Week_4)) AND ((@IsNull_Week_5 = 1 AND [Week 5] IS NULL) OR ([Week 5] = @Original_Week_5)) AND ((@IsNull_Expire = 1 AND [Expire] IS NULL) OR ([Expire] = @Original_Expire)) AND ((@IsNull_Week_6 = 1 AND [Week 6] IS NULL) OR ([Week 6] = @Original_Week_6)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Monday] WHERE (([Id] = @Original_Id) AND ((@IsNull_Platform = 1 AND [Platform] IS NULL) OR ([Platform] = @Original_Platform)) AND ((@IsNull_Page = 1 AND [Page] IS NULL) OR ([Page] = @Original_Page)) AND ((@IsNull_Time = 1 AND [Time] IS NULL) OR ([Time] = @Original_Time)) AND ((@IsNull_Week_1 = 1 AND [Week 1] IS NULL) OR ([Week 1] = @Original_Week_1)) AND ((@IsNull_Week_2 = 1 AND [Week 2] IS NULL) OR ([Week 2] = @Original_Week_2)) AND ((@IsNull_Week_3 = 1 AND [Week 3] IS NULL) OR ([Week 3] = @Original_Week_3)) AND ((@IsNull_Week_4 = 1 AND [Week 4] IS NULL) OR ([Week 4] = @Original_Week_4)) AND ((@IsNull_Week_5 = 1 AND [Week 5] IS NULL) OR ([Week 5] = @Original_Week_5)) AND ((@IsNull_Week_6 = 1 AND [Week 6] IS NULL) OR ([Week 6] = @Original_Week_6)) AND ((@IsNull_Expire = 1 AND [Expire] IS NULL) OR ([Expire] = @Original_Expire)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Platform", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -9569,14 +9570,14 @@ WHERE (Id = @Original_Id)";
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_4", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 4", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Week_5", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_5", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Expire", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Week_6", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_6", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Expire", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Monday] ([Platform], [Page], [Message], [Image], [Link], [Time], [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], [Expire], [Week 6]) VALUES (@Platform, @Page, @Message, @Image, @Link, @Time, @Week_1, @Week_2, @Week_3, @Week_4, @Week_5, @Expire, @Week_6);
-SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], Expire, [Week 6] FROM Monday WHERE (Id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Monday] ([Platform], [Page], [Message], [Image], [Link], [Time], [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], [Week 6], [Expire]) VALUES (@Platform, @Page, @Message, @Image, @Link, @Time, @Week_1, @Week_2, @Week_3, @Week_4, @Week_5, @Week_6, @Expire);
+SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], [Week 6], Expire FROM Monday WHERE (Id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Platform", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Page", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Page", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -9589,12 +9590,12 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_3", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 3", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_4", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 4", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_5", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_6", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [Monday] SET [Platform] = @Platform, [Page] = @Page, [Message] = @Message, [Image] = @Image, [Link] = @Link, [Time] = @Time, [Week 1] = @Week_1, [Week 2] = @Week_2, [Week 3] = @Week_3, [Week 4] = @Week_4, [Week 5] = @Week_5, [Expire] = @Expire, [Week 6] = @Week_6 WHERE (([Id] = @Original_Id) AND ((@IsNull_Platform = 1 AND [Platform] IS NULL) OR ([Platform] = @Original_Platform)) AND ((@IsNull_Page = 1 AND [Page] IS NULL) OR ([Page] = @Original_Page)) AND ((@IsNull_Time = 1 AND [Time] IS NULL) OR ([Time] = @Original_Time)) AND ((@IsNull_Week_1 = 1 AND [Week 1] IS NULL) OR ([Week 1] = @Original_Week_1)) AND ((@IsNull_Week_2 = 1 AND [Week 2] IS NULL) OR ([Week 2] = @Original_Week_2)) AND ((@IsNull_Week_3 = 1 AND [Week 3] IS NULL) OR ([Week 3] = @Original_Week_3)) AND ((@IsNull_Week_4 = 1 AND [Week 4] IS NULL) OR ([Week 4] = @Original_Week_4)) AND ((@IsNull_Week_5 = 1 AND [Week 5] IS NULL) OR ([Week 5] = @Original_Week_5)) AND ((@IsNull_Expire = 1 AND [Expire] IS NULL) OR ([Expire] = @Original_Expire)) AND ((@IsNull_Week_6 = 1 AND [Week 6] IS NULL) OR ([Week 6] = @Original_Week_6)));
-SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], Expire, [Week 6] FROM Monday WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Monday] SET [Platform] = @Platform, [Page] = @Page, [Message] = @Message, [Image] = @Image, [Link] = @Link, [Time] = @Time, [Week 1] = @Week_1, [Week 2] = @Week_2, [Week 3] = @Week_3, [Week 4] = @Week_4, [Week 5] = @Week_5, [Week 6] = @Week_6, [Expire] = @Expire WHERE (([Id] = @Original_Id) AND ((@IsNull_Platform = 1 AND [Platform] IS NULL) OR ([Platform] = @Original_Platform)) AND ((@IsNull_Page = 1 AND [Page] IS NULL) OR ([Page] = @Original_Page)) AND ((@IsNull_Time = 1 AND [Time] IS NULL) OR ([Time] = @Original_Time)) AND ((@IsNull_Week_1 = 1 AND [Week 1] IS NULL) OR ([Week 1] = @Original_Week_1)) AND ((@IsNull_Week_2 = 1 AND [Week 2] IS NULL) OR ([Week 2] = @Original_Week_2)) AND ((@IsNull_Week_3 = 1 AND [Week 3] IS NULL) OR ([Week 3] = @Original_Week_3)) AND ((@IsNull_Week_4 = 1 AND [Week 4] IS NULL) OR ([Week 4] = @Original_Week_4)) AND ((@IsNull_Week_5 = 1 AND [Week 5] IS NULL) OR ([Week 5] = @Original_Week_5)) AND ((@IsNull_Week_6 = 1 AND [Week 6] IS NULL) OR ([Week 6] = @Original_Week_6)) AND ((@IsNull_Expire = 1 AND [Expire] IS NULL) OR ([Expire] = @Original_Expire)));
+SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], [Week 6], Expire FROM Monday WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Platform", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Page", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Page", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -9607,8 +9608,8 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_3", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 3", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_4", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 4", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_5", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_6", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Platform", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Platform", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -9626,10 +9627,10 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_4", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 4", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Week_5", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_5", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Expire", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Week_6", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_6", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Expire", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -9647,7 +9648,7 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2]," +
-                " [Week 3], [Week 4], [Week 5], Expire, [Week 6]\r\nFROM            Monday";
+                " [Week 3], [Week 4], [Week 5], [Week 6], Expire\r\nFROM            Monday";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -9656,9 +9657,9 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "INSERT INTO Monday\r\n(Platform, Page, Message, Image, Link, Time, [Week 1], [Week " +
-                "2], [Week 3], [Week 4], [Week 5], [Week 6], Expire)\r\nVALUES (@Platform,@Page,@Me" +
-                "ssage,@Image,@Link,@Time,@Week1,@Week2,@Week3,@Week4,@Week5,@Week6,@Expire,)";
+            this._commandCollection[2].CommandText = @"INSERT INTO Monday
+                         (Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], [Week 6], Expire)
+VALUES        (@Platform, @Page, @Message, @Image, @Link, @Time, @Week1, @Week2, @Week3, @Week4, @Week5, @Week6, @Expire)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Platform", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Page", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Page", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -9676,9 +9677,10 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
             this._commandCollection[3].CommandText = @"UPDATE       Monday
-SET
-Platform = @Platform, Page = @Page, Message = @Message, Image = @Image, Link = @Link, Time = @Time, [Week 1] = @Week1, [Week 2] = @Week2, [Week 3] = @Week3, [Week 4] = @Week4, [Week 5] = @Week5, [Week 6] = @Week6, Expire = @Expire
-WHERE (Id = @Original_Id)";
+
+SET                Platform = @Platform, Page = @Page, Message = @Message, Image = @Image, Link = @Link, Time = @Time, [Week 1] = @Week1, [Week 2] = @Week2, [Week 3] = @Week3, [Week 4] = @Week4, [Week 5] = @Week5, 
+                         [Week 6] = @Week6, Expire = @Expire
+WHERE        (Id = @Original_Id)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Platform", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Page", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Page", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -9753,7 +9755,7 @@ WHERE (Id = @Original_Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, string Original_Platform, string Original_Page, global::System.Nullable<global::System.DateTime> Original_Time, global::System.Nullable<bool> Original_Week_1, global::System.Nullable<bool> Original_Week_2, global::System.Nullable<bool> Original_Week_3, global::System.Nullable<bool> Original_Week_4, global::System.Nullable<bool> Original_Week_5, global::System.Nullable<global::System.DateTime> Original_Expire, global::System.Nullable<bool> Original_Week_6) {
+        public virtual int Delete(int Original_Id, string Original_Platform, string Original_Page, global::System.Nullable<global::System.DateTime> Original_Time, global::System.Nullable<bool> Original_Week_1, global::System.Nullable<bool> Original_Week_2, global::System.Nullable<bool> Original_Week_3, global::System.Nullable<bool> Original_Week_4, global::System.Nullable<bool> Original_Week_5, global::System.Nullable<bool> Original_Week_6, global::System.Nullable<global::System.DateTime> Original_Expire) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
             if ((Original_Platform == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -9819,17 +9821,17 @@ WHERE (Id = @Original_Id)";
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
-            if ((Original_Expire.HasValue == true)) {
+            if ((Original_Week_6.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((System.DateTime)(Original_Expire.Value));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((bool)(Original_Week_6.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
-            if ((Original_Week_6.HasValue == true)) {
+            if ((Original_Expire.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((bool)(Original_Week_6.Value));
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((System.DateTime)(Original_Expire.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
@@ -9855,7 +9857,7 @@ WHERE (Id = @Original_Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Platform, string Page, string Message, byte[] Image, string Link, global::System.Nullable<global::System.DateTime> Time, global::System.Nullable<bool> Week_1, global::System.Nullable<bool> Week_2, global::System.Nullable<bool> Week_3, global::System.Nullable<bool> Week_4, global::System.Nullable<bool> Week_5, global::System.Nullable<global::System.DateTime> Expire, global::System.Nullable<bool> Week_6) {
+        public virtual int Insert(string Platform, string Page, string Message, byte[] Image, string Link, global::System.Nullable<global::System.DateTime> Time, global::System.Nullable<bool> Week_1, global::System.Nullable<bool> Week_2, global::System.Nullable<bool> Week_3, global::System.Nullable<bool> Week_4, global::System.Nullable<bool> Week_5, global::System.Nullable<bool> Week_6, global::System.Nullable<global::System.DateTime> Expire) {
             if ((Platform == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -9922,14 +9924,14 @@ WHERE (Id = @Original_Id)";
             else {
                 this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Expire.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((System.DateTime)(Expire.Value));
+            if ((Week_6.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((bool)(Week_6.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((Week_6.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[12].Value = ((bool)(Week_6.Value));
+            if ((Expire.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((System.DateTime)(Expire.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
@@ -9966,8 +9968,8 @@ WHERE (Id = @Original_Id)";
                     global::System.Nullable<bool> Week_3, 
                     global::System.Nullable<bool> Week_4, 
                     global::System.Nullable<bool> Week_5, 
-                    global::System.Nullable<global::System.DateTime> Expire, 
                     global::System.Nullable<bool> Week_6, 
+                    global::System.Nullable<global::System.DateTime> Expire, 
                     int Original_Id, 
                     string Original_Platform, 
                     string Original_Page, 
@@ -9977,8 +9979,8 @@ WHERE (Id = @Original_Id)";
                     global::System.Nullable<bool> Original_Week_3, 
                     global::System.Nullable<bool> Original_Week_4, 
                     global::System.Nullable<bool> Original_Week_5, 
-                    global::System.Nullable<global::System.DateTime> Original_Expire, 
                     global::System.Nullable<bool> Original_Week_6, 
+                    global::System.Nullable<global::System.DateTime> Original_Expire, 
                     int Id) {
             if ((Platform == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -10046,14 +10048,14 @@ WHERE (Id = @Original_Id)";
             else {
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Expire.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((System.DateTime)(Expire.Value));
+            if ((Week_6.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((bool)(Week_6.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((Week_6.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((bool)(Week_6.Value));
+            if ((Expire.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(Expire.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
@@ -10123,17 +10125,17 @@ WHERE (Id = @Original_Id)";
                 this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
             }
-            if ((Original_Expire.HasValue == true)) {
+            if ((Original_Week_6.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((System.DateTime)(Original_Expire.Value));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((bool)(Original_Week_6.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
             }
-            if ((Original_Week_6.HasValue == true)) {
+            if ((Original_Expire.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((bool)(Original_Week_6.Value));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((System.DateTime)(Original_Expire.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
@@ -10172,8 +10174,8 @@ WHERE (Id = @Original_Id)";
                     global::System.Nullable<bool> Week_3, 
                     global::System.Nullable<bool> Week_4, 
                     global::System.Nullable<bool> Week_5, 
-                    global::System.Nullable<global::System.DateTime> Expire, 
                     global::System.Nullable<bool> Week_6, 
+                    global::System.Nullable<global::System.DateTime> Expire, 
                     int Original_Id, 
                     string Original_Platform, 
                     string Original_Page, 
@@ -10183,9 +10185,9 @@ WHERE (Id = @Original_Id)";
                     global::System.Nullable<bool> Original_Week_3, 
                     global::System.Nullable<bool> Original_Week_4, 
                     global::System.Nullable<bool> Original_Week_5, 
-                    global::System.Nullable<global::System.DateTime> Original_Expire, 
-                    global::System.Nullable<bool> Original_Week_6) {
-            return this.Update(Platform, Page, Message, Image, Link, Time, Week_1, Week_2, Week_3, Week_4, Week_5, Expire, Week_6, Original_Id, Original_Platform, Original_Page, Original_Time, Original_Week_1, Original_Week_2, Original_Week_3, Original_Week_4, Original_Week_5, Original_Expire, Original_Week_6, Original_Id);
+                    global::System.Nullable<bool> Original_Week_6, 
+                    global::System.Nullable<global::System.DateTime> Original_Expire) {
+            return this.Update(Platform, Page, Message, Image, Link, Time, Week_1, Week_2, Week_3, Week_4, Week_5, Week_6, Expire, Original_Id, Original_Platform, Original_Page, Original_Time, Original_Week_1, Original_Week_2, Original_Week_3, Original_Week_4, Original_Week_5, Original_Week_6, Original_Expire, Original_Id);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10549,12 +10551,12 @@ WHERE (Id = @Original_Id)";
             tableMapping.ColumnMappings.Add("Week 3", "Week 3");
             tableMapping.ColumnMappings.Add("Week 4", "Week 4");
             tableMapping.ColumnMappings.Add("Week 5", "Week 5");
-            tableMapping.ColumnMappings.Add("Expire", "Expire");
             tableMapping.ColumnMappings.Add("Week 6", "Week 6");
+            tableMapping.ColumnMappings.Add("Expire", "Expire");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Saturday] WHERE (([Id] = @Original_Id) AND ((@IsNull_Platform = 1 AND [Platform] IS NULL) OR ([Platform] = @Original_Platform)) AND ((@IsNull_Page = 1 AND [Page] IS NULL) OR ([Page] = @Original_Page)) AND ((@IsNull_Time = 1 AND [Time] IS NULL) OR ([Time] = @Original_Time)) AND ((@IsNull_Week_1 = 1 AND [Week 1] IS NULL) OR ([Week 1] = @Original_Week_1)) AND ((@IsNull_Week_2 = 1 AND [Week 2] IS NULL) OR ([Week 2] = @Original_Week_2)) AND ((@IsNull_Week_3 = 1 AND [Week 3] IS NULL) OR ([Week 3] = @Original_Week_3)) AND ((@IsNull_Week_4 = 1 AND [Week 4] IS NULL) OR ([Week 4] = @Original_Week_4)) AND ((@IsNull_Week_5 = 1 AND [Week 5] IS NULL) OR ([Week 5] = @Original_Week_5)) AND ((@IsNull_Expire = 1 AND [Expire] IS NULL) OR ([Expire] = @Original_Expire)) AND ((@IsNull_Week_6 = 1 AND [Week 6] IS NULL) OR ([Week 6] = @Original_Week_6)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Saturday] WHERE (([Id] = @Original_Id) AND ((@IsNull_Platform = 1 AND [Platform] IS NULL) OR ([Platform] = @Original_Platform)) AND ((@IsNull_Page = 1 AND [Page] IS NULL) OR ([Page] = @Original_Page)) AND ((@IsNull_Time = 1 AND [Time] IS NULL) OR ([Time] = @Original_Time)) AND ((@IsNull_Week_1 = 1 AND [Week 1] IS NULL) OR ([Week 1] = @Original_Week_1)) AND ((@IsNull_Week_2 = 1 AND [Week 2] IS NULL) OR ([Week 2] = @Original_Week_2)) AND ((@IsNull_Week_3 = 1 AND [Week 3] IS NULL) OR ([Week 3] = @Original_Week_3)) AND ((@IsNull_Week_4 = 1 AND [Week 4] IS NULL) OR ([Week 4] = @Original_Week_4)) AND ((@IsNull_Week_5 = 1 AND [Week 5] IS NULL) OR ([Week 5] = @Original_Week_5)) AND ((@IsNull_Week_6 = 1 AND [Week 6] IS NULL) OR ([Week 6] = @Original_Week_6)) AND ((@IsNull_Expire = 1 AND [Expire] IS NULL) OR ([Expire] = @Original_Expire)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Platform", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -10573,14 +10575,14 @@ WHERE (Id = @Original_Id)";
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_4", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 4", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Week_5", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_5", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Expire", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Week_6", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_6", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Expire", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Saturday] ([Platform], [Page], [Message], [Image], [Link], [Time], [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], [Expire], [Week 6]) VALUES (@Platform, @Page, @Message, @Image, @Link, @Time, @Week_1, @Week_2, @Week_3, @Week_4, @Week_5, @Expire, @Week_6);
-SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], Expire, [Week 6] FROM Saturday WHERE (Id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Saturday] ([Platform], [Page], [Message], [Image], [Link], [Time], [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], [Week 6], [Expire]) VALUES (@Platform, @Page, @Message, @Image, @Link, @Time, @Week_1, @Week_2, @Week_3, @Week_4, @Week_5, @Week_6, @Expire);
+SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], [Week 6], Expire FROM Saturday WHERE (Id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Platform", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Page", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Page", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -10593,12 +10595,12 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_3", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 3", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_4", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 4", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_5", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_6", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [Saturday] SET [Platform] = @Platform, [Page] = @Page, [Message] = @Message, [Image] = @Image, [Link] = @Link, [Time] = @Time, [Week 1] = @Week_1, [Week 2] = @Week_2, [Week 3] = @Week_3, [Week 4] = @Week_4, [Week 5] = @Week_5, [Expire] = @Expire, [Week 6] = @Week_6 WHERE (([Id] = @Original_Id) AND ((@IsNull_Platform = 1 AND [Platform] IS NULL) OR ([Platform] = @Original_Platform)) AND ((@IsNull_Page = 1 AND [Page] IS NULL) OR ([Page] = @Original_Page)) AND ((@IsNull_Time = 1 AND [Time] IS NULL) OR ([Time] = @Original_Time)) AND ((@IsNull_Week_1 = 1 AND [Week 1] IS NULL) OR ([Week 1] = @Original_Week_1)) AND ((@IsNull_Week_2 = 1 AND [Week 2] IS NULL) OR ([Week 2] = @Original_Week_2)) AND ((@IsNull_Week_3 = 1 AND [Week 3] IS NULL) OR ([Week 3] = @Original_Week_3)) AND ((@IsNull_Week_4 = 1 AND [Week 4] IS NULL) OR ([Week 4] = @Original_Week_4)) AND ((@IsNull_Week_5 = 1 AND [Week 5] IS NULL) OR ([Week 5] = @Original_Week_5)) AND ((@IsNull_Expire = 1 AND [Expire] IS NULL) OR ([Expire] = @Original_Expire)) AND ((@IsNull_Week_6 = 1 AND [Week 6] IS NULL) OR ([Week 6] = @Original_Week_6)));
-SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], Expire, [Week 6] FROM Saturday WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Saturday] SET [Platform] = @Platform, [Page] = @Page, [Message] = @Message, [Image] = @Image, [Link] = @Link, [Time] = @Time, [Week 1] = @Week_1, [Week 2] = @Week_2, [Week 3] = @Week_3, [Week 4] = @Week_4, [Week 5] = @Week_5, [Week 6] = @Week_6, [Expire] = @Expire WHERE (([Id] = @Original_Id) AND ((@IsNull_Platform = 1 AND [Platform] IS NULL) OR ([Platform] = @Original_Platform)) AND ((@IsNull_Page = 1 AND [Page] IS NULL) OR ([Page] = @Original_Page)) AND ((@IsNull_Time = 1 AND [Time] IS NULL) OR ([Time] = @Original_Time)) AND ((@IsNull_Week_1 = 1 AND [Week 1] IS NULL) OR ([Week 1] = @Original_Week_1)) AND ((@IsNull_Week_2 = 1 AND [Week 2] IS NULL) OR ([Week 2] = @Original_Week_2)) AND ((@IsNull_Week_3 = 1 AND [Week 3] IS NULL) OR ([Week 3] = @Original_Week_3)) AND ((@IsNull_Week_4 = 1 AND [Week 4] IS NULL) OR ([Week 4] = @Original_Week_4)) AND ((@IsNull_Week_5 = 1 AND [Week 5] IS NULL) OR ([Week 5] = @Original_Week_5)) AND ((@IsNull_Week_6 = 1 AND [Week 6] IS NULL) OR ([Week 6] = @Original_Week_6)) AND ((@IsNull_Expire = 1 AND [Expire] IS NULL) OR ([Expire] = @Original_Expire)));
+SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], [Week 6], Expire FROM Saturday WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Platform", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Page", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Page", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -10611,8 +10613,8 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_3", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 3", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_4", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 4", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_5", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_6", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Platform", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Platform", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -10630,10 +10632,10 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_4", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 4", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Week_5", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_5", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Expire", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Week_6", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_6", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Expire", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -10651,7 +10653,7 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2]," +
-                " [Week 3], [Week 4], [Week 5], Expire, [Week 6]\r\nFROM            Saturday";
+                " [Week 3], [Week 4], [Week 5], [Week 6], Expire\r\nFROM            Saturday";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -10660,9 +10662,9 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "INSERT INTO Saturday\r\n(Platform, Page, Message, Image, Link, Time, [Week 1], [Wee" +
-                "k 2], [Week 3], [Week 4], [Week 5], [Week 6], Expire)\r\nVALUES (@Platform,@Page,@" +
-                "Message,@Image,@Link,@Time,@Week1,@Week2,@Week3,@Week4,@Week5,@Week6,@Expire,)";
+            this._commandCollection[2].CommandText = @"INSERT INTO Saturday
+                         (Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], [Week 6], Expire)
+VALUES        (@Platform, @Page, @Message, @Image, @Link, @Time, @Week1, @Week2, @Week3, @Week4, @Week5, @Week6, @Expire)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Platform", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Page", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Page", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -10680,9 +10682,10 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
             this._commandCollection[3].CommandText = @"UPDATE       Saturday
-SET
-Platform = @Platform, Page = @Page, Message = @Message, Image = @Image, Link = @Link, Time = @Time, [Week 1] = @Week1, [Week 2] = @Week2, [Week 3] = @Week3, [Week 4] = @Week4, [Week 5] = @Week5, [Week 6] = @Week6, Expire = @Expire
-WHERE (Id = @Original_Id)";
+
+SET                Platform = @Platform, Page = @Page, Message = @Message, Image = @Image, Link = @Link, Time = @Time, [Week 1] = @Week1, [Week 2] = @Week2, [Week 3] = @Week3, [Week 4] = @Week4, [Week 5] = @Week5, 
+                         [Week 6] = @Week6, Expire = @Expire
+WHERE        (Id = @Original_Id)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Platform", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Page", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Page", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -10757,7 +10760,7 @@ WHERE (Id = @Original_Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, string Original_Platform, string Original_Page, global::System.Nullable<global::System.DateTime> Original_Time, global::System.Nullable<bool> Original_Week_1, global::System.Nullable<bool> Original_Week_2, global::System.Nullable<bool> Original_Week_3, global::System.Nullable<bool> Original_Week_4, global::System.Nullable<bool> Original_Week_5, global::System.Nullable<global::System.DateTime> Original_Expire, global::System.Nullable<bool> Original_Week_6) {
+        public virtual int Delete(int Original_Id, string Original_Platform, string Original_Page, global::System.Nullable<global::System.DateTime> Original_Time, global::System.Nullable<bool> Original_Week_1, global::System.Nullable<bool> Original_Week_2, global::System.Nullable<bool> Original_Week_3, global::System.Nullable<bool> Original_Week_4, global::System.Nullable<bool> Original_Week_5, global::System.Nullable<bool> Original_Week_6, global::System.Nullable<global::System.DateTime> Original_Expire) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
             if ((Original_Platform == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -10823,17 +10826,17 @@ WHERE (Id = @Original_Id)";
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
-            if ((Original_Expire.HasValue == true)) {
+            if ((Original_Week_6.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((System.DateTime)(Original_Expire.Value));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((bool)(Original_Week_6.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
-            if ((Original_Week_6.HasValue == true)) {
+            if ((Original_Expire.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((bool)(Original_Week_6.Value));
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((System.DateTime)(Original_Expire.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
@@ -10859,7 +10862,7 @@ WHERE (Id = @Original_Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Platform, string Page, string Message, byte[] Image, string Link, global::System.Nullable<global::System.DateTime> Time, global::System.Nullable<bool> Week_1, global::System.Nullable<bool> Week_2, global::System.Nullable<bool> Week_3, global::System.Nullable<bool> Week_4, global::System.Nullable<bool> Week_5, global::System.Nullable<global::System.DateTime> Expire, global::System.Nullable<bool> Week_6) {
+        public virtual int Insert(string Platform, string Page, string Message, byte[] Image, string Link, global::System.Nullable<global::System.DateTime> Time, global::System.Nullable<bool> Week_1, global::System.Nullable<bool> Week_2, global::System.Nullable<bool> Week_3, global::System.Nullable<bool> Week_4, global::System.Nullable<bool> Week_5, global::System.Nullable<bool> Week_6, global::System.Nullable<global::System.DateTime> Expire) {
             if ((Platform == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -10926,14 +10929,14 @@ WHERE (Id = @Original_Id)";
             else {
                 this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Expire.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((System.DateTime)(Expire.Value));
+            if ((Week_6.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((bool)(Week_6.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((Week_6.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[12].Value = ((bool)(Week_6.Value));
+            if ((Expire.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((System.DateTime)(Expire.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
@@ -10970,8 +10973,8 @@ WHERE (Id = @Original_Id)";
                     global::System.Nullable<bool> Week_3, 
                     global::System.Nullable<bool> Week_4, 
                     global::System.Nullable<bool> Week_5, 
-                    global::System.Nullable<global::System.DateTime> Expire, 
                     global::System.Nullable<bool> Week_6, 
+                    global::System.Nullable<global::System.DateTime> Expire, 
                     int Original_Id, 
                     string Original_Platform, 
                     string Original_Page, 
@@ -10981,8 +10984,8 @@ WHERE (Id = @Original_Id)";
                     global::System.Nullable<bool> Original_Week_3, 
                     global::System.Nullable<bool> Original_Week_4, 
                     global::System.Nullable<bool> Original_Week_5, 
-                    global::System.Nullable<global::System.DateTime> Original_Expire, 
                     global::System.Nullable<bool> Original_Week_6, 
+                    global::System.Nullable<global::System.DateTime> Original_Expire, 
                     int Id) {
             if ((Platform == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -11050,14 +11053,14 @@ WHERE (Id = @Original_Id)";
             else {
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Expire.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((System.DateTime)(Expire.Value));
+            if ((Week_6.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((bool)(Week_6.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((Week_6.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((bool)(Week_6.Value));
+            if ((Expire.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(Expire.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
@@ -11127,17 +11130,17 @@ WHERE (Id = @Original_Id)";
                 this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
             }
-            if ((Original_Expire.HasValue == true)) {
+            if ((Original_Week_6.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((System.DateTime)(Original_Expire.Value));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((bool)(Original_Week_6.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
             }
-            if ((Original_Week_6.HasValue == true)) {
+            if ((Original_Expire.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((bool)(Original_Week_6.Value));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((System.DateTime)(Original_Expire.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
@@ -11176,8 +11179,8 @@ WHERE (Id = @Original_Id)";
                     global::System.Nullable<bool> Week_3, 
                     global::System.Nullable<bool> Week_4, 
                     global::System.Nullable<bool> Week_5, 
-                    global::System.Nullable<global::System.DateTime> Expire, 
                     global::System.Nullable<bool> Week_6, 
+                    global::System.Nullable<global::System.DateTime> Expire, 
                     int Original_Id, 
                     string Original_Platform, 
                     string Original_Page, 
@@ -11187,9 +11190,9 @@ WHERE (Id = @Original_Id)";
                     global::System.Nullable<bool> Original_Week_3, 
                     global::System.Nullable<bool> Original_Week_4, 
                     global::System.Nullable<bool> Original_Week_5, 
-                    global::System.Nullable<global::System.DateTime> Original_Expire, 
-                    global::System.Nullable<bool> Original_Week_6) {
-            return this.Update(Platform, Page, Message, Image, Link, Time, Week_1, Week_2, Week_3, Week_4, Week_5, Expire, Week_6, Original_Id, Original_Platform, Original_Page, Original_Time, Original_Week_1, Original_Week_2, Original_Week_3, Original_Week_4, Original_Week_5, Original_Expire, Original_Week_6, Original_Id);
+                    global::System.Nullable<bool> Original_Week_6, 
+                    global::System.Nullable<global::System.DateTime> Original_Expire) {
+            return this.Update(Platform, Page, Message, Image, Link, Time, Week_1, Week_2, Week_3, Week_4, Week_5, Week_6, Expire, Original_Id, Original_Platform, Original_Page, Original_Time, Original_Week_1, Original_Week_2, Original_Week_3, Original_Week_4, Original_Week_5, Original_Week_6, Original_Expire, Original_Id);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11553,12 +11556,12 @@ WHERE (Id = @Original_Id)";
             tableMapping.ColumnMappings.Add("Week 3", "Week 3");
             tableMapping.ColumnMappings.Add("Week 4", "Week 4");
             tableMapping.ColumnMappings.Add("Week 5", "Week 5");
-            tableMapping.ColumnMappings.Add("Expire", "Expire");
             tableMapping.ColumnMappings.Add("Week 6", "Week 6");
+            tableMapping.ColumnMappings.Add("Expire", "Expire");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Sunday] WHERE (([Id] = @Original_Id) AND ((@IsNull_Platform = 1 AND [Platform] IS NULL) OR ([Platform] = @Original_Platform)) AND ((@IsNull_Page = 1 AND [Page] IS NULL) OR ([Page] = @Original_Page)) AND ((@IsNull_Time = 1 AND [Time] IS NULL) OR ([Time] = @Original_Time)) AND ((@IsNull_Week_1 = 1 AND [Week 1] IS NULL) OR ([Week 1] = @Original_Week_1)) AND ((@IsNull_Week_2 = 1 AND [Week 2] IS NULL) OR ([Week 2] = @Original_Week_2)) AND ((@IsNull_Week_3 = 1 AND [Week 3] IS NULL) OR ([Week 3] = @Original_Week_3)) AND ((@IsNull_Week_4 = 1 AND [Week 4] IS NULL) OR ([Week 4] = @Original_Week_4)) AND ((@IsNull_Week_5 = 1 AND [Week 5] IS NULL) OR ([Week 5] = @Original_Week_5)) AND ((@IsNull_Expire = 1 AND [Expire] IS NULL) OR ([Expire] = @Original_Expire)) AND ((@IsNull_Week_6 = 1 AND [Week 6] IS NULL) OR ([Week 6] = @Original_Week_6)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Sunday] WHERE (([Id] = @Original_Id) AND ((@IsNull_Platform = 1 AND [Platform] IS NULL) OR ([Platform] = @Original_Platform)) AND ((@IsNull_Page = 1 AND [Page] IS NULL) OR ([Page] = @Original_Page)) AND ((@IsNull_Time = 1 AND [Time] IS NULL) OR ([Time] = @Original_Time)) AND ((@IsNull_Week_1 = 1 AND [Week 1] IS NULL) OR ([Week 1] = @Original_Week_1)) AND ((@IsNull_Week_2 = 1 AND [Week 2] IS NULL) OR ([Week 2] = @Original_Week_2)) AND ((@IsNull_Week_3 = 1 AND [Week 3] IS NULL) OR ([Week 3] = @Original_Week_3)) AND ((@IsNull_Week_4 = 1 AND [Week 4] IS NULL) OR ([Week 4] = @Original_Week_4)) AND ((@IsNull_Week_5 = 1 AND [Week 5] IS NULL) OR ([Week 5] = @Original_Week_5)) AND ((@IsNull_Week_6 = 1 AND [Week 6] IS NULL) OR ([Week 6] = @Original_Week_6)) AND ((@IsNull_Expire = 1 AND [Expire] IS NULL) OR ([Expire] = @Original_Expire)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Platform", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -11577,14 +11580,14 @@ WHERE (Id = @Original_Id)";
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_4", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 4", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Week_5", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_5", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Expire", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Week_6", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_6", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Expire", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Sunday] ([Platform], [Page], [Message], [Image], [Link], [Time], [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], [Expire], [Week 6]) VALUES (@Platform, @Page, @Message, @Image, @Link, @Time, @Week_1, @Week_2, @Week_3, @Week_4, @Week_5, @Expire, @Week_6);
-SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], Expire, [Week 6] FROM Sunday WHERE (Id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Sunday] ([Platform], [Page], [Message], [Image], [Link], [Time], [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], [Week 6], [Expire]) VALUES (@Platform, @Page, @Message, @Image, @Link, @Time, @Week_1, @Week_2, @Week_3, @Week_4, @Week_5, @Week_6, @Expire);
+SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], [Week 6], Expire FROM Sunday WHERE (Id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Platform", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Page", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Page", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -11597,12 +11600,12 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_3", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 3", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_4", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 4", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_5", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_6", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [Sunday] SET [Platform] = @Platform, [Page] = @Page, [Message] = @Message, [Image] = @Image, [Link] = @Link, [Time] = @Time, [Week 1] = @Week_1, [Week 2] = @Week_2, [Week 3] = @Week_3, [Week 4] = @Week_4, [Week 5] = @Week_5, [Expire] = @Expire, [Week 6] = @Week_6 WHERE (([Id] = @Original_Id) AND ((@IsNull_Platform = 1 AND [Platform] IS NULL) OR ([Platform] = @Original_Platform)) AND ((@IsNull_Page = 1 AND [Page] IS NULL) OR ([Page] = @Original_Page)) AND ((@IsNull_Time = 1 AND [Time] IS NULL) OR ([Time] = @Original_Time)) AND ((@IsNull_Week_1 = 1 AND [Week 1] IS NULL) OR ([Week 1] = @Original_Week_1)) AND ((@IsNull_Week_2 = 1 AND [Week 2] IS NULL) OR ([Week 2] = @Original_Week_2)) AND ((@IsNull_Week_3 = 1 AND [Week 3] IS NULL) OR ([Week 3] = @Original_Week_3)) AND ((@IsNull_Week_4 = 1 AND [Week 4] IS NULL) OR ([Week 4] = @Original_Week_4)) AND ((@IsNull_Week_5 = 1 AND [Week 5] IS NULL) OR ([Week 5] = @Original_Week_5)) AND ((@IsNull_Expire = 1 AND [Expire] IS NULL) OR ([Expire] = @Original_Expire)) AND ((@IsNull_Week_6 = 1 AND [Week 6] IS NULL) OR ([Week 6] = @Original_Week_6)));
-SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], Expire, [Week 6] FROM Sunday WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Sunday] SET [Platform] = @Platform, [Page] = @Page, [Message] = @Message, [Image] = @Image, [Link] = @Link, [Time] = @Time, [Week 1] = @Week_1, [Week 2] = @Week_2, [Week 3] = @Week_3, [Week 4] = @Week_4, [Week 5] = @Week_5, [Week 6] = @Week_6, [Expire] = @Expire WHERE (([Id] = @Original_Id) AND ((@IsNull_Platform = 1 AND [Platform] IS NULL) OR ([Platform] = @Original_Platform)) AND ((@IsNull_Page = 1 AND [Page] IS NULL) OR ([Page] = @Original_Page)) AND ((@IsNull_Time = 1 AND [Time] IS NULL) OR ([Time] = @Original_Time)) AND ((@IsNull_Week_1 = 1 AND [Week 1] IS NULL) OR ([Week 1] = @Original_Week_1)) AND ((@IsNull_Week_2 = 1 AND [Week 2] IS NULL) OR ([Week 2] = @Original_Week_2)) AND ((@IsNull_Week_3 = 1 AND [Week 3] IS NULL) OR ([Week 3] = @Original_Week_3)) AND ((@IsNull_Week_4 = 1 AND [Week 4] IS NULL) OR ([Week 4] = @Original_Week_4)) AND ((@IsNull_Week_5 = 1 AND [Week 5] IS NULL) OR ([Week 5] = @Original_Week_5)) AND ((@IsNull_Week_6 = 1 AND [Week 6] IS NULL) OR ([Week 6] = @Original_Week_6)) AND ((@IsNull_Expire = 1 AND [Expire] IS NULL) OR ([Expire] = @Original_Expire)));
+SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], [Week 6], Expire FROM Sunday WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Platform", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Page", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Page", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -11615,8 +11618,8 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_3", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 3", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_4", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 4", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_5", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_6", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Platform", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Platform", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -11634,10 +11637,10 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_4", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 4", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Week_5", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_5", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Expire", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Week_6", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_6", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Expire", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -11655,7 +11658,7 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2]," +
-                " [Week 3], [Week 4], [Week 5], Expire, [Week 6]\r\nFROM            Sunday";
+                " [Week 3], [Week 4], [Week 5], [Week 6], Expire\r\nFROM            Sunday";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -11664,9 +11667,9 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "INSERT INTO Sunday\r\n(Platform, Page, Message, Image, Link, Time, [Week 1], [Week " +
-                "2], [Week 3], [Week 4], [Week 5], [Week 6], Expire)\r\nVALUES (@Platform,@Page,@Me" +
-                "ssage,@Image,@Link,@Time,@Week1,@Week2,@Week3,@Week4,@Week5,@Week6,@Expire,)";
+            this._commandCollection[2].CommandText = @"INSERT INTO Sunday
+                         (Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], [Week 6], Expire)
+VALUES        (@Platform, @Page, @Message, @Image, @Link, @Time, @Week1, @Week2, @Week3, @Week4, @Week5, @Week6, @Expire)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Platform", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Page", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Page", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -11684,9 +11687,9 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
             this._commandCollection[3].CommandText = @"UPDATE       Sunday
-SET
-Platform = @Platform, Page = @Page, Message = @Message, Image = @Image, Link = @Link, Time = @Time, [Week 1] = @Week1, [Week 2] = @Week2, [Week 3] = @Week3, [Week 4] = @Week4, [Week 5] = @Week5, [Week 6] = @Week6, Expire = @Expire
-WHERE (Id = @Original_Id)";
+SET                Platform = @Platform, Page = @Page, Message = @Message, Image = @Image, Link = @Link, Time = @Time, [Week 1] = @Week1, [Week 2] = @Week2, [Week 3] = @Week3, [Week 4] = @Week4, [Week 5] = @Week5, 
+                         [Week 6] = @Week6, Expire = @Expire
+WHERE        (Id = @Original_Id)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Platform", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Page", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Page", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -11761,7 +11764,7 @@ WHERE (Id = @Original_Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, string Original_Platform, string Original_Page, global::System.Nullable<global::System.DateTime> Original_Time, global::System.Nullable<bool> Original_Week_1, global::System.Nullable<bool> Original_Week_2, global::System.Nullable<bool> Original_Week_3, global::System.Nullable<bool> Original_Week_4, global::System.Nullable<bool> Original_Week_5, global::System.Nullable<global::System.DateTime> Original_Expire, global::System.Nullable<bool> Original_Week_6) {
+        public virtual int Delete(int Original_Id, string Original_Platform, string Original_Page, global::System.Nullable<global::System.DateTime> Original_Time, global::System.Nullable<bool> Original_Week_1, global::System.Nullable<bool> Original_Week_2, global::System.Nullable<bool> Original_Week_3, global::System.Nullable<bool> Original_Week_4, global::System.Nullable<bool> Original_Week_5, global::System.Nullable<bool> Original_Week_6, global::System.Nullable<global::System.DateTime> Original_Expire) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
             if ((Original_Platform == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -11827,17 +11830,17 @@ WHERE (Id = @Original_Id)";
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
-            if ((Original_Expire.HasValue == true)) {
+            if ((Original_Week_6.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((System.DateTime)(Original_Expire.Value));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((bool)(Original_Week_6.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
-            if ((Original_Week_6.HasValue == true)) {
+            if ((Original_Expire.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((bool)(Original_Week_6.Value));
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((System.DateTime)(Original_Expire.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
@@ -11863,7 +11866,7 @@ WHERE (Id = @Original_Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Platform, string Page, string Message, byte[] Image, string Link, global::System.Nullable<global::System.DateTime> Time, global::System.Nullable<bool> Week_1, global::System.Nullable<bool> Week_2, global::System.Nullable<bool> Week_3, global::System.Nullable<bool> Week_4, global::System.Nullable<bool> Week_5, global::System.Nullable<global::System.DateTime> Expire, global::System.Nullable<bool> Week_6) {
+        public virtual int Insert(string Platform, string Page, string Message, byte[] Image, string Link, global::System.Nullable<global::System.DateTime> Time, global::System.Nullable<bool> Week_1, global::System.Nullable<bool> Week_2, global::System.Nullable<bool> Week_3, global::System.Nullable<bool> Week_4, global::System.Nullable<bool> Week_5, global::System.Nullable<bool> Week_6, global::System.Nullable<global::System.DateTime> Expire) {
             if ((Platform == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -11930,14 +11933,14 @@ WHERE (Id = @Original_Id)";
             else {
                 this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Expire.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((System.DateTime)(Expire.Value));
+            if ((Week_6.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((bool)(Week_6.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((Week_6.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[12].Value = ((bool)(Week_6.Value));
+            if ((Expire.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((System.DateTime)(Expire.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
@@ -11974,8 +11977,8 @@ WHERE (Id = @Original_Id)";
                     global::System.Nullable<bool> Week_3, 
                     global::System.Nullable<bool> Week_4, 
                     global::System.Nullable<bool> Week_5, 
-                    global::System.Nullable<global::System.DateTime> Expire, 
                     global::System.Nullable<bool> Week_6, 
+                    global::System.Nullable<global::System.DateTime> Expire, 
                     int Original_Id, 
                     string Original_Platform, 
                     string Original_Page, 
@@ -11985,8 +11988,8 @@ WHERE (Id = @Original_Id)";
                     global::System.Nullable<bool> Original_Week_3, 
                     global::System.Nullable<bool> Original_Week_4, 
                     global::System.Nullable<bool> Original_Week_5, 
-                    global::System.Nullable<global::System.DateTime> Original_Expire, 
                     global::System.Nullable<bool> Original_Week_6, 
+                    global::System.Nullable<global::System.DateTime> Original_Expire, 
                     int Id) {
             if ((Platform == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -12054,14 +12057,14 @@ WHERE (Id = @Original_Id)";
             else {
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Expire.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((System.DateTime)(Expire.Value));
+            if ((Week_6.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((bool)(Week_6.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((Week_6.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((bool)(Week_6.Value));
+            if ((Expire.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(Expire.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
@@ -12131,17 +12134,17 @@ WHERE (Id = @Original_Id)";
                 this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
             }
-            if ((Original_Expire.HasValue == true)) {
+            if ((Original_Week_6.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((System.DateTime)(Original_Expire.Value));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((bool)(Original_Week_6.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
             }
-            if ((Original_Week_6.HasValue == true)) {
+            if ((Original_Expire.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((bool)(Original_Week_6.Value));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((System.DateTime)(Original_Expire.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
@@ -12180,8 +12183,8 @@ WHERE (Id = @Original_Id)";
                     global::System.Nullable<bool> Week_3, 
                     global::System.Nullable<bool> Week_4, 
                     global::System.Nullable<bool> Week_5, 
-                    global::System.Nullable<global::System.DateTime> Expire, 
                     global::System.Nullable<bool> Week_6, 
+                    global::System.Nullable<global::System.DateTime> Expire, 
                     int Original_Id, 
                     string Original_Platform, 
                     string Original_Page, 
@@ -12191,9 +12194,9 @@ WHERE (Id = @Original_Id)";
                     global::System.Nullable<bool> Original_Week_3, 
                     global::System.Nullable<bool> Original_Week_4, 
                     global::System.Nullable<bool> Original_Week_5, 
-                    global::System.Nullable<global::System.DateTime> Original_Expire, 
-                    global::System.Nullable<bool> Original_Week_6) {
-            return this.Update(Platform, Page, Message, Image, Link, Time, Week_1, Week_2, Week_3, Week_4, Week_5, Expire, Week_6, Original_Id, Original_Platform, Original_Page, Original_Time, Original_Week_1, Original_Week_2, Original_Week_3, Original_Week_4, Original_Week_5, Original_Expire, Original_Week_6, Original_Id);
+                    global::System.Nullable<bool> Original_Week_6, 
+                    global::System.Nullable<global::System.DateTime> Original_Expire) {
+            return this.Update(Platform, Page, Message, Image, Link, Time, Week_1, Week_2, Week_3, Week_4, Week_5, Week_6, Expire, Original_Id, Original_Platform, Original_Page, Original_Time, Original_Week_1, Original_Week_2, Original_Week_3, Original_Week_4, Original_Week_5, Original_Week_6, Original_Expire, Original_Id);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12557,12 +12560,12 @@ WHERE (Id = @Original_Id)";
             tableMapping.ColumnMappings.Add("Week 3", "Week 3");
             tableMapping.ColumnMappings.Add("Week 4", "Week 4");
             tableMapping.ColumnMappings.Add("Week 5", "Week 5");
-            tableMapping.ColumnMappings.Add("Expire", "Expire");
             tableMapping.ColumnMappings.Add("Week 6", "Week 6");
+            tableMapping.ColumnMappings.Add("Expire", "Expire");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Thursday] WHERE (([Id] = @Original_Id) AND ((@IsNull_Platform = 1 AND [Platform] IS NULL) OR ([Platform] = @Original_Platform)) AND ((@IsNull_Page = 1 AND [Page] IS NULL) OR ([Page] = @Original_Page)) AND ((@IsNull_Time = 1 AND [Time] IS NULL) OR ([Time] = @Original_Time)) AND ((@IsNull_Week_1 = 1 AND [Week 1] IS NULL) OR ([Week 1] = @Original_Week_1)) AND ((@IsNull_Week_2 = 1 AND [Week 2] IS NULL) OR ([Week 2] = @Original_Week_2)) AND ((@IsNull_Week_3 = 1 AND [Week 3] IS NULL) OR ([Week 3] = @Original_Week_3)) AND ((@IsNull_Week_4 = 1 AND [Week 4] IS NULL) OR ([Week 4] = @Original_Week_4)) AND ((@IsNull_Week_5 = 1 AND [Week 5] IS NULL) OR ([Week 5] = @Original_Week_5)) AND ((@IsNull_Expire = 1 AND [Expire] IS NULL) OR ([Expire] = @Original_Expire)) AND ((@IsNull_Week_6 = 1 AND [Week 6] IS NULL) OR ([Week 6] = @Original_Week_6)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Thursday] WHERE (([Id] = @Original_Id) AND ((@IsNull_Platform = 1 AND [Platform] IS NULL) OR ([Platform] = @Original_Platform)) AND ((@IsNull_Page = 1 AND [Page] IS NULL) OR ([Page] = @Original_Page)) AND ((@IsNull_Time = 1 AND [Time] IS NULL) OR ([Time] = @Original_Time)) AND ((@IsNull_Week_1 = 1 AND [Week 1] IS NULL) OR ([Week 1] = @Original_Week_1)) AND ((@IsNull_Week_2 = 1 AND [Week 2] IS NULL) OR ([Week 2] = @Original_Week_2)) AND ((@IsNull_Week_3 = 1 AND [Week 3] IS NULL) OR ([Week 3] = @Original_Week_3)) AND ((@IsNull_Week_4 = 1 AND [Week 4] IS NULL) OR ([Week 4] = @Original_Week_4)) AND ((@IsNull_Week_5 = 1 AND [Week 5] IS NULL) OR ([Week 5] = @Original_Week_5)) AND ((@IsNull_Week_6 = 1 AND [Week 6] IS NULL) OR ([Week 6] = @Original_Week_6)) AND ((@IsNull_Expire = 1 AND [Expire] IS NULL) OR ([Expire] = @Original_Expire)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Platform", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -12581,14 +12584,14 @@ WHERE (Id = @Original_Id)";
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_4", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 4", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Week_5", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_5", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Expire", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Week_6", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_6", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Expire", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Thursday] ([Platform], [Page], [Message], [Image], [Link], [Time], [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], [Expire], [Week 6]) VALUES (@Platform, @Page, @Message, @Image, @Link, @Time, @Week_1, @Week_2, @Week_3, @Week_4, @Week_5, @Expire, @Week_6);
-SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], Expire, [Week 6] FROM Thursday WHERE (Id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Thursday] ([Platform], [Page], [Message], [Image], [Link], [Time], [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], [Week 6], [Expire]) VALUES (@Platform, @Page, @Message, @Image, @Link, @Time, @Week_1, @Week_2, @Week_3, @Week_4, @Week_5, @Week_6, @Expire);
+SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], [Week 6], Expire FROM Thursday WHERE (Id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Platform", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Page", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Page", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -12601,12 +12604,12 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_3", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 3", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_4", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 4", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_5", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_6", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [Thursday] SET [Platform] = @Platform, [Page] = @Page, [Message] = @Message, [Image] = @Image, [Link] = @Link, [Time] = @Time, [Week 1] = @Week_1, [Week 2] = @Week_2, [Week 3] = @Week_3, [Week 4] = @Week_4, [Week 5] = @Week_5, [Expire] = @Expire, [Week 6] = @Week_6 WHERE (([Id] = @Original_Id) AND ((@IsNull_Platform = 1 AND [Platform] IS NULL) OR ([Platform] = @Original_Platform)) AND ((@IsNull_Page = 1 AND [Page] IS NULL) OR ([Page] = @Original_Page)) AND ((@IsNull_Time = 1 AND [Time] IS NULL) OR ([Time] = @Original_Time)) AND ((@IsNull_Week_1 = 1 AND [Week 1] IS NULL) OR ([Week 1] = @Original_Week_1)) AND ((@IsNull_Week_2 = 1 AND [Week 2] IS NULL) OR ([Week 2] = @Original_Week_2)) AND ((@IsNull_Week_3 = 1 AND [Week 3] IS NULL) OR ([Week 3] = @Original_Week_3)) AND ((@IsNull_Week_4 = 1 AND [Week 4] IS NULL) OR ([Week 4] = @Original_Week_4)) AND ((@IsNull_Week_5 = 1 AND [Week 5] IS NULL) OR ([Week 5] = @Original_Week_5)) AND ((@IsNull_Expire = 1 AND [Expire] IS NULL) OR ([Expire] = @Original_Expire)) AND ((@IsNull_Week_6 = 1 AND [Week 6] IS NULL) OR ([Week 6] = @Original_Week_6)));
-SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], Expire, [Week 6] FROM Thursday WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Thursday] SET [Platform] = @Platform, [Page] = @Page, [Message] = @Message, [Image] = @Image, [Link] = @Link, [Time] = @Time, [Week 1] = @Week_1, [Week 2] = @Week_2, [Week 3] = @Week_3, [Week 4] = @Week_4, [Week 5] = @Week_5, [Week 6] = @Week_6, [Expire] = @Expire WHERE (([Id] = @Original_Id) AND ((@IsNull_Platform = 1 AND [Platform] IS NULL) OR ([Platform] = @Original_Platform)) AND ((@IsNull_Page = 1 AND [Page] IS NULL) OR ([Page] = @Original_Page)) AND ((@IsNull_Time = 1 AND [Time] IS NULL) OR ([Time] = @Original_Time)) AND ((@IsNull_Week_1 = 1 AND [Week 1] IS NULL) OR ([Week 1] = @Original_Week_1)) AND ((@IsNull_Week_2 = 1 AND [Week 2] IS NULL) OR ([Week 2] = @Original_Week_2)) AND ((@IsNull_Week_3 = 1 AND [Week 3] IS NULL) OR ([Week 3] = @Original_Week_3)) AND ((@IsNull_Week_4 = 1 AND [Week 4] IS NULL) OR ([Week 4] = @Original_Week_4)) AND ((@IsNull_Week_5 = 1 AND [Week 5] IS NULL) OR ([Week 5] = @Original_Week_5)) AND ((@IsNull_Week_6 = 1 AND [Week 6] IS NULL) OR ([Week 6] = @Original_Week_6)) AND ((@IsNull_Expire = 1 AND [Expire] IS NULL) OR ([Expire] = @Original_Expire)));
+SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], [Week 6], Expire FROM Thursday WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Platform", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Page", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Page", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -12619,8 +12622,8 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_3", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 3", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_4", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 4", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_5", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_6", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Platform", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Platform", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -12638,10 +12641,10 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_4", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 4", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Week_5", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_5", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Expire", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Week_6", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_6", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Expire", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -12659,7 +12662,7 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2]," +
-                " [Week 3], [Week 4], [Week 5], Expire, [Week 6]\r\nFROM            Thursday";
+                " [Week 3], [Week 4], [Week 5], [Week 6], Expire\r\nFROM            Thursday";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -12668,9 +12671,9 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "INSERT INTO Thursday\r\n(Platform, Page, Message, Image, Link, Time, [Week 1], [Wee" +
-                "k 2], [Week 3], [Week 4], [Week 5], [Week 6], Expire)\r\nVALUES (@Platform,@Page,@" +
-                "Message,@Image,@Link,@Time,@Week1,@Week2,@Week3,@Week4,@Week5,@Week6,@Expire,)";
+            this._commandCollection[2].CommandText = @"INSERT INTO Thursday
+                         (Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], [Week 6], Expire)
+VALUES        (@Platform, @Page, @Message, @Image, @Link, @Time, @Week1, @Week2, @Week3, @Week4, @Week5, @Week6, @Expire)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Platform", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Page", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Page", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -12688,9 +12691,9 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
             this._commandCollection[3].CommandText = @"UPDATE       Thursday
-SET
-Platform = @Platform, Page = @Page, Message = @Message, Image = @Image, Link = @Link, Time = @Time, [Week 1] = @Week1, [Week 2] = @Week2, [Week 3] = @Week3, [Week 4] = @Week4, [Week 5] = @Week5, [Week 6] = @Week6, Expire = @Expire
-WHERE (Id = @Original_Id)";
+SET                Platform = @Platform, Page = @Page, Message = @Message, Image = @Image, Link = @Link, Time = @Time, [Week 1] = @Week1, [Week 2] = @Week2, [Week 3] = @Week3, [Week 4] = @Week4, [Week 5] = @Week5, 
+                         [Week 6] = @Week6, Expire = @Expire
+WHERE        (Id = @Original_Id)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Platform", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Page", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Page", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -12765,7 +12768,7 @@ WHERE (Id = @Original_Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, string Original_Platform, string Original_Page, global::System.Nullable<global::System.DateTime> Original_Time, global::System.Nullable<bool> Original_Week_1, global::System.Nullable<bool> Original_Week_2, global::System.Nullable<bool> Original_Week_3, global::System.Nullable<bool> Original_Week_4, global::System.Nullable<bool> Original_Week_5, global::System.Nullable<global::System.DateTime> Original_Expire, global::System.Nullable<bool> Original_Week_6) {
+        public virtual int Delete(int Original_Id, string Original_Platform, string Original_Page, global::System.Nullable<global::System.DateTime> Original_Time, global::System.Nullable<bool> Original_Week_1, global::System.Nullable<bool> Original_Week_2, global::System.Nullable<bool> Original_Week_3, global::System.Nullable<bool> Original_Week_4, global::System.Nullable<bool> Original_Week_5, global::System.Nullable<bool> Original_Week_6, global::System.Nullable<global::System.DateTime> Original_Expire) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
             if ((Original_Platform == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -12831,17 +12834,17 @@ WHERE (Id = @Original_Id)";
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
-            if ((Original_Expire.HasValue == true)) {
+            if ((Original_Week_6.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((System.DateTime)(Original_Expire.Value));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((bool)(Original_Week_6.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
-            if ((Original_Week_6.HasValue == true)) {
+            if ((Original_Expire.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((bool)(Original_Week_6.Value));
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((System.DateTime)(Original_Expire.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
@@ -12867,7 +12870,7 @@ WHERE (Id = @Original_Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Platform, string Page, string Message, byte[] Image, string Link, global::System.Nullable<global::System.DateTime> Time, global::System.Nullable<bool> Week_1, global::System.Nullable<bool> Week_2, global::System.Nullable<bool> Week_3, global::System.Nullable<bool> Week_4, global::System.Nullable<bool> Week_5, global::System.Nullable<global::System.DateTime> Expire, global::System.Nullable<bool> Week_6) {
+        public virtual int Insert(string Platform, string Page, string Message, byte[] Image, string Link, global::System.Nullable<global::System.DateTime> Time, global::System.Nullable<bool> Week_1, global::System.Nullable<bool> Week_2, global::System.Nullable<bool> Week_3, global::System.Nullable<bool> Week_4, global::System.Nullable<bool> Week_5, global::System.Nullable<bool> Week_6, global::System.Nullable<global::System.DateTime> Expire) {
             if ((Platform == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -12934,14 +12937,14 @@ WHERE (Id = @Original_Id)";
             else {
                 this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Expire.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((System.DateTime)(Expire.Value));
+            if ((Week_6.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((bool)(Week_6.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((Week_6.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[12].Value = ((bool)(Week_6.Value));
+            if ((Expire.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((System.DateTime)(Expire.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
@@ -12978,8 +12981,8 @@ WHERE (Id = @Original_Id)";
                     global::System.Nullable<bool> Week_3, 
                     global::System.Nullable<bool> Week_4, 
                     global::System.Nullable<bool> Week_5, 
-                    global::System.Nullable<global::System.DateTime> Expire, 
                     global::System.Nullable<bool> Week_6, 
+                    global::System.Nullable<global::System.DateTime> Expire, 
                     int Original_Id, 
                     string Original_Platform, 
                     string Original_Page, 
@@ -12989,8 +12992,8 @@ WHERE (Id = @Original_Id)";
                     global::System.Nullable<bool> Original_Week_3, 
                     global::System.Nullable<bool> Original_Week_4, 
                     global::System.Nullable<bool> Original_Week_5, 
-                    global::System.Nullable<global::System.DateTime> Original_Expire, 
                     global::System.Nullable<bool> Original_Week_6, 
+                    global::System.Nullable<global::System.DateTime> Original_Expire, 
                     int Id) {
             if ((Platform == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -13058,14 +13061,14 @@ WHERE (Id = @Original_Id)";
             else {
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Expire.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((System.DateTime)(Expire.Value));
+            if ((Week_6.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((bool)(Week_6.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((Week_6.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((bool)(Week_6.Value));
+            if ((Expire.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(Expire.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
@@ -13135,17 +13138,17 @@ WHERE (Id = @Original_Id)";
                 this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
             }
-            if ((Original_Expire.HasValue == true)) {
+            if ((Original_Week_6.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((System.DateTime)(Original_Expire.Value));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((bool)(Original_Week_6.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
             }
-            if ((Original_Week_6.HasValue == true)) {
+            if ((Original_Expire.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((bool)(Original_Week_6.Value));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((System.DateTime)(Original_Expire.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
@@ -13184,8 +13187,8 @@ WHERE (Id = @Original_Id)";
                     global::System.Nullable<bool> Week_3, 
                     global::System.Nullable<bool> Week_4, 
                     global::System.Nullable<bool> Week_5, 
-                    global::System.Nullable<global::System.DateTime> Expire, 
                     global::System.Nullable<bool> Week_6, 
+                    global::System.Nullable<global::System.DateTime> Expire, 
                     int Original_Id, 
                     string Original_Platform, 
                     string Original_Page, 
@@ -13195,9 +13198,9 @@ WHERE (Id = @Original_Id)";
                     global::System.Nullable<bool> Original_Week_3, 
                     global::System.Nullable<bool> Original_Week_4, 
                     global::System.Nullable<bool> Original_Week_5, 
-                    global::System.Nullable<global::System.DateTime> Original_Expire, 
-                    global::System.Nullable<bool> Original_Week_6) {
-            return this.Update(Platform, Page, Message, Image, Link, Time, Week_1, Week_2, Week_3, Week_4, Week_5, Expire, Week_6, Original_Id, Original_Platform, Original_Page, Original_Time, Original_Week_1, Original_Week_2, Original_Week_3, Original_Week_4, Original_Week_5, Original_Expire, Original_Week_6, Original_Id);
+                    global::System.Nullable<bool> Original_Week_6, 
+                    global::System.Nullable<global::System.DateTime> Original_Expire) {
+            return this.Update(Platform, Page, Message, Image, Link, Time, Week_1, Week_2, Week_3, Week_4, Week_5, Week_6, Expire, Original_Id, Original_Platform, Original_Page, Original_Time, Original_Week_1, Original_Week_2, Original_Week_3, Original_Week_4, Original_Week_5, Original_Week_6, Original_Expire, Original_Id);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13561,12 +13564,12 @@ WHERE (Id = @Original_Id)";
             tableMapping.ColumnMappings.Add("Week 3", "Week 3");
             tableMapping.ColumnMappings.Add("Week 4", "Week 4");
             tableMapping.ColumnMappings.Add("Week 5", "Week 5");
-            tableMapping.ColumnMappings.Add("Expire", "Expire");
             tableMapping.ColumnMappings.Add("Week 6", "Week 6");
+            tableMapping.ColumnMappings.Add("Expire", "Expire");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Tuesday] WHERE (([Id] = @Original_Id) AND ((@IsNull_Platform = 1 AND [Platform] IS NULL) OR ([Platform] = @Original_Platform)) AND ((@IsNull_Page = 1 AND [Page] IS NULL) OR ([Page] = @Original_Page)) AND ((@IsNull_Time = 1 AND [Time] IS NULL) OR ([Time] = @Original_Time)) AND ((@IsNull_Week_1 = 1 AND [Week 1] IS NULL) OR ([Week 1] = @Original_Week_1)) AND ((@IsNull_Week_2 = 1 AND [Week 2] IS NULL) OR ([Week 2] = @Original_Week_2)) AND ((@IsNull_Week_3 = 1 AND [Week 3] IS NULL) OR ([Week 3] = @Original_Week_3)) AND ((@IsNull_Week_4 = 1 AND [Week 4] IS NULL) OR ([Week 4] = @Original_Week_4)) AND ((@IsNull_Week_5 = 1 AND [Week 5] IS NULL) OR ([Week 5] = @Original_Week_5)) AND ((@IsNull_Expire = 1 AND [Expire] IS NULL) OR ([Expire] = @Original_Expire)) AND ((@IsNull_Week_6 = 1 AND [Week 6] IS NULL) OR ([Week 6] = @Original_Week_6)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Tuesday] WHERE (([Id] = @Original_Id) AND ((@IsNull_Platform = 1 AND [Platform] IS NULL) OR ([Platform] = @Original_Platform)) AND ((@IsNull_Page = 1 AND [Page] IS NULL) OR ([Page] = @Original_Page)) AND ((@IsNull_Time = 1 AND [Time] IS NULL) OR ([Time] = @Original_Time)) AND ((@IsNull_Week_1 = 1 AND [Week 1] IS NULL) OR ([Week 1] = @Original_Week_1)) AND ((@IsNull_Week_2 = 1 AND [Week 2] IS NULL) OR ([Week 2] = @Original_Week_2)) AND ((@IsNull_Week_3 = 1 AND [Week 3] IS NULL) OR ([Week 3] = @Original_Week_3)) AND ((@IsNull_Week_4 = 1 AND [Week 4] IS NULL) OR ([Week 4] = @Original_Week_4)) AND ((@IsNull_Week_5 = 1 AND [Week 5] IS NULL) OR ([Week 5] = @Original_Week_5)) AND ((@IsNull_Week_6 = 1 AND [Week 6] IS NULL) OR ([Week 6] = @Original_Week_6)) AND ((@IsNull_Expire = 1 AND [Expire] IS NULL) OR ([Expire] = @Original_Expire)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Platform", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -13585,14 +13588,14 @@ WHERE (Id = @Original_Id)";
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_4", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 4", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Week_5", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_5", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Expire", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Week_6", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_6", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Expire", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Tuesday] ([Platform], [Page], [Message], [Image], [Link], [Time], [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], [Expire], [Week 6]) VALUES (@Platform, @Page, @Message, @Image, @Link, @Time, @Week_1, @Week_2, @Week_3, @Week_4, @Week_5, @Expire, @Week_6);
-SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], Expire, [Week 6] FROM Tuesday WHERE (Id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Tuesday] ([Platform], [Page], [Message], [Image], [Link], [Time], [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], [Week 6], [Expire]) VALUES (@Platform, @Page, @Message, @Image, @Link, @Time, @Week_1, @Week_2, @Week_3, @Week_4, @Week_5, @Week_6, @Expire);
+SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], [Week 6], Expire FROM Tuesday WHERE (Id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Platform", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Page", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Page", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -13605,12 +13608,12 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_3", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 3", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_4", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 4", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_5", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_6", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [Tuesday] SET [Platform] = @Platform, [Page] = @Page, [Message] = @Message, [Image] = @Image, [Link] = @Link, [Time] = @Time, [Week 1] = @Week_1, [Week 2] = @Week_2, [Week 3] = @Week_3, [Week 4] = @Week_4, [Week 5] = @Week_5, [Expire] = @Expire, [Week 6] = @Week_6 WHERE (([Id] = @Original_Id) AND ((@IsNull_Platform = 1 AND [Platform] IS NULL) OR ([Platform] = @Original_Platform)) AND ((@IsNull_Page = 1 AND [Page] IS NULL) OR ([Page] = @Original_Page)) AND ((@IsNull_Time = 1 AND [Time] IS NULL) OR ([Time] = @Original_Time)) AND ((@IsNull_Week_1 = 1 AND [Week 1] IS NULL) OR ([Week 1] = @Original_Week_1)) AND ((@IsNull_Week_2 = 1 AND [Week 2] IS NULL) OR ([Week 2] = @Original_Week_2)) AND ((@IsNull_Week_3 = 1 AND [Week 3] IS NULL) OR ([Week 3] = @Original_Week_3)) AND ((@IsNull_Week_4 = 1 AND [Week 4] IS NULL) OR ([Week 4] = @Original_Week_4)) AND ((@IsNull_Week_5 = 1 AND [Week 5] IS NULL) OR ([Week 5] = @Original_Week_5)) AND ((@IsNull_Expire = 1 AND [Expire] IS NULL) OR ([Expire] = @Original_Expire)) AND ((@IsNull_Week_6 = 1 AND [Week 6] IS NULL) OR ([Week 6] = @Original_Week_6)));
-SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], Expire, [Week 6] FROM Tuesday WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Tuesday] SET [Platform] = @Platform, [Page] = @Page, [Message] = @Message, [Image] = @Image, [Link] = @Link, [Time] = @Time, [Week 1] = @Week_1, [Week 2] = @Week_2, [Week 3] = @Week_3, [Week 4] = @Week_4, [Week 5] = @Week_5, [Week 6] = @Week_6, [Expire] = @Expire WHERE (([Id] = @Original_Id) AND ((@IsNull_Platform = 1 AND [Platform] IS NULL) OR ([Platform] = @Original_Platform)) AND ((@IsNull_Page = 1 AND [Page] IS NULL) OR ([Page] = @Original_Page)) AND ((@IsNull_Time = 1 AND [Time] IS NULL) OR ([Time] = @Original_Time)) AND ((@IsNull_Week_1 = 1 AND [Week 1] IS NULL) OR ([Week 1] = @Original_Week_1)) AND ((@IsNull_Week_2 = 1 AND [Week 2] IS NULL) OR ([Week 2] = @Original_Week_2)) AND ((@IsNull_Week_3 = 1 AND [Week 3] IS NULL) OR ([Week 3] = @Original_Week_3)) AND ((@IsNull_Week_4 = 1 AND [Week 4] IS NULL) OR ([Week 4] = @Original_Week_4)) AND ((@IsNull_Week_5 = 1 AND [Week 5] IS NULL) OR ([Week 5] = @Original_Week_5)) AND ((@IsNull_Week_6 = 1 AND [Week 6] IS NULL) OR ([Week 6] = @Original_Week_6)) AND ((@IsNull_Expire = 1 AND [Expire] IS NULL) OR ([Expire] = @Original_Expire)));
+SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], [Week 6], Expire FROM Tuesday WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Platform", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Page", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Page", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -13623,8 +13626,8 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_3", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 3", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_4", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 4", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_5", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_6", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Platform", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Platform", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -13642,10 +13645,10 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_4", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 4", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Week_5", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_5", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Expire", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Week_6", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_6", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Expire", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -13663,7 +13666,7 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2]," +
-                " [Week 3], [Week 4], [Week 5], Expire, [Week 6]\r\nFROM            Tuesday";
+                " [Week 3], [Week 4], [Week 5], [Week 6], Expire\r\nFROM            Tuesday";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -13672,9 +13675,9 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "INSERT INTO Tuesday\r\n(Platform, Page, Message, Image, Link, Time, [Week 1], [Week" +
-                " 2], [Week 3], [Week 4], [Week 5], [Week 6], Expire)\r\nVALUES (@Platform,@Page,@M" +
-                "essage,@Image,@Link,@Time,@Week1,@Week2,@Week3,@Week4,@Week5,@Week6,@Expire,)";
+            this._commandCollection[2].CommandText = @"INSERT INTO Tuesday
+                         (Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], [Week 6], Expire)
+VALUES        (@Platform, @Page, @Message, @Image, @Link, @Time, @Week1, @Week2, @Week3, @Week4, @Week5, @Week6, @Expire)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Platform", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Page", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Page", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -13692,9 +13695,9 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
             this._commandCollection[3].CommandText = @"UPDATE       Tuesday
-SET
-Platform = @Platform, Page = @Page, Message = @Message, Image = @Image, Link = @Link, Time = @Time, [Week 1] = @Week1, [Week 2] = @Week2, [Week 3] = @Week3, [Week 4] = @Week4, [Week 5] = @Week5, [Week 6] = @Week6, Expire = @Expire
-WHERE (Id = @Original_Id)";
+SET                Platform = @Platform, Page = @Page, Message = @Message, Image = @Image, Link = @Link, Time = @Time, [Week 1] = @Week1, [Week 2] = @Week2, [Week 3] = @Week3, [Week 4] = @Week4, [Week 5] = @Week5, 
+                         [Week 6] = @Week6, Expire = @Expire
+WHERE        (Id = @Original_Id)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Platform", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Page", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Page", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -13769,7 +13772,7 @@ WHERE (Id = @Original_Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, string Original_Platform, string Original_Page, global::System.Nullable<global::System.DateTime> Original_Time, global::System.Nullable<bool> Original_Week_1, global::System.Nullable<bool> Original_Week_2, global::System.Nullable<bool> Original_Week_3, global::System.Nullable<bool> Original_Week_4, global::System.Nullable<bool> Original_Week_5, global::System.Nullable<global::System.DateTime> Original_Expire, global::System.Nullable<bool> Original_Week_6) {
+        public virtual int Delete(int Original_Id, string Original_Platform, string Original_Page, global::System.Nullable<global::System.DateTime> Original_Time, global::System.Nullable<bool> Original_Week_1, global::System.Nullable<bool> Original_Week_2, global::System.Nullable<bool> Original_Week_3, global::System.Nullable<bool> Original_Week_4, global::System.Nullable<bool> Original_Week_5, global::System.Nullable<bool> Original_Week_6, global::System.Nullable<global::System.DateTime> Original_Expire) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
             if ((Original_Platform == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -13835,17 +13838,17 @@ WHERE (Id = @Original_Id)";
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
-            if ((Original_Expire.HasValue == true)) {
+            if ((Original_Week_6.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((System.DateTime)(Original_Expire.Value));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((bool)(Original_Week_6.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
-            if ((Original_Week_6.HasValue == true)) {
+            if ((Original_Expire.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((bool)(Original_Week_6.Value));
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((System.DateTime)(Original_Expire.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
@@ -13871,7 +13874,7 @@ WHERE (Id = @Original_Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Platform, string Page, string Message, byte[] Image, string Link, global::System.Nullable<global::System.DateTime> Time, global::System.Nullable<bool> Week_1, global::System.Nullable<bool> Week_2, global::System.Nullable<bool> Week_3, global::System.Nullable<bool> Week_4, global::System.Nullable<bool> Week_5, global::System.Nullable<global::System.DateTime> Expire, global::System.Nullable<bool> Week_6) {
+        public virtual int Insert(string Platform, string Page, string Message, byte[] Image, string Link, global::System.Nullable<global::System.DateTime> Time, global::System.Nullable<bool> Week_1, global::System.Nullable<bool> Week_2, global::System.Nullable<bool> Week_3, global::System.Nullable<bool> Week_4, global::System.Nullable<bool> Week_5, global::System.Nullable<bool> Week_6, global::System.Nullable<global::System.DateTime> Expire) {
             if ((Platform == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -13938,14 +13941,14 @@ WHERE (Id = @Original_Id)";
             else {
                 this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Expire.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((System.DateTime)(Expire.Value));
+            if ((Week_6.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((bool)(Week_6.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((Week_6.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[12].Value = ((bool)(Week_6.Value));
+            if ((Expire.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((System.DateTime)(Expire.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
@@ -13982,8 +13985,8 @@ WHERE (Id = @Original_Id)";
                     global::System.Nullable<bool> Week_3, 
                     global::System.Nullable<bool> Week_4, 
                     global::System.Nullable<bool> Week_5, 
-                    global::System.Nullable<global::System.DateTime> Expire, 
                     global::System.Nullable<bool> Week_6, 
+                    global::System.Nullable<global::System.DateTime> Expire, 
                     int Original_Id, 
                     string Original_Platform, 
                     string Original_Page, 
@@ -13993,8 +13996,8 @@ WHERE (Id = @Original_Id)";
                     global::System.Nullable<bool> Original_Week_3, 
                     global::System.Nullable<bool> Original_Week_4, 
                     global::System.Nullable<bool> Original_Week_5, 
-                    global::System.Nullable<global::System.DateTime> Original_Expire, 
                     global::System.Nullable<bool> Original_Week_6, 
+                    global::System.Nullable<global::System.DateTime> Original_Expire, 
                     int Id) {
             if ((Platform == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -14062,14 +14065,14 @@ WHERE (Id = @Original_Id)";
             else {
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Expire.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((System.DateTime)(Expire.Value));
+            if ((Week_6.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((bool)(Week_6.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((Week_6.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((bool)(Week_6.Value));
+            if ((Expire.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(Expire.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
@@ -14139,17 +14142,17 @@ WHERE (Id = @Original_Id)";
                 this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
             }
-            if ((Original_Expire.HasValue == true)) {
+            if ((Original_Week_6.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((System.DateTime)(Original_Expire.Value));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((bool)(Original_Week_6.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
             }
-            if ((Original_Week_6.HasValue == true)) {
+            if ((Original_Expire.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((bool)(Original_Week_6.Value));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((System.DateTime)(Original_Expire.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
@@ -14188,8 +14191,8 @@ WHERE (Id = @Original_Id)";
                     global::System.Nullable<bool> Week_3, 
                     global::System.Nullable<bool> Week_4, 
                     global::System.Nullable<bool> Week_5, 
-                    global::System.Nullable<global::System.DateTime> Expire, 
                     global::System.Nullable<bool> Week_6, 
+                    global::System.Nullable<global::System.DateTime> Expire, 
                     int Original_Id, 
                     string Original_Platform, 
                     string Original_Page, 
@@ -14199,9 +14202,9 @@ WHERE (Id = @Original_Id)";
                     global::System.Nullable<bool> Original_Week_3, 
                     global::System.Nullable<bool> Original_Week_4, 
                     global::System.Nullable<bool> Original_Week_5, 
-                    global::System.Nullable<global::System.DateTime> Original_Expire, 
-                    global::System.Nullable<bool> Original_Week_6) {
-            return this.Update(Platform, Page, Message, Image, Link, Time, Week_1, Week_2, Week_3, Week_4, Week_5, Expire, Week_6, Original_Id, Original_Platform, Original_Page, Original_Time, Original_Week_1, Original_Week_2, Original_Week_3, Original_Week_4, Original_Week_5, Original_Expire, Original_Week_6, Original_Id);
+                    global::System.Nullable<bool> Original_Week_6, 
+                    global::System.Nullable<global::System.DateTime> Original_Expire) {
+            return this.Update(Platform, Page, Message, Image, Link, Time, Week_1, Week_2, Week_3, Week_4, Week_5, Week_6, Expire, Original_Id, Original_Platform, Original_Page, Original_Time, Original_Week_1, Original_Week_2, Original_Week_3, Original_Week_4, Original_Week_5, Original_Week_6, Original_Expire, Original_Id);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15129,12 +15132,12 @@ SELECT Id, PAGE_NAME, API_KEY, API_SECRET_KEY, ACCESS_TOKEN, ACCESS_TOKEN_SECRET
             tableMapping.ColumnMappings.Add("Week 3", "Week 3");
             tableMapping.ColumnMappings.Add("Week 4", "Week 4");
             tableMapping.ColumnMappings.Add("Week 5", "Week 5");
-            tableMapping.ColumnMappings.Add("Expire", "Expire");
             tableMapping.ColumnMappings.Add("Week 6", "Week 6");
+            tableMapping.ColumnMappings.Add("Expire", "Expire");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Wednesday] WHERE (([Id] = @Original_Id) AND ((@IsNull_Platform = 1 AND [Platform] IS NULL) OR ([Platform] = @Original_Platform)) AND ((@IsNull_Page = 1 AND [Page] IS NULL) OR ([Page] = @Original_Page)) AND ((@IsNull_Time = 1 AND [Time] IS NULL) OR ([Time] = @Original_Time)) AND ((@IsNull_Week_1 = 1 AND [Week 1] IS NULL) OR ([Week 1] = @Original_Week_1)) AND ((@IsNull_Week_2 = 1 AND [Week 2] IS NULL) OR ([Week 2] = @Original_Week_2)) AND ((@IsNull_Week_3 = 1 AND [Week 3] IS NULL) OR ([Week 3] = @Original_Week_3)) AND ((@IsNull_Week_4 = 1 AND [Week 4] IS NULL) OR ([Week 4] = @Original_Week_4)) AND ((@IsNull_Week_5 = 1 AND [Week 5] IS NULL) OR ([Week 5] = @Original_Week_5)) AND ((@IsNull_Expire = 1 AND [Expire] IS NULL) OR ([Expire] = @Original_Expire)) AND ((@IsNull_Week_6 = 1 AND [Week 6] IS NULL) OR ([Week 6] = @Original_Week_6)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Wednesday] WHERE (([Id] = @Original_Id) AND ((@IsNull_Platform = 1 AND [Platform] IS NULL) OR ([Platform] = @Original_Platform)) AND ((@IsNull_Page = 1 AND [Page] IS NULL) OR ([Page] = @Original_Page)) AND ((@IsNull_Time = 1 AND [Time] IS NULL) OR ([Time] = @Original_Time)) AND ((@IsNull_Week_1 = 1 AND [Week 1] IS NULL) OR ([Week 1] = @Original_Week_1)) AND ((@IsNull_Week_2 = 1 AND [Week 2] IS NULL) OR ([Week 2] = @Original_Week_2)) AND ((@IsNull_Week_3 = 1 AND [Week 3] IS NULL) OR ([Week 3] = @Original_Week_3)) AND ((@IsNull_Week_4 = 1 AND [Week 4] IS NULL) OR ([Week 4] = @Original_Week_4)) AND ((@IsNull_Week_5 = 1 AND [Week 5] IS NULL) OR ([Week 5] = @Original_Week_5)) AND ((@IsNull_Week_6 = 1 AND [Week 6] IS NULL) OR ([Week 6] = @Original_Week_6)) AND ((@IsNull_Expire = 1 AND [Expire] IS NULL) OR ([Expire] = @Original_Expire)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Platform", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -15153,14 +15156,14 @@ SELECT Id, PAGE_NAME, API_KEY, API_SECRET_KEY, ACCESS_TOKEN, ACCESS_TOKEN_SECRET
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_4", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 4", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Week_5", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_5", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Expire", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Week_6", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_6", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Expire", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Wednesday] ([Platform], [Page], [Message], [Image], [Link], [Time], [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], [Expire], [Week 6]) VALUES (@Platform, @Page, @Message, @Image, @Link, @Time, @Week_1, @Week_2, @Week_3, @Week_4, @Week_5, @Expire, @Week_6);
-SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], Expire, [Week 6] FROM Wednesday WHERE (Id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Wednesday] ([Platform], [Page], [Message], [Image], [Link], [Time], [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], [Week 6], [Expire]) VALUES (@Platform, @Page, @Message, @Image, @Link, @Time, @Week_1, @Week_2, @Week_3, @Week_4, @Week_5, @Week_6, @Expire);
+SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], [Week 6], Expire FROM Wednesday WHERE (Id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Platform", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Page", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Page", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -15173,12 +15176,12 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_3", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 3", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_4", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 4", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_5", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_6", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [Wednesday] SET [Platform] = @Platform, [Page] = @Page, [Message] = @Message, [Image] = @Image, [Link] = @Link, [Time] = @Time, [Week 1] = @Week_1, [Week 2] = @Week_2, [Week 3] = @Week_3, [Week 4] = @Week_4, [Week 5] = @Week_5, [Expire] = @Expire, [Week 6] = @Week_6 WHERE (([Id] = @Original_Id) AND ((@IsNull_Platform = 1 AND [Platform] IS NULL) OR ([Platform] = @Original_Platform)) AND ((@IsNull_Page = 1 AND [Page] IS NULL) OR ([Page] = @Original_Page)) AND ((@IsNull_Time = 1 AND [Time] IS NULL) OR ([Time] = @Original_Time)) AND ((@IsNull_Week_1 = 1 AND [Week 1] IS NULL) OR ([Week 1] = @Original_Week_1)) AND ((@IsNull_Week_2 = 1 AND [Week 2] IS NULL) OR ([Week 2] = @Original_Week_2)) AND ((@IsNull_Week_3 = 1 AND [Week 3] IS NULL) OR ([Week 3] = @Original_Week_3)) AND ((@IsNull_Week_4 = 1 AND [Week 4] IS NULL) OR ([Week 4] = @Original_Week_4)) AND ((@IsNull_Week_5 = 1 AND [Week 5] IS NULL) OR ([Week 5] = @Original_Week_5)) AND ((@IsNull_Expire = 1 AND [Expire] IS NULL) OR ([Expire] = @Original_Expire)) AND ((@IsNull_Week_6 = 1 AND [Week 6] IS NULL) OR ([Week 6] = @Original_Week_6)));
-SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], Expire, [Week 6] FROM Wednesday WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Wednesday] SET [Platform] = @Platform, [Page] = @Page, [Message] = @Message, [Image] = @Image, [Link] = @Link, [Time] = @Time, [Week 1] = @Week_1, [Week 2] = @Week_2, [Week 3] = @Week_3, [Week 4] = @Week_4, [Week 5] = @Week_5, [Week 6] = @Week_6, [Expire] = @Expire WHERE (([Id] = @Original_Id) AND ((@IsNull_Platform = 1 AND [Platform] IS NULL) OR ([Platform] = @Original_Platform)) AND ((@IsNull_Page = 1 AND [Page] IS NULL) OR ([Page] = @Original_Page)) AND ((@IsNull_Time = 1 AND [Time] IS NULL) OR ([Time] = @Original_Time)) AND ((@IsNull_Week_1 = 1 AND [Week 1] IS NULL) OR ([Week 1] = @Original_Week_1)) AND ((@IsNull_Week_2 = 1 AND [Week 2] IS NULL) OR ([Week 2] = @Original_Week_2)) AND ((@IsNull_Week_3 = 1 AND [Week 3] IS NULL) OR ([Week 3] = @Original_Week_3)) AND ((@IsNull_Week_4 = 1 AND [Week 4] IS NULL) OR ([Week 4] = @Original_Week_4)) AND ((@IsNull_Week_5 = 1 AND [Week 5] IS NULL) OR ([Week 5] = @Original_Week_5)) AND ((@IsNull_Week_6 = 1 AND [Week 6] IS NULL) OR ([Week 6] = @Original_Week_6)) AND ((@IsNull_Expire = 1 AND [Expire] IS NULL) OR ([Expire] = @Original_Expire)));
+SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], [Week 6], Expire FROM Wednesday WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Platform", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Page", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Page", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -15191,8 +15194,8 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_3", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 3", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_4", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 4", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_5", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Week_6", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Platform", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Platform", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -15210,10 +15213,10 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_4", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 4", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Week_5", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_5", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 5", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Expire", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Week_6", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Week_6", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Week 6", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Expire", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Expire", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expire", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -15231,7 +15234,7 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2]," +
-                " [Week 3], [Week 4], [Week 5], Expire, [Week 6]\r\nFROM            Wednesday";
+                " [Week 3], [Week 4], [Week 5], [Week 6], Expire\r\nFROM            Wednesday";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -15240,9 +15243,9 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "INSERT INTO Wednesday\r\n(Platform, Page, Message, Image, Link, Time, [Week 1], [We" +
-                "ek 2], [Week 3], [Week 4], [Week 5], [Week 6], Expire)\r\nVALUES (@Platform,@Page," +
-                "@Message,@Image,@Link,@Time,@Week1,@Week2,@Week3,@Week4,@Week5,@Week6,@Expire,)";
+            this._commandCollection[2].CommandText = @"INSERT INTO Wednesday
+                         (Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week 3], [Week 4], [Week 5], [Week 6], Expire)
+VALUES        (@Platform, @Page, @Message, @Image, @Link, @Time, @Week1, @Week2, @Week3, @Week4, @Week5, @Week6, @Expire)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Platform", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Page", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Page", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -15260,9 +15263,10 @@ SELECT Id, Platform, Page, Message, Image, Link, Time, [Week 1], [Week 2], [Week
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
             this._commandCollection[3].CommandText = @"UPDATE       Wednesday
-SET
-Platform = @Platform, Page = @Page, Message = @Message, Image = @Image, Link = @Link, Time = @Time, [Week 1] = @Week1, [Week 2] = @Week2, [Week 3] = @Week3, [Week 4] = @Week4, [Week 5] = @Week5, [Week 6] = @Week6, Expire = @Expire
-WHERE (Id = @Original_Id)";
+
+SET                Platform = @Platform, Page = @Page, Message = @Message, Image = @Image, Link = @Link, Time = @Time, [Week 1] = @Week1, [Week 2] = @Week2, [Week 3] = @Week3, [Week 4] = @Week4, [Week 5] = @Week5, 
+                         [Week 6] = @Week6, Expire = @Expire
+WHERE        (Id = @Original_Id)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Platform", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Platform", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Page", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Page", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -15337,7 +15341,7 @@ WHERE (Id = @Original_Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, string Original_Platform, string Original_Page, global::System.Nullable<global::System.DateTime> Original_Time, global::System.Nullable<bool> Original_Week_1, global::System.Nullable<bool> Original_Week_2, global::System.Nullable<bool> Original_Week_3, global::System.Nullable<bool> Original_Week_4, global::System.Nullable<bool> Original_Week_5, global::System.Nullable<global::System.DateTime> Original_Expire, global::System.Nullable<bool> Original_Week_6) {
+        public virtual int Delete(int Original_Id, string Original_Platform, string Original_Page, global::System.Nullable<global::System.DateTime> Original_Time, global::System.Nullable<bool> Original_Week_1, global::System.Nullable<bool> Original_Week_2, global::System.Nullable<bool> Original_Week_3, global::System.Nullable<bool> Original_Week_4, global::System.Nullable<bool> Original_Week_5, global::System.Nullable<bool> Original_Week_6, global::System.Nullable<global::System.DateTime> Original_Expire) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
             if ((Original_Platform == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -15403,17 +15407,17 @@ WHERE (Id = @Original_Id)";
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
-            if ((Original_Expire.HasValue == true)) {
+            if ((Original_Week_6.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((System.DateTime)(Original_Expire.Value));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((bool)(Original_Week_6.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
-            if ((Original_Week_6.HasValue == true)) {
+            if ((Original_Expire.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((bool)(Original_Week_6.Value));
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((System.DateTime)(Original_Expire.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
@@ -15439,7 +15443,7 @@ WHERE (Id = @Original_Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Platform, string Page, string Message, byte[] Image, string Link, global::System.Nullable<global::System.DateTime> Time, global::System.Nullable<bool> Week_1, global::System.Nullable<bool> Week_2, global::System.Nullable<bool> Week_3, global::System.Nullable<bool> Week_4, global::System.Nullable<bool> Week_5, global::System.Nullable<global::System.DateTime> Expire, global::System.Nullable<bool> Week_6) {
+        public virtual int Insert(string Platform, string Page, string Message, byte[] Image, string Link, global::System.Nullable<global::System.DateTime> Time, global::System.Nullable<bool> Week_1, global::System.Nullable<bool> Week_2, global::System.Nullable<bool> Week_3, global::System.Nullable<bool> Week_4, global::System.Nullable<bool> Week_5, global::System.Nullable<bool> Week_6, global::System.Nullable<global::System.DateTime> Expire) {
             if ((Platform == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -15506,14 +15510,14 @@ WHERE (Id = @Original_Id)";
             else {
                 this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Expire.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((System.DateTime)(Expire.Value));
+            if ((Week_6.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((bool)(Week_6.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((Week_6.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[12].Value = ((bool)(Week_6.Value));
+            if ((Expire.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((System.DateTime)(Expire.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
@@ -15550,8 +15554,8 @@ WHERE (Id = @Original_Id)";
                     global::System.Nullable<bool> Week_3, 
                     global::System.Nullable<bool> Week_4, 
                     global::System.Nullable<bool> Week_5, 
-                    global::System.Nullable<global::System.DateTime> Expire, 
                     global::System.Nullable<bool> Week_6, 
+                    global::System.Nullable<global::System.DateTime> Expire, 
                     int Original_Id, 
                     string Original_Platform, 
                     string Original_Page, 
@@ -15561,8 +15565,8 @@ WHERE (Id = @Original_Id)";
                     global::System.Nullable<bool> Original_Week_3, 
                     global::System.Nullable<bool> Original_Week_4, 
                     global::System.Nullable<bool> Original_Week_5, 
-                    global::System.Nullable<global::System.DateTime> Original_Expire, 
                     global::System.Nullable<bool> Original_Week_6, 
+                    global::System.Nullable<global::System.DateTime> Original_Expire, 
                     int Id) {
             if ((Platform == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -15630,14 +15634,14 @@ WHERE (Id = @Original_Id)";
             else {
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Expire.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((System.DateTime)(Expire.Value));
+            if ((Week_6.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((bool)(Week_6.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((Week_6.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((bool)(Week_6.Value));
+            if ((Expire.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(Expire.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
@@ -15707,17 +15711,17 @@ WHERE (Id = @Original_Id)";
                 this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
             }
-            if ((Original_Expire.HasValue == true)) {
+            if ((Original_Week_6.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((System.DateTime)(Original_Expire.Value));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((bool)(Original_Week_6.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
             }
-            if ((Original_Week_6.HasValue == true)) {
+            if ((Original_Expire.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((bool)(Original_Week_6.Value));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((System.DateTime)(Original_Expire.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
@@ -15756,8 +15760,8 @@ WHERE (Id = @Original_Id)";
                     global::System.Nullable<bool> Week_3, 
                     global::System.Nullable<bool> Week_4, 
                     global::System.Nullable<bool> Week_5, 
-                    global::System.Nullable<global::System.DateTime> Expire, 
                     global::System.Nullable<bool> Week_6, 
+                    global::System.Nullable<global::System.DateTime> Expire, 
                     int Original_Id, 
                     string Original_Platform, 
                     string Original_Page, 
@@ -15767,9 +15771,9 @@ WHERE (Id = @Original_Id)";
                     global::System.Nullable<bool> Original_Week_3, 
                     global::System.Nullable<bool> Original_Week_4, 
                     global::System.Nullable<bool> Original_Week_5, 
-                    global::System.Nullable<global::System.DateTime> Original_Expire, 
-                    global::System.Nullable<bool> Original_Week_6) {
-            return this.Update(Platform, Page, Message, Image, Link, Time, Week_1, Week_2, Week_3, Week_4, Week_5, Expire, Week_6, Original_Id, Original_Platform, Original_Page, Original_Time, Original_Week_1, Original_Week_2, Original_Week_3, Original_Week_4, Original_Week_5, Original_Expire, Original_Week_6, Original_Id);
+                    global::System.Nullable<bool> Original_Week_6, 
+                    global::System.Nullable<global::System.DateTime> Original_Expire) {
+            return this.Update(Platform, Page, Message, Image, Link, Time, Week_1, Week_2, Week_3, Week_4, Week_5, Week_6, Expire, Original_Id, Original_Platform, Original_Page, Original_Time, Original_Week_1, Original_Week_2, Original_Week_3, Original_Week_4, Original_Week_5, Original_Week_6, Original_Expire, Original_Id);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

@@ -1533,7 +1533,10 @@ namespace SocialPostScheduler
             Focus();
             Activate();
             TopMost = false;
-            dataGridView.Refresh();
+            if (dataGridView != null)
+            {
+                dataGridView.Refresh();
+            }
         }
 
         private static void EnsureVisibleRow(DataGridView view, int rowToShow)

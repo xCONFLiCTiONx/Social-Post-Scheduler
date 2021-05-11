@@ -4,6 +4,9 @@
 
     partial class SocialPostSchedulerDataSet
     {
+        partial class MondayDataTable
+        {
+        }
     }
 }
 
