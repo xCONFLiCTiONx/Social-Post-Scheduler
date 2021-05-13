@@ -17,6 +17,7 @@ namespace SocialPostScheduler
                     string responseInString = wb.DownloadString("https://graph.facebook.com/oauth/access_token?client_id=" + APP_ID + "&client_secret=" + APP_SECRET + "&grant_type=fb_exchange_token&fb_exchange_token=" + USER_TOKEN);
 
                     JObject json = JObject.Parse(responseInString);
+
                     return json["access_token"].ToString();
                 }
             }
@@ -28,29 +29,12 @@ namespace SocialPostScheduler
             }
         }
 
-        internal static string GetPageTokenAsync(string PAGE_NAME, string USER_TOKEN, string USER_ID, string PAGE_ID, bool isImage, string MESSAGE_STRING, string IMAGE_PATH, string LINK_URL)
+        internal static async Task<string> GrabTokenPostMessage(string USER_TOKEN, string PAGE_ID, bool isImage, string MESSAGE_STRING, string IMAGE_PATH, string LINK_URL)
         {
             try
             {
-                using (WebClient wb = new WebClient())
-                {
-                    string responseInString = wb.DownloadString("https://graph.facebook.com/" + USER_ID + "/accounts?access_token=" + USER_TOKEN);
-
-                    JObject jdata = JObject.Parse(responseInString);
-                    JToken array = jdata["data"];
-
-                    foreach (JToken account in array)
-                    {
-                        if (account["name"].ToString().Equals(PAGE_NAME))
-                        {
-                            string PAGE_TOKEN = account["access_token"].ToString();
-                            _ = PostMessage(PAGE_ID, PAGE_TOKEN, isImage, MESSAGE_STRING, IMAGE_PATH, LINK_URL);
-                            return PAGE_TOKEN;
-                        }
-                    }
-                }
-
-                return string.Empty;
+                USER_TOKEN = await Task.Run(() => PostMessage(PAGE_ID, USER_TOKEN, isImage, MESSAGE_STRING, IMAGE_PATH, LINK_URL));
+                return USER_TOKEN;
             }
             catch (Exception ex)
             {
@@ -74,13 +58,12 @@ namespace SocialPostScheduler
                     {
                         EasyLogger.Warning(response);
 
-                        Form.ActiveForm.Opacity = 0;
                         Form.ActiveForm.TopMost = true;
-                        Form.ActiveForm.Show();
-                        Form.ActiveForm.WindowState = FormWindowState.Normal;
                         Form.ActiveForm.WindowState = FormWindowState.Minimized;
-                        Form.ActiveForm.Opacity = 1;
+                        Form.ActiveForm.Show();
+                        Form.ActiveForm.ShowInTaskbar = true;
                         Form.ActiveForm.WindowState = FormWindowState.Normal;
+                        Form.ActiveForm.WindowState = Properties.Settings.Default.windowState;
                         Form.ActiveForm.BringToFront();
                         Form.ActiveForm.Focus();
                         Form.ActiveForm.Activate();
@@ -103,13 +86,12 @@ namespace SocialPostScheduler
                     {
                         EasyLogger.Warning(response);
 
-                        Form.ActiveForm.Opacity = 0;
                         Form.ActiveForm.TopMost = true;
-                        Form.ActiveForm.Show();
-                        Form.ActiveForm.WindowState = FormWindowState.Normal;
                         Form.ActiveForm.WindowState = FormWindowState.Minimized;
-                        Form.ActiveForm.Opacity = 1;
+                        Form.ActiveForm.Show();
+                        Form.ActiveForm.ShowInTaskbar = true;
                         Form.ActiveForm.WindowState = FormWindowState.Normal;
+                        Form.ActiveForm.WindowState = Properties.Settings.Default.windowState;
                         Form.ActiveForm.BringToFront();
                         Form.ActiveForm.Focus();
                         Form.ActiveForm.Activate();

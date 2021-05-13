@@ -24,7 +24,7 @@ namespace SocialPostScheduler
 
                 HttpResponseMessage response = await client.PostAsync("https://graph.facebook.com/" + PAGE_ID + "/feed?", content);
 
-                string responseString = await response.Content.ReadAsStringAsync();
+                _ = await response.Content.ReadAsStringAsync();
 
                 return "OK";
             }

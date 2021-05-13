@@ -71,18 +71,6 @@ namespace SocialPostScheduler.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\SocialPostSch" +
-            "eduler.mdf;Integrated Security=True;MultipleActiveResultSets=True;Connect Timeou" +
-            "t=60")]
-        public string SocialPostSchedulerConnectionString {
-            get {
-                return ((string)(this["SocialPostSchedulerConnectionString"]));
-            }
-        }
-        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("2/4/1980 12:12:00 AM +00:00")]
@@ -236,6 +224,17 @@ namespace SocialPostScheduler.Properties {
             }
             set {
                 this["windowState"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\SocialPostSch" +
+            "eduler.mdf;Integrated Security=True;Connect Timeout=30")]
+        public string SocialPostSchedulerConnectionString {
+            get {
+                return ((string)(this["SocialPostSchedulerConnectionString"]));
             }
         }
     }
