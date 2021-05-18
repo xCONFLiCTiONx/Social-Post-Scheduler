@@ -1426,7 +1426,7 @@ namespace SocialPostScheduler
                         }
                     }));
 
-                    _ = await GetToken.GrabTokenPostMessage(_CURRENT_USER_TOKEN, _PAGE_ID, isImage, MESSAGE_STRING, IMAGE_PATH, LINK_URL);
+                    _ = await Task.Run(() => GetToken.PostMessage(PAGE_NAME, _USER_ID, _PAGE_ID, _CURRENT_USER_TOKEN, isImage, MESSAGE_STRING, IMAGE_PATH, LINK_URL));
                 }
                 else if (platform == "Twitter")
                 {
