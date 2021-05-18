@@ -6,12 +6,11 @@ Post to Facebook and Twitter on a weekly schedule
 
 ![Screenshot](https://github.com/xCONFLiCTiONx/Social-Post-Scheduler/raw/master/Screenshot.jpg)
 
-
 Post to Facebook, Instagram and Twitter on a weekly schedule. This is for repeat posts or for posts that you want to schedule for later. Using Facebook Creator Studio is the preferred method for posting to Facebook but for those posts that you repeat or want to post for a while then this program will save you tons of time.
 
-### How to create the apps for Facebook, Instagram and Twitter
+## How to create the apps for Facebook, Instagram and Twitter
 
-#### Facebook API
+### Facebook API
 
 [https://developers.facebook.com](https://developers.facebook.com)
 
