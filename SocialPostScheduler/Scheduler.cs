@@ -71,7 +71,7 @@ namespace SocialPostScheduler
                     Properties.Settings.Default.PublishDate = Properties.Settings.Default.PublishDate;
                     Properties.Settings.Default.RenewUserToken = Properties.Settings.Default.RenewUserToken;
 
-                    Process.Start("https://xconflictionx.github.io/2021/01/08/social-post-scheduler/");
+                    Process.Start("https://github.com/xCONFLiCTiONx/Social-Post-Scheduler#social-post-scheduler");
                     ShowInTaskbar = true;
                     WindowState = FormWindowState.Normal;
 
@@ -2711,7 +2711,7 @@ namespace SocialPostScheduler
 
         private void wikiImage_Click(object sender, EventArgs e)
         {
-            Process.Start("https://xconflictionx.github.io/2021/01/08/social-post-scheduler/");
+            Process.Start("https://github.com/xCONFLiCTiONx/Social-Post-Scheduler#social-post-scheduler");
         }
 
         private void MinimizeToTrayToolStripMenuItem_Click(object sender, EventArgs e)
