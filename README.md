@@ -25,8 +25,7 @@ Generate USER Token with proper permissions:
 6. Make sure you add the correct permissions (see [permissions]({{ site.url }}/2021/01/08/social-post-scheduler/#permissions) below) and then click on the `Generate Access Token` button.
 7. Convert this short-lived access token into a long-lived access token by making this Graph API call: [https://graph.facebook.com/oauth/access_token?client_id={APP_ID}&client_secret={APP_SECRET}&grant_type=fb_exchange_token&fb_exchange_token={SHORT_LIVED_ACCESS_TOKEN}](https://graph.facebook.com/oauth/access_token?client_id={APP_ID}&client_secret={APP_SECRET}&grant_type=fb_exchange_token&fb_exchange_token={SHORT_LIVED_ACCESS_TOKEN})
 8. Grab the new long-lived access token returned back
-9. Make a Graph API call to see your accounts using the new long-lived access token: [https://graph.facebook.com/{USER_ID}/accounts?access_token={LONG_LIVED_ACCESS_TOKEN}](https://graph.facebook.com/{USER_ID}/accounts?access_token={LONG_LIVED_ACCESS_TOKEN})
-10. Grab the `access_token` for the page you'll be posting to
+9. Grab the `access_token` for the page you'll be posting to
 
 ### Minimum Permissions
 
