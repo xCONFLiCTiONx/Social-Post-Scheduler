@@ -10,34 +10,35 @@ namespace SocialPostScheduler
         [STAThread]
         private static void Main()
         {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+
             EasyLogger.BackupLogs(EasyLogger.LogFile, 7);
             EasyLogger.AddListener(EasyLogger.LogFile);
 
             EasyLogger.Info("Initializing...");
 
-            int tries = 60;
-        TryAgain:;
+            int tries = 10;
+
             try
             {
-                if (!SQLConnection.IsServerConnected(Properties.Settings.Default.SocialPostSchedulerConnectionString))
+                while (!SQLConnection.IsServerConnected(Properties.Settings.Default.SocialPostSchedulerConnectionString))
                 {
                     tries--;
                     if (tries > 0)
                     {
-                        EasyLogger.Warning("SQL Server is not responding. I'll try again " + tries + " more times until I require user input...");
                         Thread.Sleep(2000);
-                        goto TryAgain;
                     }
                     else
                     {
                         DialogResult result = MessageBox.Show("SQL Server is not responding. Would you like to try again?", "Social Post Scheduler", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        if (result == DialogResult.Yes)
+                        if (result == DialogResult.No)
                         {
-                            goto TryAgain;
+                            Environment.Exit(0);
                         }
                         else
                         {
-                            Environment.Exit(0);
+                            tries = 10;
                         }
                     }
                 }
@@ -105,8 +106,6 @@ namespace SocialPostScheduler
             }
             try
             {
-                Application.EnableVisualStyles();
-                Application.SetCompatibleTextRenderingDefault(false);
                 Application.Run(new Scheduler());
             }
             catch (Exception ex)
