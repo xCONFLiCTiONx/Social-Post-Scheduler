@@ -117,12 +117,12 @@ namespace SocialPostScheduler
 
         private static void Application_ThreadException(object sender, ThreadExceptionEventArgs e)
         {
-            EasyLogger.Error(e.Exception.Message + " Application.ThreadException");
+            EasyLogger.Error(e.Exception.Message + Environment.NewLine + e.Exception.StackTrace + Environment.NewLine + e.Exception.InnerException + " Application.ThreadException");
         }
 
         private static void AppDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
-            EasyLogger.Error(((Exception)e.ExceptionObject).Message + " AppDomain.UnhandledException");
+            EasyLogger.Error(((Exception)e.ExceptionObject).Message + Environment.NewLine + ((Exception)e.ExceptionObject).StackTrace + Environment.NewLine + ((Exception)e.ExceptionObject).InnerException + " AppDomain.UnhandledException");
         }
 
         private static void ExitApp()

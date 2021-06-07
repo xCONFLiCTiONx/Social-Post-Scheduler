@@ -225,6 +225,16 @@ namespace SocialPostScheduler
                     dataGridView7.CellValueChanged += DataGridView7_CellValueChanged;
                     dataGridView8.CellValueChanged += DataGridView8_CellValueChanged;
                     dataGridView9.CellValueChanged += DataGridView9_CellValueChanged;
+
+                    dataGridView1.KeyUp += DataGridView1_KeyUp;
+                    dataGridView2.KeyUp += DataGridView2_KeyUp;
+                    dataGridView3.KeyUp += DataGridView3_KeyUp;
+                    dataGridView4.KeyUp += DataGridView4_KeyUp;
+                    dataGridView5.KeyUp += DataGridView5_KeyUp;
+                    dataGridView6.KeyUp += DataGridView6_KeyUp;
+                    dataGridView7.KeyUp += DataGridView7_KeyUp;
+                    dataGridView8.KeyUp += DataGridView8_KeyUp;
+                    dataGridView9.KeyUp += DataGridView9_KeyUp;
                 }
                 catch (Exception ex)
                 {
@@ -321,66 +331,160 @@ namespace SocialPostScheduler
             }
         }
 
+        private void DataGridView9_KeyUp(object sender, KeyEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void DataGridView8_KeyUp(object sender, KeyEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void DataGridView7_KeyUp(object sender, KeyEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void DataGridView6_KeyUp(object sender, KeyEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void DataGridView5_KeyUp(object sender, KeyEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void DataGridView4_KeyUp(object sender, KeyEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void DataGridView3_KeyUp(object sender, KeyEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void DataGridView2_KeyUp(object sender, KeyEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void DataGridView1_KeyUp(object sender, KeyEventArgs e)
+        {
+            e.Handled = true;
+        }
+
         private void DataGridView9_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridView dgv = (DataGridView)sender;
-            if (e.ColumnIndex == 7 || e.ColumnIndex == 8 || e.ColumnIndex == 9 || e.ColumnIndex == 10 || e.ColumnIndex == 11 || e.ColumnIndex == 12)
+            try
             {
-                dgv.EndEdit();
+                DataGridView dgv = (DataGridView)sender;
+                if (e.ColumnIndex == 7 || e.ColumnIndex == 8 || e.ColumnIndex == 9 || e.ColumnIndex == 10 || e.ColumnIndex == 11 || e.ColumnIndex == 12)
+                {
+                    dgv.EndEdit();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void DataGridView8_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridView dgv = (DataGridView)sender;
-            if (e.ColumnIndex == 7 || e.ColumnIndex == 8 || e.ColumnIndex == 9 || e.ColumnIndex == 10 || e.ColumnIndex == 11 || e.ColumnIndex == 12)
+            try
             {
-                dgv.EndEdit();
+                DataGridView dgv = (DataGridView)sender;
+                if (e.ColumnIndex == 7 || e.ColumnIndex == 8 || e.ColumnIndex == 9 || e.ColumnIndex == 10 || e.ColumnIndex == 11 || e.ColumnIndex == 12)
+                {
+                    dgv.EndEdit();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void DataGridView7_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridView dgv = (DataGridView)sender;
-            if (e.ColumnIndex == 7 || e.ColumnIndex == 8 || e.ColumnIndex == 9 || e.ColumnIndex == 10 || e.ColumnIndex == 11 || e.ColumnIndex == 12)
+            try
             {
-                dgv.EndEdit();
+                DataGridView dgv = (DataGridView)sender;
+                if (e.ColumnIndex == 7 || e.ColumnIndex == 8 || e.ColumnIndex == 9 || e.ColumnIndex == 10 || e.ColumnIndex == 11 || e.ColumnIndex == 12)
+                {
+                    dgv.EndEdit();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void DataGridView6_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridView dgv = (DataGridView)sender;
-            if (e.ColumnIndex == 7 || e.ColumnIndex == 8 || e.ColumnIndex == 9 || e.ColumnIndex == 10 || e.ColumnIndex == 11 || e.ColumnIndex == 12)
+            try
             {
-                dgv.EndEdit();
+                DataGridView dgv = (DataGridView)sender;
+                if (e.ColumnIndex == 7 || e.ColumnIndex == 8 || e.ColumnIndex == 9 || e.ColumnIndex == 10 || e.ColumnIndex == 11 || e.ColumnIndex == 12)
+                {
+                    dgv.EndEdit();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void DataGridView5_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridView dgv = (DataGridView)sender;
-            if (e.ColumnIndex == 7 || e.ColumnIndex == 8 || e.ColumnIndex == 9 || e.ColumnIndex == 10 || e.ColumnIndex == 11 || e.ColumnIndex == 12)
+            try
             {
-                dgv.EndEdit();
+                DataGridView dgv = (DataGridView)sender;
+                if (e.ColumnIndex == 7 || e.ColumnIndex == 8 || e.ColumnIndex == 9 || e.ColumnIndex == 10 || e.ColumnIndex == 11 || e.ColumnIndex == 12)
+                {
+                    dgv.EndEdit();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void DataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridView dgv = (DataGridView)sender;
-            if (e.ColumnIndex == 7 || e.ColumnIndex == 8 || e.ColumnIndex == 9 || e.ColumnIndex == 10 || e.ColumnIndex == 11 || e.ColumnIndex == 12)
+            try
             {
-                dgv.EndEdit();
+                DataGridView dgv = (DataGridView)sender;
+                if (e.ColumnIndex == 7 || e.ColumnIndex == 8 || e.ColumnIndex == 9 || e.ColumnIndex == 10 || e.ColumnIndex == 11 || e.ColumnIndex == 12)
+                {
+                    dgv.EndEdit();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void DataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridView dgv = (DataGridView)sender;
-            if (e.ColumnIndex == 7 || e.ColumnIndex == 8 || e.ColumnIndex == 9 || e.ColumnIndex == 10 || e.ColumnIndex == 11 || e.ColumnIndex == 12)
+            try
             {
-                dgv.EndEdit();
+                DataGridView dgv = (DataGridView)sender;
+                if (e.ColumnIndex == 7 || e.ColumnIndex == 8 || e.ColumnIndex == 9 || e.ColumnIndex == 10 || e.ColumnIndex == 11 || e.ColumnIndex == 12)
+                {
+                    dgv.EndEdit();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -878,14 +982,22 @@ namespace SocialPostScheduler
 
         private void TextEditorBox_TextChanged(object sender, EventArgs e)
         {
-            if (textEditorBox.Text.Length > 0)
+            try
             {
-                tabControl2.TabPages[7].Text = "Text Editor (" + textEditorBox.Text.Length + "/280)";
+                if (textEditorBox.Text.Length > 0)
+                {
+                    tabControl2.TabPages[7].Text = "Text Editor (" + textEditorBox.Text.Length + "/280)";
+                }
+                else
+                {
+                    tabControl2.TabPages[7].Text = "Text Editor";
+                }
             }
-            else
+            catch (Exception ex)
             {
-                tabControl2.TabPages[7].Text = "Text Editor";
+                MessageBox.Show(ex.Message);
             }
+            
         }
 
         #endregion Scheduler
@@ -895,47 +1007,54 @@ namespace SocialPostScheduler
         private static bool GetBooleanValue(DataGridViewRow DGVR, int week)
         {
             bool value = false;
-            if (week == 1)
+            try
             {
-                if (DGVR.Cells[7].Value != DBNull.Value)
+                if (week == 1)
                 {
-                    value = Convert.ToBoolean(DGVR.Cells[7].Value);
+                    if (DGVR.Cells[7].Value != DBNull.Value)
+                    {
+                        value = Convert.ToBoolean(DGVR.Cells[7].Value);
+                    }
+                }
+                if (week == 2)
+                {
+                    if (DGVR.Cells[8].Value != DBNull.Value)
+                    {
+                        value = Convert.ToBoolean(DGVR.Cells[8].Value);
+                    }
+                }
+                if (week == 3)
+                {
+                    if (DGVR.Cells[9].Value != DBNull.Value)
+                    {
+                        value = Convert.ToBoolean(DGVR.Cells[9].Value);
+                    }
+                }
+                if (week == 4)
+                {
+                    if (DGVR.Cells[10].Value != DBNull.Value)
+                    {
+                        value = Convert.ToBoolean(DGVR.Cells[10].Value);
+                    }
+                }
+                if (week == 5)
+                {
+                    if (DGVR.Cells[11].Value != DBNull.Value)
+                    {
+                        value = Convert.ToBoolean(DGVR.Cells[11].Value);
+                    }
+                }
+                if (week == 6)
+                {
+                    if (DGVR.Cells[12].Value != DBNull.Value)
+                    {
+                        value = Convert.ToBoolean(DGVR.Cells[12].Value);
+                    }
                 }
             }
-            if (week == 2)
+            catch (Exception ex)
             {
-                if (DGVR.Cells[8].Value != DBNull.Value)
-                {
-                    value = Convert.ToBoolean(DGVR.Cells[8].Value);
-                }
-            }
-            if (week == 3)
-            {
-                if (DGVR.Cells[9].Value != DBNull.Value)
-                {
-                    value = Convert.ToBoolean(DGVR.Cells[9].Value);
-                }
-            }
-            if (week == 4)
-            {
-                if (DGVR.Cells[10].Value != DBNull.Value)
-                {
-                    value = Convert.ToBoolean(DGVR.Cells[10].Value);
-                }
-            }
-            if (week == 5)
-            {
-                if (DGVR.Cells[11].Value != DBNull.Value)
-                {
-                    value = Convert.ToBoolean(DGVR.Cells[11].Value);
-                }
-            }
-            if (week == 6)
-            {
-                if (DGVR.Cells[12].Value != DBNull.Value)
-                {
-                    value = Convert.ToBoolean(DGVR.Cells[12].Value);
-                }
+                MessageBox.Show(ex.Message);
             }
 
             return value;
@@ -944,9 +1063,15 @@ namespace SocialPostScheduler
         public static int GetWeekNumberOfMonth(DateTime date)
         {
             DateTime beginningOfMonth = new DateTime(date.Year, date.Month, 1);
-
-            while (date.Date.AddDays(1).DayOfWeek != CultureInfo.CurrentCulture.DateTimeFormat.FirstDayOfWeek)
-                date = date.AddDays(1);
+            try
+            {
+                while (date.Date.AddDays(1).DayOfWeek != CultureInfo.CurrentCulture.DateTimeFormat.FirstDayOfWeek)
+                    date = date.AddDays(1);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
             return (int)Math.Truncate((double)date.Subtract(beginningOfMonth).TotalDays / 7f) + 1;
         }
@@ -1493,12 +1618,19 @@ namespace SocialPostScheduler
 
         private void DataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
-            e.ThrowException = false;
+            try
+            {
+                e.ThrowException = false;
 
-            string txt = "Error with " + dataGridView.Columns[e.ColumnIndex].HeaderText + "\n\n" + e.Exception.Message;
-            MessageBox.Show(txt, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                string txt = "Error with " + dataGridView.Columns[e.ColumnIndex].HeaderText + "\n\n" + e.Exception.Message;
+                MessageBox.Show(txt, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            e.Cancel = false;
+                e.Cancel = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void NotifyIcon_MouseClick(object sender, MouseEventArgs e)
@@ -1523,25 +1655,39 @@ namespace SocialPostScheduler
 
         private void ShowWindow()
         {
-            TopMost = true;
-            WindowState = FormWindowState.Minimized;
-            Show();
-            ShowInTaskbar = true;
-            WindowState = FormWindowState.Normal;
-            WindowState = Properties.Settings.Default.windowState;
-            BringToFront();
-            Focus();
-            Activate();
-            TopMost = false;
-            if (dataGridView != null)
+            try
             {
-                dataGridView.Refresh();
+                TopMost = true;
+                WindowState = FormWindowState.Minimized;
+                Show();
+                ShowInTaskbar = true;
+                WindowState = FormWindowState.Normal;
+                WindowState = Properties.Settings.Default.windowState;
+                BringToFront();
+                Focus();
+                Activate();
+                TopMost = false;
+                if (dataGridView != null)
+                {
+                    dataGridView.Refresh();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
         private static void EnsureVisibleRow(DataGridView view, int rowToShow)
         {
-            view.FirstDisplayedScrollingRowIndex = rowToShow;
+            try
+            {
+                view.FirstDisplayedScrollingRowIndex = rowToShow;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         #region Add, Update, Remove, View Image
@@ -2355,67 +2501,109 @@ namespace SocialPostScheduler
 
         private void DataGridView4_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
+            try
             {
-                if (e.ColumnIndex != -1)
+                if (e.Button == MouseButtons.Left)
                 {
-                    CreateContextMenu(dataGridView4);
+                    if (e.ColumnIndex != -1)
+                    {
+                        CreateContextMenu(dataGridView4);
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void DataGridView5_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
+            try
             {
-                if (e.ColumnIndex != -1)
+                if (e.Button == MouseButtons.Left)
                 {
-                    CreateContextMenu(dataGridView5);
+                    if (e.ColumnIndex != -1)
+                    {
+                        CreateContextMenu(dataGridView5);
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void DataGridView6_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
+            try
             {
-                if (e.ColumnIndex != -1)
+                if (e.Button == MouseButtons.Left)
                 {
-                    CreateContextMenu(dataGridView6);
+                    if (e.ColumnIndex != -1)
+                    {
+                        CreateContextMenu(dataGridView6);
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void DataGridView7_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
+            try
             {
-                if (e.ColumnIndex != -1)
+                if (e.Button == MouseButtons.Left)
                 {
-                    CreateContextMenu(dataGridView7);
+                    if (e.ColumnIndex != -1)
+                    {
+                        CreateContextMenu(dataGridView7);
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void DataGridView8_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
+            try
             {
-                if (e.ColumnIndex != -1)
+                if (e.Button == MouseButtons.Left)
                 {
-                    CreateContextMenu(dataGridView8);
+                    if (e.ColumnIndex != -1)
+                    {
+                        CreateContextMenu(dataGridView8);
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void DataGridView9_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
+            try
             {
-                if (e.ColumnIndex != -1)
+                if (e.Button == MouseButtons.Left)
                 {
-                    CreateContextMenu(dataGridView9);
+                    if (e.ColumnIndex != -1)
+                    {
+                        CreateContextMenu(dataGridView9);
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -2601,15 +2789,22 @@ namespace SocialPostScheduler
 
         private void ExportAllTabs()
         {
-            SaveToCSV(dataGridView3, "Sunday", true);
-            SaveToCSV(dataGridView4, "Monday", true);
-            SaveToCSV(dataGridView5, "Tuesday", true);
-            SaveToCSV(dataGridView6, "Wednesday", true);
-            SaveToCSV(dataGridView7, "Thursday", true);
-            SaveToCSV(dataGridView8, "Friday", true);
-            SaveToCSV(dataGridView9, "Saturday", true);
+            try
+            {
+                SaveToCSV(dataGridView3, "Sunday", true);
+                SaveToCSV(dataGridView4, "Monday", true);
+                SaveToCSV(dataGridView5, "Tuesday", true);
+                SaveToCSV(dataGridView6, "Wednesday", true);
+                SaveToCSV(dataGridView7, "Thursday", true);
+                SaveToCSV(dataGridView8, "Friday", true);
+                SaveToCSV(dataGridView9, "Saturday", true);
 
-            MessageBox.Show("The tables have been exported to " + Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + " successfully!", "Exported CSV", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("The tables have been exported to " + Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + " successfully!", "Exported CSV", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void ActiveTabToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2619,33 +2814,40 @@ namespace SocialPostScheduler
 
         private void ExportCurrentTab()
         {
-            if (tabControl2.SelectedTab.Text == "Sunday")
+            try
             {
-                SaveToCSV(dataGridView3, "Sunday");
+                if (tabControl2.SelectedTab.Text == "Sunday")
+                {
+                    SaveToCSV(dataGridView3, "Sunday");
+                }
+                else if (tabControl2.SelectedTab.Text == "Monday")
+                {
+                    SaveToCSV(dataGridView4, "Monday");
+                }
+                else if (tabControl2.SelectedTab.Text == "Tuesday")
+                {
+                    SaveToCSV(dataGridView5, "Tuesday");
+                }
+                else if (tabControl2.SelectedTab.Text == "Wednesday")
+                {
+                    SaveToCSV(dataGridView6, "Wednesday");
+                }
+                else if (tabControl2.SelectedTab.Text == "Thursday")
+                {
+                    SaveToCSV(dataGridView7, "Thursday");
+                }
+                else if (tabControl2.SelectedTab.Text == "Friday")
+                {
+                    SaveToCSV(dataGridView8, "Friday");
+                }
+                else if (tabControl2.SelectedTab.Text == "Saturday")
+                {
+                    SaveToCSV(dataGridView9, "Saturday");
+                }
             }
-            else if (tabControl2.SelectedTab.Text == "Monday")
+            catch (Exception ex)
             {
-                SaveToCSV(dataGridView4, "Monday");
-            }
-            else if (tabControl2.SelectedTab.Text == "Tuesday")
-            {
-                SaveToCSV(dataGridView5, "Tuesday");
-            }
-            else if (tabControl2.SelectedTab.Text == "Wednesday")
-            {
-                SaveToCSV(dataGridView6, "Wednesday");
-            }
-            else if (tabControl2.SelectedTab.Text == "Thursday")
-            {
-                SaveToCSV(dataGridView7, "Thursday");
-            }
-            else if (tabControl2.SelectedTab.Text == "Friday")
-            {
-                SaveToCSV(dataGridView8, "Friday");
-            }
-            else if (tabControl2.SelectedTab.Text == "Saturday")
-            {
-                SaveToCSV(dataGridView9, "Saturday");
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -2711,20 +2913,41 @@ namespace SocialPostScheduler
 
         private void wikiImage_Click(object sender, EventArgs e)
         {
-            Process.Start("https://github.com/xCONFLiCTiONx/Social-Post-Scheduler#social-post-scheduler");
+            try
+            {
+                Process.Start("https://github.com/xCONFLiCTiONx/Social-Post-Scheduler#social-post-scheduler");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void MinimizeToTrayToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Hide();
+            try
+            {
+                Hide();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void SettingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Settings settings = new Settings();
-            settings.ShowDialog();
+            try
+            {
+                Settings settings = new Settings();
+                settings.ShowDialog();
 
-            Properties.Settings.Default.Reload();
+                Properties.Settings.Default.Reload();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void PlatforMenuItem_Click(object sender, EventArgs e)
