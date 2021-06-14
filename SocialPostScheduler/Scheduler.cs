@@ -997,7 +997,7 @@ namespace SocialPostScheduler
             {
                 MessageBox.Show(ex.Message);
             }
-            
+
         }
 
         #endregion Scheduler
@@ -1066,7 +1066,9 @@ namespace SocialPostScheduler
             try
             {
                 while (date.Date.AddDays(1).DayOfWeek != CultureInfo.CurrentCulture.DateTimeFormat.FirstDayOfWeek)
+                {
                     date = date.AddDays(1);
+                }
             }
             catch (Exception ex)
             {
@@ -1166,31 +1168,31 @@ namespace SocialPostScheduler
                                 {
                                     DateTime postTime = new DateTime(now.Year, now.Month, now.Day, time.Value.Hour, time.Value.Minute, 0);
 
-                                    if (now.ToString() == postTime.ToString())
+                                    if (GetBooleanValue(row, GetWeekNumberOfMonth(postTime)))
                                     {
-                                        string imagePath = null;
-                                        if (!DBNull.Value.Equals(row.Cells[4].Value) && row.Cells[4].Value != null)
+                                        if (now.ToString() == postTime.ToString())
                                         {
-                                            Image x = (Bitmap)((new ImageConverter()).ConvertFrom(row.Cells[4].Value));
-                                            Guid id = Guid.NewGuid();
-                                            imagePath = Path.GetTempPath() + id + ".jpg";
-                                            x.Save(imagePath, ImageFormat.Jpeg);
-                                            while (!File.Exists(imagePath))
+                                            string imagePath = null;
+                                            if (!DBNull.Value.Equals(row.Cells[4].Value) && row.Cells[4].Value != null)
                                             {
-                                                Thread.Sleep(10);
-                                            }
-                                        }
-
-                                        if (row.Cells[1].Value != DBNull.Value && row.Cells[2].Value != DBNull.Value && row.Cells[3].Value != DBNull.Value)
-                                        {
-                                            bool isImage = false;
-                                            if (row.Cells[4].Value != DBNull.Value)
-                                            {
-                                                isImage = true;
+                                                Image x = (Bitmap)((new ImageConverter()).ConvertFrom(row.Cells[4].Value));
+                                                Guid id = Guid.NewGuid();
+                                                imagePath = Path.GetTempPath() + id + ".jpg";
+                                                x.Save(imagePath, ImageFormat.Jpeg);
+                                                while (!File.Exists(imagePath))
+                                                {
+                                                    Thread.Sleep(10);
+                                                }
                                             }
 
-                                            if (GetBooleanValue(row, GetWeekNumberOfMonth(DateTime.Now)))
+                                            if (row.Cells[1].Value != DBNull.Value && row.Cells[2].Value != DBNull.Value && row.Cells[3].Value != DBNull.Value)
                                             {
+                                                bool isImage = false;
+                                                if (row.Cells[4].Value != DBNull.Value)
+                                                {
+                                                    isImage = true;
+                                                }
+
                                                 Post(row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), isImage, imagePath, row.Cells[5].Value.ToString());
                                             }
                                         }
@@ -1216,31 +1218,31 @@ namespace SocialPostScheduler
                                 {
                                     DateTime postTime = new DateTime(now.Year, now.Month, now.Day, time.Value.Hour, time.Value.Minute, 0);
 
-                                    if (now.ToString() == postTime.ToString())
+                                    if (GetBooleanValue(row, GetWeekNumberOfMonth(postTime)))
                                     {
-                                        string imagePath = null;
-                                        if (!DBNull.Value.Equals(row.Cells[4].Value) && row.Cells[4].Value != null)
+                                        if (now.ToString() == postTime.ToString())
                                         {
-                                            Image x = (Bitmap)((new ImageConverter()).ConvertFrom(row.Cells[4].Value));
-                                            Guid id = Guid.NewGuid();
-                                            imagePath = Path.GetTempPath() + id + ".jpg";
-                                            x.Save(imagePath, ImageFormat.Jpeg);
-                                            while (!File.Exists(imagePath))
+                                            string imagePath = null;
+                                            if (!DBNull.Value.Equals(row.Cells[4].Value) && row.Cells[4].Value != null)
                                             {
-                                                Thread.Sleep(10);
-                                            }
-                                        }
-
-                                        if (row.Cells[1].Value != DBNull.Value && row.Cells[2].Value != DBNull.Value && row.Cells[3].Value != DBNull.Value)
-                                        {
-                                            bool isImage = false;
-                                            if (row.Cells[4].Value != DBNull.Value)
-                                            {
-                                                isImage = true;
+                                                Image x = (Bitmap)((new ImageConverter()).ConvertFrom(row.Cells[4].Value));
+                                                Guid id = Guid.NewGuid();
+                                                imagePath = Path.GetTempPath() + id + ".jpg";
+                                                x.Save(imagePath, ImageFormat.Jpeg);
+                                                while (!File.Exists(imagePath))
+                                                {
+                                                    Thread.Sleep(10);
+                                                }
                                             }
 
-                                            if (GetBooleanValue(row, GetWeekNumberOfMonth(DateTime.Now)))
+                                            if (row.Cells[1].Value != DBNull.Value && row.Cells[2].Value != DBNull.Value && row.Cells[3].Value != DBNull.Value)
                                             {
+                                                bool isImage = false;
+                                                if (row.Cells[4].Value != DBNull.Value)
+                                                {
+                                                    isImage = true;
+                                                }
+
                                                 Post(row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), isImage, imagePath, row.Cells[5].Value.ToString());
                                             }
                                         }
@@ -1266,30 +1268,30 @@ namespace SocialPostScheduler
                                 {
                                     DateTime postTime = new DateTime(now.Year, now.Month, now.Day, time.Value.Hour, time.Value.Minute, 0);
 
-                                    if (now.ToString() == postTime.ToString())
+                                    if (GetBooleanValue(row, GetWeekNumberOfMonth(postTime)))
                                     {
-                                        string imagePath = null;
-                                        if (!DBNull.Value.Equals(row.Cells[4].Value) && row.Cells[4].Value != null)
+                                        if (now.ToString() == postTime.ToString())
                                         {
-                                            Image x = (Bitmap)((new ImageConverter()).ConvertFrom(row.Cells[4].Value));
-                                            Guid id = Guid.NewGuid();
-                                            imagePath = Path.GetTempPath() + id + ".jpg";
-                                            x.Save(imagePath, ImageFormat.Jpeg);
-                                            while (!File.Exists(imagePath))
+                                            string imagePath = null;
+                                            if (!DBNull.Value.Equals(row.Cells[4].Value) && row.Cells[4].Value != null)
                                             {
-                                                Thread.Sleep(10);
+                                                Image x = (Bitmap)((new ImageConverter()).ConvertFrom(row.Cells[4].Value));
+                                                Guid id = Guid.NewGuid();
+                                                imagePath = Path.GetTempPath() + id + ".jpg";
+                                                x.Save(imagePath, ImageFormat.Jpeg);
+                                                while (!File.Exists(imagePath))
+                                                {
+                                                    Thread.Sleep(10);
+                                                }
                                             }
-                                        }
-                                        if (!DBNull.Value.Equals(row.Cells[1].Value) && !DBNull.Value.Equals(row.Cells[2].Value) && !DBNull.Value.Equals(row.Cells[3].Value))
-                                        {
-                                            bool isImage = false;
-                                            if (row.Cells[4].Value != DBNull.Value)
+                                            if (!DBNull.Value.Equals(row.Cells[1].Value) && !DBNull.Value.Equals(row.Cells[2].Value) && !DBNull.Value.Equals(row.Cells[3].Value))
                                             {
-                                                isImage = true;
-                                            }
+                                                bool isImage = false;
+                                                if (row.Cells[4].Value != DBNull.Value)
+                                                {
+                                                    isImage = true;
+                                                }
 
-                                            if (GetBooleanValue(row, GetWeekNumberOfMonth(DateTime.Now)))
-                                            {
                                                 Post(row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), isImage, imagePath, row.Cells[5].Value.ToString());
                                             }
                                         }
@@ -1315,31 +1317,31 @@ namespace SocialPostScheduler
                                 {
                                     DateTime postTime = new DateTime(now.Year, now.Month, now.Day, time.Value.Hour, time.Value.Minute, 0);
 
-                                    if (now.ToString() == postTime.ToString())
+                                    if (GetBooleanValue(row, GetWeekNumberOfMonth(postTime)))
                                     {
-                                        string imagePath = null;
-                                        if (!DBNull.Value.Equals(row.Cells[4].Value) && row.Cells[4].Value != null)
+                                        if (now.ToString() == postTime.ToString())
                                         {
-                                            Image x = (Bitmap)((new ImageConverter()).ConvertFrom(row.Cells[4].Value));
-                                            Guid id = Guid.NewGuid();
-                                            imagePath = Path.GetTempPath() + id + ".jpg";
-                                            x.Save(imagePath, ImageFormat.Jpeg);
-                                            while (!File.Exists(imagePath))
+                                            string imagePath = null;
+                                            if (!DBNull.Value.Equals(row.Cells[4].Value) && row.Cells[4].Value != null)
                                             {
-                                                Thread.Sleep(10);
-                                            }
-                                        }
-
-                                        if (row.Cells[1].Value != DBNull.Value && row.Cells[2].Value != DBNull.Value && row.Cells[3].Value != DBNull.Value)
-                                        {
-                                            bool isImage = false;
-                                            if (row.Cells[4].Value != DBNull.Value)
-                                            {
-                                                isImage = true;
+                                                Image x = (Bitmap)((new ImageConverter()).ConvertFrom(row.Cells[4].Value));
+                                                Guid id = Guid.NewGuid();
+                                                imagePath = Path.GetTempPath() + id + ".jpg";
+                                                x.Save(imagePath, ImageFormat.Jpeg);
+                                                while (!File.Exists(imagePath))
+                                                {
+                                                    Thread.Sleep(10);
+                                                }
                                             }
 
-                                            if (GetBooleanValue(row, GetWeekNumberOfMonth(DateTime.Now)))
+                                            if (row.Cells[1].Value != DBNull.Value && row.Cells[2].Value != DBNull.Value && row.Cells[3].Value != DBNull.Value)
                                             {
+                                                bool isImage = false;
+                                                if (row.Cells[4].Value != DBNull.Value)
+                                                {
+                                                    isImage = true;
+                                                }
+
                                                 Post(row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), isImage, imagePath, row.Cells[5].Value.ToString());
                                             }
                                         }
@@ -1365,31 +1367,31 @@ namespace SocialPostScheduler
                                 {
                                     DateTime postTime = new DateTime(now.Year, now.Month, now.Day, time.Value.Hour, time.Value.Minute, 0);
 
-                                    if (now.ToString() == postTime.ToString())
+                                    if (GetBooleanValue(row, GetWeekNumberOfMonth(postTime)))
                                     {
-                                        string imagePath = null;
-                                        if (!DBNull.Value.Equals(row.Cells[4].Value) && row.Cells[4].Value != null)
+                                        if (now.ToString() == postTime.ToString())
                                         {
-                                            Image x = (Bitmap)((new ImageConverter()).ConvertFrom(row.Cells[4].Value));
-                                            Guid id = Guid.NewGuid();
-                                            imagePath = Path.GetTempPath() + id + ".jpg";
-                                            x.Save(imagePath, ImageFormat.Jpeg);
-                                            while (!File.Exists(imagePath))
+                                            string imagePath = null;
+                                            if (!DBNull.Value.Equals(row.Cells[4].Value) && row.Cells[4].Value != null)
                                             {
-                                                Thread.Sleep(10);
-                                            }
-                                        }
-
-                                        if (row.Cells[1].Value != DBNull.Value && row.Cells[2].Value != DBNull.Value && row.Cells[3].Value != DBNull.Value)
-                                        {
-                                            bool isImage = false;
-                                            if (row.Cells[4].Value != DBNull.Value)
-                                            {
-                                                isImage = true;
+                                                Image x = (Bitmap)((new ImageConverter()).ConvertFrom(row.Cells[4].Value));
+                                                Guid id = Guid.NewGuid();
+                                                imagePath = Path.GetTempPath() + id + ".jpg";
+                                                x.Save(imagePath, ImageFormat.Jpeg);
+                                                while (!File.Exists(imagePath))
+                                                {
+                                                    Thread.Sleep(10);
+                                                }
                                             }
 
-                                            if (GetBooleanValue(row, GetWeekNumberOfMonth(DateTime.Now)))
+                                            if (row.Cells[1].Value != DBNull.Value && row.Cells[2].Value != DBNull.Value && row.Cells[3].Value != DBNull.Value)
                                             {
+                                                bool isImage = false;
+                                                if (row.Cells[4].Value != DBNull.Value)
+                                                {
+                                                    isImage = true;
+                                                }
+
                                                 Post(row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), isImage, imagePath, row.Cells[5].Value.ToString());
                                             }
                                         }
@@ -1415,31 +1417,31 @@ namespace SocialPostScheduler
                                 {
                                     DateTime postTime = new DateTime(now.Year, now.Month, now.Day, time.Value.Hour, time.Value.Minute, 0);
 
-                                    if (now.ToString() == postTime.ToString())
+                                    if (GetBooleanValue(row, GetWeekNumberOfMonth(postTime)))
                                     {
-                                        string imagePath = null;
-                                        if (!DBNull.Value.Equals(row.Cells[4].Value) && row.Cells[4].Value != null)
+                                        if (now.ToString() == postTime.ToString())
                                         {
-                                            Image x = (Bitmap)((new ImageConverter()).ConvertFrom(row.Cells[4].Value));
-                                            Guid id = Guid.NewGuid();
-                                            imagePath = Path.GetTempPath() + id + ".jpg";
-                                            x.Save(imagePath, ImageFormat.Jpeg);
-                                            while (!File.Exists(imagePath))
+                                            string imagePath = null;
+                                            if (!DBNull.Value.Equals(row.Cells[4].Value) && row.Cells[4].Value != null)
                                             {
-                                                Thread.Sleep(10);
-                                            }
-                                        }
-
-                                        if (row.Cells[1].Value != DBNull.Value && row.Cells[2].Value != DBNull.Value && row.Cells[3].Value != DBNull.Value)
-                                        {
-                                            bool isImage = false;
-                                            if (row.Cells[4].Value != DBNull.Value)
-                                            {
-                                                isImage = true;
+                                                Image x = (Bitmap)((new ImageConverter()).ConvertFrom(row.Cells[4].Value));
+                                                Guid id = Guid.NewGuid();
+                                                imagePath = Path.GetTempPath() + id + ".jpg";
+                                                x.Save(imagePath, ImageFormat.Jpeg);
+                                                while (!File.Exists(imagePath))
+                                                {
+                                                    Thread.Sleep(10);
+                                                }
                                             }
 
-                                            if (GetBooleanValue(row, GetWeekNumberOfMonth(DateTime.Now)))
+                                            if (row.Cells[1].Value != DBNull.Value && row.Cells[2].Value != DBNull.Value && row.Cells[3].Value != DBNull.Value)
                                             {
+                                                bool isImage = false;
+                                                if (row.Cells[4].Value != DBNull.Value)
+                                                {
+                                                    isImage = true;
+                                                }
+
                                                 Post(row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), isImage, imagePath, row.Cells[5].Value.ToString());
                                             }
                                         }
@@ -1466,31 +1468,31 @@ namespace SocialPostScheduler
                                 {
                                     DateTime postTime = new DateTime(now.Year, now.Month, now.Day, time.Value.Hour, time.Value.Minute, 0);
 
-                                    if (now.ToString() == postTime.ToString())
+                                    if (GetBooleanValue(row, GetWeekNumberOfMonth(postTime)))
                                     {
-                                        string imagePath = null;
-                                        if (!DBNull.Value.Equals(row.Cells[4].Value) && row.Cells[4].Value != null)
+                                        if (now.ToString() == postTime.ToString())
                                         {
-                                            Image x = (Bitmap)((new ImageConverter()).ConvertFrom(row.Cells[4].Value));
-                                            Guid id = Guid.NewGuid();
-                                            imagePath = Path.GetTempPath() + id + ".jpg";
-                                            x.Save(imagePath, ImageFormat.Jpeg);
-                                            while (!File.Exists(imagePath))
+                                            string imagePath = null;
+                                            if (!DBNull.Value.Equals(row.Cells[4].Value) && row.Cells[4].Value != null)
                                             {
-                                                Thread.Sleep(10);
-                                            }
-                                        }
-
-                                        if (row.Cells[1].Value != DBNull.Value && row.Cells[2].Value != DBNull.Value && row.Cells[3].Value != DBNull.Value)
-                                        {
-                                            bool isImage = false;
-                                            if (row.Cells[4].Value != DBNull.Value)
-                                            {
-                                                isImage = true;
+                                                Image x = (Bitmap)((new ImageConverter()).ConvertFrom(row.Cells[4].Value));
+                                                Guid id = Guid.NewGuid();
+                                                imagePath = Path.GetTempPath() + id + ".jpg";
+                                                x.Save(imagePath, ImageFormat.Jpeg);
+                                                while (!File.Exists(imagePath))
+                                                {
+                                                    Thread.Sleep(10);
+                                                }
                                             }
 
-                                            if (GetBooleanValue(row, GetWeekNumberOfMonth(DateTime.Now)))
+                                            if (row.Cells[1].Value != DBNull.Value && row.Cells[2].Value != DBNull.Value && row.Cells[3].Value != DBNull.Value)
                                             {
+                                                bool isImage = false;
+                                                if (row.Cells[4].Value != DBNull.Value)
+                                                {
+                                                    isImage = true;
+                                                }
+
                                                 Post(row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), row.Cells[3].Value.ToString(), isImage, imagePath, row.Cells[5].Value.ToString());
                                             }
                                         }
