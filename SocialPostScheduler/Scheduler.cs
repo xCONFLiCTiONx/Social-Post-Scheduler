@@ -1663,8 +1663,14 @@ namespace SocialPostScheduler
                 WindowState = FormWindowState.Minimized;
                 Show();
                 ShowInTaskbar = true;
-                WindowState = FormWindowState.Normal;
-                WindowState = Properties.Settings.Default.windowState;
+                if (Properties.Settings.Default.windowState != FormWindowState.Normal && Properties.Settings.Default.windowState != FormWindowState.Maximized)
+                {
+                    WindowState = FormWindowState.Normal;
+                }
+                else
+                {
+                    WindowState = Properties.Settings.Default.windowState;
+                }
                 BringToFront();
                 Focus();
                 Activate();
@@ -3272,7 +3278,10 @@ namespace SocialPostScheduler
         {
             try
             {
-                Properties.Settings.Default.windowState = WindowState;
+                if (WindowState != FormWindowState.Minimized)
+                {
+                    Properties.Settings.Default.windowState = WindowState;
+                }
                 if (WindowState == FormWindowState.Normal)
                 {
                     Properties.Settings.Default.windowLocation = Location;
