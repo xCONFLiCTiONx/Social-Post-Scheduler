@@ -141,7 +141,7 @@ namespace SocialPostScheduler
         {
             while (!IsHandleCreated)
             {
-                Thread.Sleep(1000);
+                Thread.Sleep(2000);
             }
 
             // Background Post Timer
