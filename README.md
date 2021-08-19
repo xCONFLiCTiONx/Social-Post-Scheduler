@@ -21,10 +21,11 @@ Generate USER Token with proper permissions:
 3. Head over to the [Facebook Graph API Explorer](http://developers.facebook.com/tools/explorer/)
 4. On the top right, select the FB App you created from the "Application" drop down list
 5. Click "Get User Access Token"
-6. Make sure you add the correct permissions (see [permissions]({{ site.url }}/2021/01/08/social-post-scheduler/#permissions) below) and then click on the `Generate Access Token` button.
-7. Convert this short-lived access token into a long-lived access token by making this Graph API call: [https://graph.facebook.com/oauth/access_token?client_id={APP_ID}&client_secret={APP_SECRET}&grant_type=fb_exchange_token&fb_exchange_token={SHORT_LIVED_ACCESS_TOKEN}](https://graph.facebook.com/oauth/access_token?client_id={APP_ID}&client_secret={APP_SECRET}&grant_type=fb_exchange_token&fb_exchange_token={SHORT_LIVED_ACCESS_TOKEN})
-8. Grab the new long-lived access token returned back
-9. Grab the `access_token` for the page you'll be posting to
+6. Make sure you add the correct permissions (see [https://github.com/xCONFLiCTiONx/Social-Post-Scheduler#facebook-permissions](Facebook Permissions) below) and then click on the `Generate Access Token` button.
+7. Convert this `short-lived access token` into a `long-lived access token` by clicking on the `information ico`n just to the left of the newly created `Access Token`
+  A. Click on Open in `Access Tool`
+  B. At the bottom of the new page click `Extend Access Token`
+  C. Click `Debug` next to the new `long-lived access token` and make sure it says `expires in about a month` and paste it into Social Post Scheduler
 
 ### Minimum Permissions
 
