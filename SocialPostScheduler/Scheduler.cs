@@ -1086,10 +1086,28 @@ namespace SocialPostScheduler
                 {
                     Text = "Social Post Scheduler - " + Assembly.GetEntryAssembly().GetName().Version + "  |  " + DateTime.Now.ToString("h:mm:ss tt");
                 }));
+            }
+            catch (Exception ex)
+            {
+                EasyLogger.Error("Scheduler - @PollUpdates(1): " + ex);
+                if (!Visible)
+                {
+                    Invoke(new Action(() =>
+                    {
+                        ShowWindow();
+                    }));
+                }
+                Invoke(new Action(() =>
+                {
+                    tabControl1.SelectTab(tabPage11);
+                }));
+            }
 
-                DateTime now = DateTime.Now;
-                DateTime? time = null;
+            DateTime now = DateTime.Now;
+            DateTime? time = null;
 
+            try
+            {
                 if (DateTime.Now.ToString("h:mm:ss tt") == Properties.Settings.Default.PostExpireTime)
                 {
                     EasyLogger.Info("Cleaning up expired posts...");
@@ -1109,7 +1127,24 @@ namespace SocialPostScheduler
                         await Task.Run(PostFromFeed.PostToInstagram);
                     }
                 }
-
+            }
+            catch (Exception ex)
+            {
+                EasyLogger.Error("Scheduler - @PollUpdates(2): " + ex);
+                if (!Visible)
+                {
+                    Invoke(new Action(() =>
+                    {
+                        ShowWindow();
+                    }));
+                }
+                Invoke(new Action(() =>
+                {
+                    tabControl1.SelectTab(tabPage11);
+                }));
+            }
+            try
+            {
                 if (DateTime.Now.ToString("h:mm:ss tt") == Properties.Settings.Default.RenewUserToken)
                 {
                     string _CURRENT_USER_TOKEN = null;
@@ -1149,6 +1184,24 @@ namespace SocialPostScheduler
                         EasyLogger.Info("Your Facebook user token has been renewed successfully!");
                     }
                 }
+            }
+            catch (Exception ex)
+            {
+                EasyLogger.Error("Scheduler - @PollUpdates(3): " + ex);
+                if (!Visible)
+                {
+                    Invoke(new Action(() =>
+                    {
+                        ShowWindow();
+                    }));
+                }
+                Invoke(new Action(() =>
+                {
+                    tabControl1.SelectTab(tabPage11);
+                }));
+            }
+            try
+            {
                 Invoke(new Action(() =>
                 {
                     if (now.DayOfWeek.ToString() == "Sunday")
@@ -1505,12 +1558,18 @@ namespace SocialPostScheduler
             }
             catch (Exception ex)
             {
-                EasyLogger.Error("Scheduler - @PollUpdates(1): " + ex);
+                EasyLogger.Error("Scheduler - @PollUpdates(4): " + ex);
                 if (!Visible)
                 {
-                    ShowWindow();
+                    Invoke(new Action(() =>
+                    {
+                        ShowWindow();
+                    }));
                 }
-                tabControlOne.SelectedIndex = 4;
+                Invoke(new Action(() =>
+                {
+                    tabControl1.SelectTab(tabPage11);
+                }));
             }
         }
 
