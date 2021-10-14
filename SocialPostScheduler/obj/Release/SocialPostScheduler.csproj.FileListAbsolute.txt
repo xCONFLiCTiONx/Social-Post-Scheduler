@@ -12,3 +12,17 @@ C:\Users\mhall\Source\repos\Social-Post-Scheduler\SocialPostScheduler\obj\Releas
 C:\Users\mhall\Source\repos\Social-Post-Scheduler\SocialPostScheduler\obj\Release\SocialPostScheduler.csproj.CoreCompileInputs.cache
 C:\Users\mhall\Source\repos\Social-Post-Scheduler\SocialPostScheduler\obj\Release\SocialPostScheduler.csproj.CopyComplete
 C:\Users\mhall\Source\repos\Social-Post-Scheduler\SocialPostScheduler\obj\Release\Social Post Scheduler.exe
+C:\Users\Mike\Source\repos\Social-Post-Scheduler\Release\SocialPostScheduler.mdf
+C:\Users\Mike\Source\repos\Social-Post-Scheduler\Release\SocialPostScheduler_log.ldf
+C:\Users\Mike\Source\repos\Social-Post-Scheduler\Release\Social Post Scheduler.exe.config
+C:\Users\Mike\Source\repos\Social-Post-Scheduler\Release\Social Post Scheduler.exe
+C:\Users\Mike\Source\repos\Social-Post-Scheduler\SocialPostScheduler\obj\Release\SocialPostScheduler.csproj.AssemblyReference.cache
+C:\Users\Mike\Source\repos\Social-Post-Scheduler\SocialPostScheduler\obj\Release\Interop.IWshRuntimeLibrary.dll
+C:\Users\Mike\Source\repos\Social-Post-Scheduler\SocialPostScheduler\obj\Release\SocialPostScheduler.csproj.ResolveComReference.cache
+C:\Users\Mike\Source\repos\Social-Post-Scheduler\SocialPostScheduler\obj\Release\SocialPostScheduler.Properties.Resources.resources
+C:\Users\Mike\Source\repos\Social-Post-Scheduler\SocialPostScheduler\obj\Release\SocialPostScheduler.Scheduler.resources
+C:\Users\Mike\Source\repos\Social-Post-Scheduler\SocialPostScheduler\obj\Release\SocialPostScheduler.Settings.resources
+C:\Users\Mike\Source\repos\Social-Post-Scheduler\SocialPostScheduler\obj\Release\SocialPostScheduler.csproj.GenerateResource.cache
+C:\Users\Mike\Source\repos\Social-Post-Scheduler\SocialPostScheduler\obj\Release\SocialPostScheduler.csproj.CoreCompileInputs.cache
+C:\Users\Mike\Source\repos\Social-Post-Scheduler\SocialPostScheduler\obj\Release\SocialPostScheduler.csproj.CopyComplete
+C:\Users\Mike\Source\repos\Social-Post-Scheduler\SocialPostScheduler\obj\Release\Social Post Scheduler.exe
