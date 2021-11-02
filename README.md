@@ -2,6 +2,8 @@
 
 Post to Facebook and Twitter on a weekly schedule
 
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/donate?business=GKLE6HYQE46SA&no_recurring=0&item_name=i%21i%21i%21+NOTE+WHAT+THIS+DONATION+IS+FOR+i%21i%21i%21&currency_code=USD)
+
 ![social-post-scheduler](https://github.com/xCONFLiCTiONx/Social-Post-Scheduler/raw/master/social-post-scheduler.jpg)
 
 ![Screenshot](https://github.com/xCONFLiCTiONx/Social-Post-Scheduler/raw/master/Screenshot.jpg)
