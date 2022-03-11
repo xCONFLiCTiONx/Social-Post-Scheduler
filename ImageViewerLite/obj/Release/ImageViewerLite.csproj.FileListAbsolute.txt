@@ -29,3 +29,20 @@ C:\Users\Mike\Source\repos\Social-Post-Scheduler\ImageViewerLite\obj\Release\Ima
 C:\Users\Mike\Source\repos\Social-Post-Scheduler\ImageViewerLite\obj\Release\ImageViewerLite.csproj.GenerateResource.cache
 C:\Users\Mike\Source\repos\Social-Post-Scheduler\ImageViewerLite\obj\Release\ImageViewerLite.csproj.CoreCompileInputs.cache
 C:\Users\Mike\Source\repos\Social-Post-Scheduler\ImageViewerLite\obj\Release\ImageViewerLite.exe
+F:\OneDrive - New Life Evangelistic Center\Source\repos\Social-Post-Scheduler\ImageViewerLite\bin\Release\ImageViewerLite.exe.config
+F:\OneDrive - New Life Evangelistic Center\Source\repos\Social-Post-Scheduler\ImageViewerLite\bin\Release\ImageViewerLite.exe
+F:\OneDrive - New Life Evangelistic Center\Source\repos\Social-Post-Scheduler\ImageViewerLite\obj\Release\ImageViewerLite.csproj.AssemblyReference.cache
+F:\OneDrive - New Life Evangelistic Center\Source\repos\Social-Post-Scheduler\ImageViewerLite\obj\Release\ImageViewerLite.csproj.SuggestedBindingRedirects.cache
+F:\OneDrive - New Life Evangelistic Center\Source\repos\Social-Post-Scheduler\ImageViewerLite\obj\Release\Resources\Icons.baml
+F:\OneDrive - New Life Evangelistic Center\Source\repos\Social-Post-Scheduler\ImageViewerLite\obj\Release\Resources\Styles.baml
+F:\OneDrive - New Life Evangelistic Center\Source\repos\Social-Post-Scheduler\ImageViewerLite\obj\Release\App.g.cs
+F:\OneDrive - New Life Evangelistic Center\Source\repos\Social-Post-Scheduler\ImageViewerLite\obj\Release\MainWindow.g.cs
+F:\OneDrive - New Life Evangelistic Center\Source\repos\Social-Post-Scheduler\ImageViewerLite\obj\Release\ImageViewerLite_MarkupCompile.cache
+F:\OneDrive - New Life Evangelistic Center\Source\repos\Social-Post-Scheduler\ImageViewerLite\obj\Release\ImageViewerLite_MarkupCompile.lref
+F:\OneDrive - New Life Evangelistic Center\Source\repos\Social-Post-Scheduler\ImageViewerLite\obj\Release\App.baml
+F:\OneDrive - New Life Evangelistic Center\Source\repos\Social-Post-Scheduler\ImageViewerLite\obj\Release\MainWindow.baml
+F:\OneDrive - New Life Evangelistic Center\Source\repos\Social-Post-Scheduler\ImageViewerLite\obj\Release\ImageViewerLite.g.resources
+F:\OneDrive - New Life Evangelistic Center\Source\repos\Social-Post-Scheduler\ImageViewerLite\obj\Release\ImageViewerLite.Properties.Resources.resources
+F:\OneDrive - New Life Evangelistic Center\Source\repos\Social-Post-Scheduler\ImageViewerLite\obj\Release\ImageViewerLite.csproj.GenerateResource.cache
+F:\OneDrive - New Life Evangelistic Center\Source\repos\Social-Post-Scheduler\ImageViewerLite\obj\Release\ImageViewerLite.csproj.CoreCompileInputs.cache
+F:\OneDrive - New Life Evangelistic Center\Source\repos\Social-Post-Scheduler\ImageViewerLite\obj\Release\ImageViewerLite.exe
