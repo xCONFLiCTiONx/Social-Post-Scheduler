@@ -2,7 +2,17 @@
 
 Post to Facebook and Twitter on a weekly schedule
 
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/donate?business=GKLE6HYQE46SA&no_recurring=0&item_name=i%21i%21i%21+NOTE+WHAT+THIS+DONATION+IS+FOR+i%21i%21i%21&currency_code=USD)
+## Download
+
+[https://github.com/xCONFLiCTiONx/Social-Post-Scheduler/releases](https://github.com/xCONFLiCTiONx/Social-Post-Scheduler/releases)  
+
+![GitHub all releases](https://img.shields.io/github/downloads/xCONFLiCTiONx/Social-Post-Scheduler/total)  [![GitHub stars](https://img.shields.io/github/stars/xCONFLiCTiONx/Social-Post-Scheduler)](https://github.com/xCONFLiCTiONx/Social-Post-Scheduler/stargazers)
+
+## Donations
+
+Feel free to donate to my [PayPal.Me/xCONFLiCTiONx](https://PayPal.Me/xCONFLiCTiONx) account. I work hard on these projects.
+
+## Information
 
 ![social-post-scheduler](https://github.com/xCONFLiCTiONx/Social-Post-Scheduler/raw/main/social-post-scheduler.jpg)
 
