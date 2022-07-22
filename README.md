@@ -14,6 +14,11 @@ Feel free to donate to my [PayPal.Me/xCONFLiCTiONx](https://PayPal.Me/xCONFLiCTi
 
 ## Information
 
+### Tips
+
+- If twitter is not working just log in through your browser. It will refresh your last logged in time.
+- Remember that there are 6 weeks in some months.
+
 ![social-post-scheduler](https://github.com/xCONFLiCTiONx/Social-Post-Scheduler/raw/main/social-post-scheduler.jpg)
 
 ![Screenshot](https://github.com/xCONFLiCTiONx/Social-Post-Scheduler/raw/main/Screenshot.jpg)
