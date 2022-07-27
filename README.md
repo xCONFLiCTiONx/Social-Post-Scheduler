@@ -17,6 +17,7 @@ Feel free to donate to my [PayPal.Me/xCONFLiCTiONx](https://PayPal.Me/xCONFLiCTi
 ### Tips
 
 - If twitter is not working just log in through your browser. It will refresh your last logged in time.
+  - Also, do not post to twitter more than once in the same minute.
 - Remember that there are 6 weeks in some months.
 
 ![social-post-scheduler](https://github.com/xCONFLiCTiONx/Social-Post-Scheduler/raw/main/social-post-scheduler.jpg)
