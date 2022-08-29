@@ -293,7 +293,7 @@ namespace SocialPostScheduler
                     Icon = Properties.Resources.ICON,
                     Text = "Social Post Scheduler - " + Assembly.GetEntryAssembly().GetName().Version
                 };
-                notifyIcon.MouseClick += NotifyIcon_MouseClick;
+                notifyIcon.DoubleClick += NotifyIcon_DoubleClick;
                 menuItemClearLog.Click += MenuItemClearLog_Click;
                 menuItemSettings.Click += MenuItemSettings_Click;
                 menuItemScheduler.Click += MenuItemScheduler_Click;
@@ -329,6 +329,11 @@ namespace SocialPostScheduler
                 }
                 tabControlOne.SelectedIndex = 4;
             }
+        }
+
+        private void NotifyIcon_DoubleClick(object sender, EventArgs e)
+        {
+            ShowWindow();
         }
 
         private void DataGridView9_KeyUp(object sender, KeyEventArgs e)
@@ -1691,26 +1696,6 @@ namespace SocialPostScheduler
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void NotifyIcon_MouseClick(object sender, MouseEventArgs e)
-        {
-            try
-            {
-                if (e.Button == MouseButtons.Left)
-                {
-                    ShowWindow();
-                }
-            }
-            catch (Exception ex)
-            {
-                EasyLogger.Error("Scheduler - @NotifyIcon_MouseClick(1): " + ex);
-                if (!Visible)
-                {
-                    ShowWindow();
-                }
-                tabControlOne.SelectedIndex = 4;
             }
         }
 

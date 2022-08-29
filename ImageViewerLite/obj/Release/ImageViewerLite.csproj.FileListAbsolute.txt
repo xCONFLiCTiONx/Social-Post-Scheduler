@@ -46,3 +46,20 @@ F:\OneDrive - New Life Evangelistic Center\Source\repos\Social-Post-Scheduler\Im
 F:\OneDrive - New Life Evangelistic Center\Source\repos\Social-Post-Scheduler\ImageViewerLite\obj\Release\ImageViewerLite.csproj.GenerateResource.cache
 F:\OneDrive - New Life Evangelistic Center\Source\repos\Social-Post-Scheduler\ImageViewerLite\obj\Release\ImageViewerLite.csproj.CoreCompileInputs.cache
 F:\OneDrive - New Life Evangelistic Center\Source\repos\Social-Post-Scheduler\ImageViewerLite\obj\Release\ImageViewerLite.exe
+F:\repos\Social-Post-Scheduler\ImageViewerLite\bin\Release\ImageViewerLite.exe.config
+F:\repos\Social-Post-Scheduler\ImageViewerLite\bin\Release\ImageViewerLite.exe
+F:\repos\Social-Post-Scheduler\ImageViewerLite\obj\Release\ImageViewerLite.csproj.AssemblyReference.cache
+F:\repos\Social-Post-Scheduler\ImageViewerLite\obj\Release\ImageViewerLite.csproj.SuggestedBindingRedirects.cache
+F:\repos\Social-Post-Scheduler\ImageViewerLite\obj\Release\Resources\Icons.baml
+F:\repos\Social-Post-Scheduler\ImageViewerLite\obj\Release\Resources\Styles.baml
+F:\repos\Social-Post-Scheduler\ImageViewerLite\obj\Release\App.g.cs
+F:\repos\Social-Post-Scheduler\ImageViewerLite\obj\Release\MainWindow.g.cs
+F:\repos\Social-Post-Scheduler\ImageViewerLite\obj\Release\ImageViewerLite_MarkupCompile.cache
+F:\repos\Social-Post-Scheduler\ImageViewerLite\obj\Release\ImageViewerLite_MarkupCompile.lref
+F:\repos\Social-Post-Scheduler\ImageViewerLite\obj\Release\App.baml
+F:\repos\Social-Post-Scheduler\ImageViewerLite\obj\Release\MainWindow.baml
+F:\repos\Social-Post-Scheduler\ImageViewerLite\obj\Release\ImageViewerLite.g.resources
+F:\repos\Social-Post-Scheduler\ImageViewerLite\obj\Release\ImageViewerLite.Properties.Resources.resources
+F:\repos\Social-Post-Scheduler\ImageViewerLite\obj\Release\ImageViewerLite.csproj.GenerateResource.cache
+F:\repos\Social-Post-Scheduler\ImageViewerLite\obj\Release\ImageViewerLite.csproj.CoreCompileInputs.cache
+F:\repos\Social-Post-Scheduler\ImageViewerLite\obj\Release\ImageViewerLite.exe
