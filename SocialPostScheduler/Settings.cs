@@ -33,9 +33,9 @@ namespace SocialPostScheduler
             result = Convert.ToDateTime(Properties.Settings.Default.RenewUserToken);
             DateTime renewTime = new DateTime(now.Year, now.Month, now.Day, result.Hour, result.Minute, 0);
 
-            RenewTimePicker.Value = renewTime;
-            RenewTimePicker.Format = DateTimePickerFormat.Time;
-            RenewTimePicker.ShowUpDown = true;
+            //RenewTimePicker.Value = renewTime;
+            //RenewTimePicker.Format = DateTimePickerFormat.Time;
+            //RenewTimePicker.ShowUpDown = true;
 
             result = Convert.ToDateTime(Properties.Settings.Default.InstagramPostTime);
             DateTime postTime = new DateTime(now.Year, now.Month, now.Day, result.Hour, result.Minute, 0);
@@ -53,7 +53,7 @@ namespace SocialPostScheduler
             SiteBox.Text = Properties.Settings.Default.WebsiteFeed;
 
             PostTimePicker.ValueChanged += PostTimePicker_ValueChanged;
-            RenewTimePicker.ValueChanged += RenewTimePicker_ValueChanged;
+            //RenewTimePicker.ValueChanged += RenewTimePicker_ValueChanged;
             dbBTimePicker.ValueChanged += DbBTimePicker_ValueChanged;
             pcTimePicker.ValueChanged += PcTimePicker_ValueChanged;
 
@@ -87,12 +87,12 @@ namespace SocialPostScheduler
             Properties.Settings.Default.Reload();
         }
 
-        private void RenewTimePicker_ValueChanged(object sender, EventArgs e)
-        {
-            Properties.Settings.Default.RenewUserToken = RenewTimePicker.Value.ToString("h:mm:ss tt");
-            Properties.Settings.Default.Save();
-            Properties.Settings.Default.Reload();
-        }
+        //private void RenewTimePicker_ValueChanged(object sender, EventArgs e)
+        //{
+        //    Properties.Settings.Default.RenewUserToken = RenewTimePicker.Value.ToString("h:mm:ss tt");
+        //    Properties.Settings.Default.Save();
+        //    Properties.Settings.Default.Reload();
+        //}
 
         private void DbBTimePicker_ValueChanged(object sender, EventArgs e)
         {

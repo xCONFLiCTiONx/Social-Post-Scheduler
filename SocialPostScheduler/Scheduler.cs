@@ -69,7 +69,8 @@ namespace SocialPostScheduler
                     Properties.Settings.Default.InstagramPostTime = Properties.Settings.Default.InstagramPostTime;
                     Properties.Settings.Default.PostExpireTime = Properties.Settings.Default.PostExpireTime;
                     Properties.Settings.Default.PublishDate = Properties.Settings.Default.PublishDate;
-                    Properties.Settings.Default.RenewUserToken = Properties.Settings.Default.RenewUserToken;
+                    // Renew was removed 11-22-22 due to facebook giving non-expiring tokens - see archive branch
+                    //Properties.Settings.Default.RenewUserToken = Properties.Settings.Default.RenewUserToken;
 
                     Process.Start("https://github.com/xCONFLiCTiONx/Social-Post-Scheduler#social-post-scheduler");
                     ShowInTaskbar = true;
@@ -1148,63 +1149,64 @@ namespace SocialPostScheduler
                     tabControl1.SelectTab(tabPage11);
                 }));
             }
-            try
-            {
-                if (DateTime.Now.ToString("h:mm:ss tt") == Properties.Settings.Default.RenewUserToken)
-                {
-                    string _CURRENT_USER_TOKEN = null;
-                    string _APP_SECRET = null;
-                    string _APP_ID = null;
+            // Renew was removed 11-22-22 due to facebook giving non-expiring tokens - see archive branch
+            //try
+            //{
+            //    if (DateTime.Now.ToString("h:mm:ss tt") == Properties.Settings.Default.RenewUserToken)
+            //    {
+            //        string _CURRENT_USER_TOKEN = null;
+            //        string _APP_SECRET = null;
+            //        string _APP_ID = null;
 
-                    DataGridViewRow dataGridViewRow = null;
+            //        DataGridViewRow dataGridViewRow = null;
 
-                    int error = 0;
-                    Invoke(new Action(() =>
-                    {
-                        foreach (DataGridViewRow row in dataGridView1.Rows)
-                        {
-                            if (row.Cells[1].Value != DBNull.Value && row.Cells[1].Value != null)
-                            {
-                                dataGridViewRow = row;
-                                _CURRENT_USER_TOKEN = row.Cells[3].Value.ToString();
-                                _APP_SECRET = row.Cells[4].Value.ToString();
-                                _APP_ID = row.Cells[5].Value.ToString();
+            //        int error = 0;
+            //        Invoke(new Action(() =>
+            //        {
+            //            foreach (DataGridViewRow row in dataGridView1.Rows)
+            //            {
+            //                if (row.Cells[1].Value != DBNull.Value && row.Cells[1].Value != null)
+            //                {
+            //                    dataGridViewRow = row;
+            //                    _CURRENT_USER_TOKEN = row.Cells[3].Value.ToString();
+            //                    _APP_SECRET = row.Cells[4].Value.ToString();
+            //                    _APP_ID = row.Cells[5].Value.ToString();
 
-                                string token = GetToken.RenewAccessToken(_CURRENT_USER_TOKEN, _APP_SECRET, _APP_ID);
-                                if (token.Contains("ERROR:"))
-                                {
-                                    error++;
-                                    EasyLogger.Error(token);
-                                }
-                                else
-                                {
-                                    facebookTableAdapter.UpdateQuery(dataGridViewRow.Cells[1].Value.ToString(), dataGridViewRow.Cells[2].Value.ToString(), token, dataGridViewRow.Cells[4].Value.ToString(), dataGridViewRow.Cells[5].Value.ToString(), dataGridViewRow.Cells[6].Value.ToString(), (int)dataGridViewRow.Cells[0].Value);
-                                    facebookTableAdapter.Fill(socialPostSchedulerDataSet.Facebook);
-                                }
-                            }
-                        }
-                    }));
-                    if (error == 0)
-                    {
-                        EasyLogger.Info("Your Facebook user token has been renewed successfully!");
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                EasyLogger.Error("Scheduler - @PollUpdates(3): " + ex);
-                if (!Visible)
-                {
-                    Invoke(new Action(() =>
-                    {
-                        ShowWindow();
-                    }));
-                }
-                Invoke(new Action(() =>
-                {
-                    tabControl1.SelectTab(tabPage11);
-                }));
-            }
+            //                    string token = GetToken.RenewAccessToken(_CURRENT_USER_TOKEN, _APP_SECRET, _APP_ID);
+            //                    if (token.Contains("ERROR:"))
+            //                    {
+            //                        error++;
+            //                        EasyLogger.Error(token);
+            //                    }
+            //                    else
+            //                    {
+            //                        facebookTableAdapter.UpdateQuery(dataGridViewRow.Cells[1].Value.ToString(), dataGridViewRow.Cells[2].Value.ToString(), token, dataGridViewRow.Cells[4].Value.ToString(), dataGridViewRow.Cells[5].Value.ToString(), dataGridViewRow.Cells[6].Value.ToString(), (int)dataGridViewRow.Cells[0].Value);
+            //                        facebookTableAdapter.Fill(socialPostSchedulerDataSet.Facebook);
+            //                    }
+            //                }
+            //            }
+            //        }));
+            //        if (error == 0)
+            //        {
+            //            EasyLogger.Info("Your Facebook user token has been renewed successfully!");
+            //        }
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    EasyLogger.Error("Scheduler - @PollUpdates(3): " + ex);
+            //    if (!Visible)
+            //    {
+            //        Invoke(new Action(() =>
+            //        {
+            //            ShowWindow();
+            //        }));
+            //    }
+            //    Invoke(new Action(() =>
+            //    {
+            //        tabControl1.SelectTab(tabPage11);
+            //    }));
+            //}
             try
             {
                 Invoke(new Action(() =>
