@@ -1525,6 +1525,8 @@ namespace SocialPostScheduler
 
         private async void Post(string platform, string PAGE_NAME, string MESSAGE_STRING, bool isImage, string IMAGE_PATH, string LINK_URL)
         {
+            Thread.Sleep(2000); // This will prevent errors for multiple twitter posts on the same minute
+
             try
             {
                 if (!InternetConnection.CheckConnection())
