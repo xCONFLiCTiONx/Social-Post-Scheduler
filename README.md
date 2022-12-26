@@ -2,9 +2,27 @@
 
 Post to Facebook and Twitter on a weekly schedule
 
-![social-post-scheduler](https://github.com/xCONFLiCTiONx/Social-Post-Scheduler/raw/master/social-post-scheduler.jpg)
+## Download
 
-![Screenshot](https://github.com/xCONFLiCTiONx/Social-Post-Scheduler/raw/master/Screenshot.jpg)
+[https://github.com/xCONFLiCTiONx/Social-Post-Scheduler/releases](https://github.com/xCONFLiCTiONx/Social-Post-Scheduler/releases)  
+
+![GitHub all releases](https://img.shields.io/github/downloads/xCONFLiCTiONx/Social-Post-Scheduler/total)  [![GitHub stars](https://img.shields.io/github/stars/xCONFLiCTiONx/Social-Post-Scheduler)](https://github.com/xCONFLiCTiONx/Social-Post-Scheduler/stargazers)
+
+## Donations
+
+Feel free to donate to my [PayPal.Me/xCONFLiCTiONx](https://PayPal.Me/xCONFLiCTiONx) account. I work hard on these projects.
+
+## Information
+
+### Tips
+
+- If twitter is not working just log in through your browser. It will refresh your last logged in time.
+  - Also, do not post to twitter more than once in the same minute.
+- Remember that there are 6 weeks in some months.
+
+![social-post-scheduler](https://github.com/xCONFLiCTiONx/Social-Post-Scheduler/raw/main/social-post-scheduler.jpg)
+
+![Screenshot](https://github.com/xCONFLiCTiONx/Social-Post-Scheduler/raw/main/Screenshot.jpg)
 
 Post to Facebook, Instagram and Twitter on a weekly schedule. This is for repeat posts or for posts that you want to schedule for later. Using Facebook Creator Studio is the preferred method for posting to Facebook but for those posts that you repeat or want to post for a while then this program will save you tons of time.
 

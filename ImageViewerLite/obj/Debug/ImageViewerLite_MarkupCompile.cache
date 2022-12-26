@@ -4,7 +4,7 @@
 winexe
 C#
 .cs
-C:\Users\mhall\Source\repos\Social-Post-Scheduler\ImageViewerLite\obj\Release\
+f:\repos\Social-Post-Scheduler\ImageViewerLite\obj\Debug\
 ImageViewerLite
 none
 false
@@ -12,9 +12,9 @@ false
 
 4-456649922
 
-51579654133
+6-502434485
 981569020
 App.xaml;MainWindow.xaml;Resources\Icons.xaml;Resources\Styles.xaml;
 
-False
+True
 

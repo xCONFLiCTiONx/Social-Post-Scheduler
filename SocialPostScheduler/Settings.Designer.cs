@@ -37,10 +37,8 @@ namespace SocialPostScheduler
             this.label2 = new System.Windows.Forms.Label();
             this.pcTimePicker = new System.Windows.Forms.DateTimePicker();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.RenewTimePicker = new System.Windows.Forms.DateTimePicker();
             this.PostTimePicker = new System.Windows.Forms.DateTimePicker();
             this.releaseLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.UserIDBox = new System.Windows.Forms.TextBox();
@@ -62,7 +60,7 @@ namespace SocialPostScheduler
             // BackupButton
             // 
             this.BackupButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BackupButton.Location = new System.Drawing.Point(201, 309);
+            this.BackupButton.Location = new System.Drawing.Point(201, 284);
             this.BackupButton.Name = "BackupButton";
             this.BackupButton.Size = new System.Drawing.Size(125, 24);
             this.BackupButton.TabIndex = 7;
@@ -122,22 +120,11 @@ namespace SocialPostScheduler
             this.toolTip1.InitialDelay = 100;
             this.toolTip1.ReshowDelay = 20;
             // 
-            // RenewTimePicker
-            // 
-            this.RenewTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.RenewTimePicker.Location = new System.Drawing.Point(126, 113);
-            this.RenewTimePicker.Name = "RenewTimePicker";
-            this.RenewTimePicker.Size = new System.Drawing.Size(201, 20);
-            this.RenewTimePicker.TabIndex = 13;
-            this.toolTip1.SetToolTip(this.RenewTimePicker, "Set this to a time that you will not be editing the schedule or posting. This val" +
-        "ue should be different from the database backup time.");
-            // 
             // PostTimePicker
             // 
             this.PostTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PostTimePicker.Location = new System.Drawing.Point(126, 138);
+            this.PostTimePicker.Location = new System.Drawing.Point(126, 115);
             this.PostTimePicker.Name = "PostTimePicker";
             this.PostTimePicker.Size = new System.Drawing.Size(201, 20);
             this.PostTimePicker.TabIndex = 16;
@@ -149,22 +136,11 @@ namespace SocialPostScheduler
             this.releaseLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.releaseLabel.AutoSize = true;
             this.releaseLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.releaseLabel.Location = new System.Drawing.Point(4, 327);
+            this.releaseLabel.Location = new System.Drawing.Point(4, 302);
             this.releaseLabel.Name = "releaseLabel";
             this.releaseLabel.Size = new System.Drawing.Size(51, 13);
             this.releaseLabel.TabIndex = 12;
             this.releaseLabel.Text = "Release: ";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 117);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 13);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Renew User Token";
             // 
             // label4
             // 
@@ -181,7 +157,7 @@ namespace SocialPostScheduler
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(63, 141);
+            this.label5.Location = new System.Drawing.Point(63, 118);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 13);
             this.label5.TabIndex = 17;
@@ -191,7 +167,7 @@ namespace SocialPostScheduler
             // 
             this.UserIDBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.UserIDBox.Location = new System.Drawing.Point(126, 161);
+            this.UserIDBox.Location = new System.Drawing.Point(126, 138);
             this.UserIDBox.Margin = new System.Windows.Forms.Padding(2);
             this.UserIDBox.Name = "UserIDBox";
             this.UserIDBox.Size = new System.Drawing.Size(201, 20);
@@ -202,7 +178,7 @@ namespace SocialPostScheduler
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(75, 165);
+            this.label6.Location = new System.Drawing.Point(75, 142);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 13);
             this.label6.TabIndex = 20;
@@ -213,7 +189,7 @@ namespace SocialPostScheduler
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(78, 187);
+            this.label7.Location = new System.Drawing.Point(78, 164);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(40, 13);
             this.label7.TabIndex = 22;
@@ -223,7 +199,7 @@ namespace SocialPostScheduler
             // 
             this.AppIDBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.AppIDBox.Location = new System.Drawing.Point(126, 184);
+            this.AppIDBox.Location = new System.Drawing.Point(126, 161);
             this.AppIDBox.Margin = new System.Windows.Forms.Padding(2);
             this.AppIDBox.Name = "AppIDBox";
             this.AppIDBox.Size = new System.Drawing.Size(201, 20);
@@ -234,7 +210,7 @@ namespace SocialPostScheduler
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(75, 235);
+            this.label8.Location = new System.Drawing.Point(75, 212);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(46, 13);
             this.label8.TabIndex = 24;
@@ -244,7 +220,7 @@ namespace SocialPostScheduler
             // 
             this.PageIDBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PageIDBox.Location = new System.Drawing.Point(126, 232);
+            this.PageIDBox.Location = new System.Drawing.Point(126, 209);
             this.PageIDBox.Margin = new System.Windows.Forms.Padding(2);
             this.PageIDBox.Name = "PageIDBox";
             this.PageIDBox.Size = new System.Drawing.Size(201, 20);
@@ -255,7 +231,7 @@ namespace SocialPostScheduler
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(57, 257);
+            this.label9.Location = new System.Drawing.Point(57, 234);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(63, 13);
             this.label9.TabIndex = 26;
@@ -265,7 +241,7 @@ namespace SocialPostScheduler
             // 
             this.TokenBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TokenBox.Location = new System.Drawing.Point(126, 255);
+            this.TokenBox.Location = new System.Drawing.Point(126, 232);
             this.TokenBox.Margin = new System.Windows.Forms.Padding(2);
             this.TokenBox.Name = "TokenBox";
             this.TokenBox.Size = new System.Drawing.Size(201, 20);
@@ -276,7 +252,7 @@ namespace SocialPostScheduler
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(47, 279);
+            this.label10.Location = new System.Drawing.Point(47, 256);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(73, 13);
             this.label10.TabIndex = 28;
@@ -286,7 +262,7 @@ namespace SocialPostScheduler
             // 
             this.SiteBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.SiteBox.Location = new System.Drawing.Point(126, 277);
+            this.SiteBox.Location = new System.Drawing.Point(126, 254);
             this.SiteBox.Margin = new System.Windows.Forms.Padding(2);
             this.SiteBox.Name = "SiteBox";
             this.SiteBox.Size = new System.Drawing.Size(201, 20);
@@ -307,7 +283,7 @@ namespace SocialPostScheduler
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(58, 212);
+            this.label12.Location = new System.Drawing.Point(58, 189);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(60, 13);
             this.label12.TabIndex = 31;
@@ -317,7 +293,7 @@ namespace SocialPostScheduler
             // 
             this.AppSecretBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.AppSecretBox.Location = new System.Drawing.Point(126, 209);
+            this.AppSecretBox.Location = new System.Drawing.Point(126, 186);
             this.AppSecretBox.Margin = new System.Windows.Forms.Padding(2);
             this.AppSecretBox.Name = "AppSecretBox";
             this.AppSecretBox.Size = new System.Drawing.Size(201, 20);
@@ -337,7 +313,7 @@ namespace SocialPostScheduler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(340, 344);
+            this.ClientSize = new System.Drawing.Size(340, 319);
             this.Controls.Add(this.EnableInstagramBox);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.AppSecretBox);
@@ -355,8 +331,6 @@ namespace SocialPostScheduler
             this.Controls.Add(this.label5);
             this.Controls.Add(this.PostTimePicker);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.RenewTimePicker);
             this.Controls.Add(this.releaseLabel);
             this.Controls.Add(this.BackupButton);
             this.Controls.Add(this.label3);
@@ -383,8 +357,6 @@ namespace SocialPostScheduler
         private System.Windows.Forms.DateTimePicker pcTimePicker;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label releaseLabel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker RenewTimePicker;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker PostTimePicker;

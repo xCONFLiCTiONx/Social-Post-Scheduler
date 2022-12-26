@@ -16,142 +16,116 @@ namespace SocialPostScheduler
     {
         private static readonly HttpClient client = new HttpClient();
 
-        /// <summary>
-        /// {instagram_id}/media?image_url={image_url}&access_token={access_token}
-        /// {instagram_id}/media_publish?creation_id={creation-id}&access_token={access_token}
-        /// </summary>
         internal static void PostToInstagram()
         {
             try
             {
-                string USER_TOKEN = GetToken.RenewAccessToken(Properties.Settings.Default.InstagramToken, Properties.Settings.Default.InstagramAppSecret, Properties.Settings.Default.InstagramAppID);
-                if (USER_TOKEN.Contains("ERROR:"))
+                HttpWebRequest hwr = (HttpWebRequest)WebRequest.Create(Properties.Settings.Default.WebsiteFeed);
+                hwr.Accept = "text/xml, */*";
+                hwr.Headers.Add(HttpRequestHeader.AcceptLanguage, "en-us");
+                hwr.UserAgent = "Mozilla";
+                hwr.KeepAlive = true;
+                hwr.AutomaticDecompression = DecompressionMethods.Deflate | DecompressionMethods.GZip;
+
+                using (var resp = (HttpWebResponse)hwr.GetResponse())
                 {
-                    EasyLogger.Error(USER_TOKEN);
-                }
-                else
-                {
-                    if (USER_TOKEN != "The remote server returned an error: (400) Bad Request.")
+                    using (Stream s = resp.GetResponseStream())
                     {
-                        EasyLogger.Info("Your Instagram user token has been renewed successfully!");
+                        string cs = String.IsNullOrEmpty(resp.CharacterSet) ? "UTF-8" : resp.CharacterSet;
+                        Encoding e = Encoding.GetEncoding(cs);
 
-                        Properties.Settings.Default.InstagramToken = USER_TOKEN;
-                        Properties.Settings.Default.Save();
-                        Properties.Settings.Default.Reload();
-                    }
-                    else
-                    {
-                        EasyLogger.Warning("Error: The remote server returned an error: (400) Bad Request.");
-                        return;
-                    }
-
-                    HttpWebRequest hwr = (HttpWebRequest)WebRequest.Create(Properties.Settings.Default.WebsiteFeed);
-                    hwr.Accept = "text/xml, */*";
-                    hwr.Headers.Add(HttpRequestHeader.AcceptLanguage, "en-us");
-                    hwr.UserAgent = "Mozilla";
-                    hwr.KeepAlive = true;
-                    hwr.AutomaticDecompression = DecompressionMethods.Deflate | DecompressionMethods.GZip;
-
-                    using (var resp = (HttpWebResponse)hwr.GetResponse())
-                    {
-                        using (Stream s = resp.GetResponseStream())
+                        using (StreamReader sr = new StreamReader(s, e))
                         {
-                            string cs = String.IsNullOrEmpty(resp.CharacterSet) ? "UTF-8" : resp.CharacterSet;
-                            Encoding e = Encoding.GetEncoding(cs);
+                            var allXml = sr.ReadToEnd();
 
-                            using (StreamReader sr = new StreamReader(s, e))
+                            allXml = Regex.Replace(allXml,
+                                                    "(.*)<script type='text/javascript'>.+?</script>(.*)",
+                                                    "$1$2",
+                                                    RegexOptions.Singleline);
+
+                            using (XmlReader xmlr = XmlReader.Create(new StringReader(allXml)))
                             {
-                                var allXml = sr.ReadToEnd();
+                                SyndicationFeed feedContent = SyndicationFeed.Load(xmlr);
+                                List<SyndicationItem> feedItems = new List<SyndicationItem>();
 
-                                allXml = Regex.Replace(allXml,
-                                                        "(.*)<script type='text/javascript'>.+?</script>(.*)",
-                                                        "$1$2",
-                                                        RegexOptions.Singleline);
-
-                                using (XmlReader xmlr = XmlReader.Create(new StringReader(allXml)))
+                                foreach (SyndicationItem item in feedContent.Items)
                                 {
-                                    SyndicationFeed feedContent = SyndicationFeed.Load(xmlr);
-                                    List<SyndicationItem> feedItems = new List<SyndicationItem>();
+                                    feedItems.Add(item);
+                                }
+                                feedItems.Reverse();
+                                feedContent.Items = feedItems;
 
-                                    foreach (SyndicationItem item in feedContent.Items)
+                                if (null == feedContent)
+                                {
+                                    return;
+                                }
+
+                                foreach (SyndicationItem item in feedContent.Items)
+                                {
+                                    string quota_total = string.Empty;
+                                    string quota_usage = string.Empty;
+                                    try
                                     {
-                                        feedItems.Add(item);
+                                        using (WebClient wb = new WebClient())
+                                        {
+                                            string responseInString = wb.DownloadString("https://graph.facebook.com/" + Properties.Settings.Default.InstagramPageID + "/content_publishing_limit?fields=config&access_token=" + Properties.Settings.Default.InstagramToken);
+
+                                            JObject jdata = JObject.Parse(responseInString);
+                                            JToken array = jdata["data"];
+                                            foreach (JToken info in array)
+                                            {
+                                                quota_total = info["config"]["quota_total"].ToString();
+                                            }
+                                        }
+
+                                        using (WebClient wb = new WebClient())
+                                        {
+                                            string responseInString = wb.DownloadString("https://graph.facebook.com/" + Properties.Settings.Default.InstagramPageID + "/content_publishing_limit?fields=quota_usage&access_token=" + Properties.Settings.Default.InstagramToken);
+
+                                            JObject jdata = JObject.Parse(responseInString);
+                                            JToken array = jdata["data"];
+
+                                            foreach (JToken info in array)
+                                            {
+                                                quota_usage = info["quota_usage"].ToString();
+                                            }
+                                        }
                                     }
-                                    feedItems.Reverse();
-                                    feedContent.Items = feedItems;
+                                    catch { }
 
-                                    if (null == feedContent)
+                                    int usage = Convert.ToInt32(quota_usage);
+                                    int total = Convert.ToInt32(quota_total);
+
+                                    if (usage >= total)
                                     {
-                                        return;
+                                        EasyLogger.Info("Instagram post quota reached!");
+                                        break;
                                     }
 
-                                    foreach (SyndicationItem item in feedContent.Items)
+                                    try
                                     {
-                                        string quota_total = string.Empty;
-                                        string quota_usage = string.Empty;
-                                        try
+                                        System.Collections.ObjectModel.Collection<SyndicationLink> links = item.Links;
+
+                                        string title = item.Title.Text + " - " + links[0].Uri.ToString();
+                                        string image = ExtensionMethods.GetEnclosureUri(item);
+                                        DateTimeOffset date = item.PublishDate;
+
+                                        if (StringToDTOffset(Properties.Settings.Default.PublishDate) < date)
                                         {
-                                            using (WebClient wb = new WebClient())
-                                            {
-                                                string responseInString = wb.DownloadString("https://graph.facebook.com/" + Properties.Settings.Default.InstagramPageID + "/content_publishing_limit?fields=config&access_token=" + Properties.Settings.Default.InstagramToken);
+                                            Task<string> success = PostAsync(image, title);
+                                            int posts_used = Convert.ToInt32(quota_usage);
+                                            posts_used++;
+                                            EasyLogger.Info(success.Result + Environment.NewLine + "Instagram Post usage for the day: " + posts_used + " of " + quota_total);
 
-                                                JObject jdata = JObject.Parse(responseInString);
-                                                JToken array = jdata["data"];
-                                                foreach (JToken info in array)
-                                                {
-                                                    quota_total = info["config"]["quota_total"].ToString();
-                                                }
-                                            }
-
-                                            using (WebClient wb = new WebClient())
-                                            {
-                                                string responseInString = wb.DownloadString("https://graph.facebook.com/" + Properties.Settings.Default.InstagramPageID + "/content_publishing_limit?fields=quota_usage&access_token=" + Properties.Settings.Default.InstagramToken);
-
-                                                JObject jdata = JObject.Parse(responseInString);
-                                                JToken array = jdata["data"];
-
-                                                foreach (JToken info in array)
-                                                {
-                                                    quota_usage = info["quota_usage"].ToString();
-                                                }
-                                            }
+                                            Properties.Settings.Default.PublishDate = date.ToString();
+                                            Properties.Settings.Default.Save();
+                                            Properties.Settings.Default.Reload();
                                         }
-                                        catch { }
-
-                                        int usage = Convert.ToInt32(quota_usage);
-                                        int total = Convert.ToInt32(quota_total);
-
-                                        if (usage >= total)
-                                        {
-                                            EasyLogger.Info("Instagram post quota reached!");
-                                            break;
-                                        }
-
-                                        try
-                                        {
-                                            System.Collections.ObjectModel.Collection<SyndicationLink> links = item.Links;
-
-                                            string title = item.Title.Text + " - " + links[0].Uri.ToString();
-                                            string image = ExtensionMethods.GetEnclosureUri(item);
-                                            DateTimeOffset date = item.PublishDate;
-
-                                            if (StringToDTOffset(Properties.Settings.Default.PublishDate) < date)
-                                            {
-                                                Task<string> success = PostAsync(image, title);
-                                                int posts_used = Convert.ToInt32(quota_usage);
-                                                posts_used++;
-                                                EasyLogger.Info(success.Result + Environment.NewLine + "Instagram Post usage for the day: " + posts_used + " of " + quota_total);
-
-                                                Properties.Settings.Default.PublishDate = date.ToString();
-                                                Properties.Settings.Default.Save();
-                                                Properties.Settings.Default.Reload();
-                                            }
-                                        }
-                                        catch (Exception ex)
-                                        {
-                                            EasyLogger.Error(ex);
-                                            continue;
-                                        }
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        EasyLogger.Error(ex);
+                                        continue;
                                     }
                                 }
                             }
